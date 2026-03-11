@@ -152,6 +152,7 @@ section{padding:120px 60px}
 
 /* ABOUT SECTION */
 .about{background:var(--bg-alt);color:var(--ink);display:grid;grid-template-columns:1fr 1fr;padding:0}
+.about-mobile-logo{display:none;width:140px;height:auto;margin-bottom:28px;object-fit:contain}
 .about-left{padding:120px 80px 120px 60px}
 .about-left .section-title{color:var(--ink)}
 .about-body{margin-top:36px;font-size:1rem;line-height:1.95;color:var(--ink-soft);max-width:440px}
@@ -416,8 +417,9 @@ footer{background:var(--ink);border-top:1px solid rgba(247,245,242,.08);padding:
   .hero-actions{flex-wrap:wrap;gap:14px}
   .scroll-indicator{display:none}
   /* ABOUT — reduce padding in single-column layout */
-  .about-left{padding:56px 24px}
-  .about-right{min-height:260px}
+  .about-left{padding:48px 24px 28px}
+  .about-right{min-height:220px}
+  .about-mobile-logo{display:block}
   section{padding:64px 24px}
   .stats-bar{padding:28px 24px;gap:0}
   .stat-item{padding:16px 0;border-right:none;border-bottom:1px solid var(--line)}
@@ -539,7 +541,8 @@ footer{background:var(--ink);border-top:1px solid rgba(247,245,242,.08);padding:
   <!-- ABOUT -->
   <div class="about" id="about">
     <div class="about-left">
-      <div class="section-tag reveal"><div class="section-tag-line"></div><span>Over Ons</span></div>
+      <img class="about-mobile-logo" id="aboutMobileLogo" alt="Tsang Law Firm">
+    <div class="section-tag reveal"><div class="section-tag-line"></div><span>Over Ons</span></div>
       <h2 class="section-title reveal" style="transition-delay:.1s">Waarom kiezen voor<br><em>Tsang Law Firm?</em></h2>
       <p class="about-body reveal" style="transition-delay:.2s">Wij geloven in een persoonlijke benadering waarbij uw belangen altijd centraal staan. Ons kantoor begeleidt u door complexe juridische processen met toewijding, integriteit en transparantie.</p>
       <div class="about-values">
@@ -1033,6 +1036,9 @@ footer{background:var(--ink);border-top:1px solid rgba(247,245,242,.08);padding:
 </template>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+// ====== ABOUT MOBILE LOGO ======
+(function(){const navLogo=document.querySelector('.nav-logo img');const aboutLogo=document.getElementById('aboutMobileLogo');if(navLogo&&aboutLogo){aboutLogo.src=navLogo.src;}})();
+
 // ====== CURSOR ======
 const cursor=document.getElementById('cursor'),ring=document.getElementById('cursorRing');
 let mx=0,my=0,rx=0,ry=0;
