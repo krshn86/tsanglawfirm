@@ -339,6 +339,10 @@ footer{background:var(--ink);border-top:1px solid rgba(247,245,242,.08);padding:
 .lang-btn:hover{color:var(--ink);border-color:var(--line-strong)}
 .lang-btn.active{color:var(--accent);border-color:var(--accent);background:rgba(184,154,106,.06)}
 @media(max-width:768px){.lang-switcher{display:none}}
+.mobile-lang-switcher{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:8px}
+.mobile-lang-btn{font-family:'Outfit',sans-serif;font-size:.82rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);padding:6px 14px;border:1px solid transparent;border-radius:100px;cursor:pointer;background:none;transition:color .25s,border-color .25s,background .25s}
+.mobile-lang-btn:hover{color:var(--ink);border-color:var(--line-strong)}
+.mobile-lang-btn.active{color:var(--accent);border-color:var(--accent);background:rgba(184,154,106,.06)}
 /* RTL support */
 [dir="rtl"] #navbar{flex-direction:row-reverse}
 [dir="rtl"] .nav-links{flex-direction:row-reverse}
@@ -474,6 +478,13 @@ footer{background:var(--ink);border-top:1px solid rgba(247,245,242,.08);padding:
   <a href="#" data-page="werkwijze" class="mobile-nav-link">Werkwijze</a>
   <a href="#" data-page="prodeo" class="mobile-nav-link">Pro Deo</a>
   <a href="#" data-page="contact" class="mobile-nav-link">Contact</a>
+  <div class="mobile-lang-switcher" id="mobileLangSwitcher">
+    <button class="mobile-lang-btn active" data-lang="nl" aria-label="Taal: Nederlands">NL</button>
+    <button class="mobile-lang-btn" data-lang="en" aria-label="Language: English">EN</button>
+    <button class="mobile-lang-btn" data-lang="tr" aria-label="Dil: Türkçe">TR</button>
+    <button class="mobile-lang-btn" data-lang="ar" aria-label="اللغة: العربية">AR</button>
+    <button class="mobile-lang-btn" data-lang="zh" aria-label="语言: 中文">中文</button>
+  </div>
 </div>
 
 <!-- =================== PAGE: HOME =================== -->
@@ -1472,8 +1483,8 @@ function setLanguage(lang) {
   currentLang = lang;
   const T = TRANSLATIONS[lang];
 
-  // Update lang-btn active state
-  document.querySelectorAll('.lang-btn').forEach(btn => {
+  // Update lang-btn active state (desktop + mobile)
+  document.querySelectorAll('.lang-btn, .mobile-lang-btn').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.lang === lang);
   });
 
@@ -1680,6 +1691,10 @@ function setLanguage(lang) {
 // ====== LANG BTN CLICKS ======
 document.getElementById('langSwitcher').addEventListener('click', e => {
   const btn = e.target.closest('.lang-btn');
+  if (btn && btn.dataset.lang) setLanguage(btn.dataset.lang);
+});
+document.getElementById('mobileLangSwitcher').addEventListener('click', e => {
+  const btn = e.target.closest('.mobile-lang-btn');
   if (btn && btn.dataset.lang) setLanguage(btn.dataset.lang);
 });
 
