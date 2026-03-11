@@ -417,8 +417,9 @@ footer{background:var(--ink);border-top:1px solid rgba(247,245,242,.08);padding:
   .hero-actions{flex-wrap:wrap;gap:14px}
   .scroll-indicator{display:none}
   /* ABOUT — reduce padding in single-column layout */
-  .about-left{padding:48px 24px 28px}
-  .about-right{min-height:220px}
+  .about-left{padding:40px 24px 20px}
+  .about-right{min-height:260px}
+  .about-values{margin-top:28px;gap:16px}
   .about-mobile-logo{display:block}
   section{padding:64px 24px}
   .stats-bar{padding:28px 24px;gap:0}
@@ -1058,7 +1059,7 @@ function observeAll(){
       if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}
     });
   },{threshold:0.08});
-  document.querySelectorAll('.reveal,.reveal-left,.reveal-right,.reveal-scale,.stat-item,.practice-card,.team-hero-card,.rechtsgebied-card').forEach(el=>io.observe(el));
+  document.querySelectorAll('.reveal,.reveal-left,.reveal-right,.reveal-scale,.stat-item,.practice-card,.team-hero-card,.rechtsgebied-card,.about-value').forEach(el=>io.observe(el));
 }
 
 function applyStagger(){
@@ -1075,7 +1076,7 @@ function showPage(id){
     target.classList.add('active');
     window.scrollTo({top:0,behavior:'smooth'});
     // Force all reveals visible immediately then let observer handle new ones
-    target.querySelectorAll('.reveal,.reveal-left,.reveal-right,.reveal-scale,.stat-item,.practice-card,.team-hero-card,.rechtsgebied-card').forEach(el=>el.classList.add('visible'));
+    target.querySelectorAll('.reveal,.reveal-left,.reveal-right,.reveal-scale,.stat-item,.practice-card,.team-hero-card,.rechtsgebied-card,.about-value').forEach(el=>el.classList.add('visible'));
     setTimeout(()=>{observeAll();applyStagger();updateCursorTargets();},50);
   }
   document.getElementById('mobileMenu').classList.remove('open');
