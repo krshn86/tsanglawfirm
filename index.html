@@ -491,11 +491,11 @@ footer{background:var(--ink);border-top:1px solid rgba(247,245,242,.08);padding:
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
   <a href="#" data-page="home" class="mobile-nav-link">Home</a>
-  <a href="#" data-page="team" class="mobile-nav-link">Team</a>
-  <a href="#" data-page="rechtsgebieden" class="mobile-nav-link">Rechtsgebieden</a>
-  <a href="#" data-page="werkwijze" class="mobile-nav-link">Werkwijze</a>
-  <a href="#" data-page="prodeo" class="mobile-nav-link">Pro Deo</a>
-  <a href="#" data-page="contact" class="mobile-nav-link">Contact</a>
+  <a href="#" data-page="team" class="mobile-nav-link" data-i18n="nav.team">Team</a>
+  <a href="#" data-page="rechtsgebieden" class="mobile-nav-link" data-i18n="nav.areas">Rechtsgebieden</a>
+  <a href="#" data-page="werkwijze" class="mobile-nav-link" data-i18n="nav.werkwijze">Werkwijze</a>
+  <a href="#" data-page="prodeo" class="mobile-nav-link" data-i18n="nav.prodeo">Pro Deo</a>
+  <a href="#" data-page="contact" class="mobile-nav-link" data-i18n="nav.contact">Contact</a>
   <div class="mobile-lang-switcher" id="mobileLangSwitcher">
     <button class="mobile-lang-btn active" data-lang="nl" aria-label="Taal: Nederlands">NL</button>
     <button class="mobile-lang-btn" data-lang="en" aria-label="Language: English">EN</button>
@@ -644,12 +644,12 @@ footer{background:var(--ink);border-top:1px solid rgba(247,245,242,.08);padding:
         <div class="team-profile-info">
           <div class="team-profile-role" data-i18n="team.role.founder">Advocaat & Oprichter</div>
           <h2 class="team-profile-name">T.Y. (Angel) Tsang</h2>
-          <div class="team-profile-uni">Rijksuniversiteit Groningen — Rechtsgeleerdheid</div>
+          <div class="team-profile-uni" data-i18n="team.angel.uni">Rijksuniversiteit Groningen — Rechtsgeleerdheid</div>
           <p class="team-profile-bio" data-i18n="team.angel.bio1">Bij Angel draait alles om de cliënt. Met haar enthousiasme, betrokkenheid en juridische kennis zet zij zich volledig in om uw zaak op de best mogelijke manier te behartigen.</p>
           <p class="team-profile-bio" data-i18n="team.angel.bio2">Angel heeft haar studie Rechtsgeleerdheid afgerond aan de Rijksuniversiteit Groningen. Na haar studie heeft zij eerst ervaring opgedaan als juridisch medewerker en is daarna beëdigd als advocaat bij een kantoor in Den Haag. In 2015 zette zij de stap naar zelfstandigheid en richtte zij Tsang Law Firm op.</p>
           <p class="team-profile-bio" data-i18n="team.angel.bio3">Dankzij haar Chinese achtergrond kan zij cliënten ook in het Chinees bijstaan — een waardevolle meerwaarde voor haar internationale clientèle.</p>
           <div class="team-expertise">
-            <div class="team-expertise-label">Expertise</div>
+            <div class="team-expertise-label" data-i18n="team.expertise">Expertise</div>
             <div class="team-expertise-tags"><span class="tag" data-i18n="team.angel.tag1">Vreemdelingenrecht</span><span class="tag" data-i18n="team.angel.tag2">Personen- & Familierecht</span><span class="tag" data-i18n="team.angel.tag3">Ondernemingsrecht</span></div>
           </div>
         </div>
@@ -663,12 +663,12 @@ footer{background:var(--ink);border-top:1px solid rgba(247,245,242,.08);padding:
         <div class="team-profile-info">
           <div class="team-profile-role" data-i18n="team.role.lawyer">Advocaat</div>
           <h2 class="team-profile-name">R. (Tansu) Sarican</h2>
-          <div class="team-profile-uni">Universiteit van Amsterdam — Rechtsgeleerdheid</div>
+          <div class="team-profile-uni" data-i18n="team.tansu.uni">Universiteit van Amsterdam — Rechtsgeleerdheid</div>
           <p class="team-profile-bio" data-i18n="team.tansu.bio1">Tansu is een ambitieuze en gedreven advocaat met een specialisatie in strafrecht en privaatrecht. Met een sterke interesse in contractenrecht, aansprakelijkheidsrecht en verbintenissenrecht, geeft zij cliënten helder en praktisch juridisch advies.</p>
           <p class="team-profile-bio" data-i18n="team.tansu.bio2">Na haar studie aan de UvA heeft zij ervaring opgedaan bij een advocatenkantoor, waarna zij in 2025 werd beëdigd als advocaat. Haar analytische denkwijze en nauwkeurige aanpak zorgen ervoor dat juridische vraagstukken tot in detail worden uitgewerkt.</p>
           <p class="team-profile-bio" data-i18n="team.tansu.bio3">Dankzij haar Turkse achtergrond staat Tansu cliënten in het Nederlands, Engels én Turks te woord.</p>
           <div class="team-expertise">
-            <div class="team-expertise-label">Expertise</div>
+            <div class="team-expertise-label" data-i18n="team.expertise">Expertise</div>
             <div class="team-expertise-tags"><span class="tag" data-i18n="team.tansu.tag1">Strafrecht</span><span class="tag" data-i18n="team.tansu.tag2">Privaatrecht</span><span class="tag" data-i18n="team.tansu.tag3">Contractenrecht</span><span class="tag" data-i18n="team.tansu.tag4">Aansprakelijkheidsrecht</span></div>
           </div>
         </div>
@@ -979,30 +979,30 @@ footer{background:var(--ink);border-top:1px solid rgba(247,245,242,.08);padding:
 <div class="page" id="page-voorwaarden">
   <div class="page-hero">
     <div class="page-hero-content">
-      <div class="page-hero-eyebrow"><div class="page-hero-eyebrow-line"></div><span>Juridisch</span></div>
-      <h1 class="page-hero-title">Algemene<br><em>Voorwaarden</em></h1>
-      <p class="page-hero-sub">De algemene voorwaarden van Tsang Law Firm zijn van toepassing op alle opdrachten en dienstverlening van ons kantoor.</p>
+      <div class="page-hero-eyebrow"><div class="page-hero-eyebrow-line"></div><span data-i18n="voorwaarden.tag">Juridisch</span></div>
+      <h1 class="page-hero-title" data-i18n-html="voorwaarden.title">Algemene<br><em>Voorwaarden</em></h1>
+      <p class="page-hero-sub" data-i18n="voorwaarden.sub">De algemene voorwaarden van Tsang Law Firm zijn van toepassing op alle opdrachten en dienstverlening van ons kantoor.</p>
     </div>
   </div>
   <section style="background:var(--bg);padding:80px 60px">
     <div class="voorwaarden-content">
-      <p class="voorwaarden-intro">Tsang Law Firm is een eenmanskantoor waarin de praktijk door mr. T.Y. Tsang wordt uitgeoefend. Deze voorwaarden zijn van toepassing op alle huidige en toekomstige opdrachten, werkzaamheden en diensten van Tsang Law Firm.</p>
-      <div class="voorwaarden-article"><h3>Artikel 1 — Naam</h3><p>Tsang Law Firm is een eenmanskantoor waarin de praktijk door mr. T.Y. Tsang wordt uitgeoefend.</p></div>
-      <div class="voorwaarden-article"><h3>Artikel 2 — Toepasselijkheid</h3><p>Deze voorwaarden zijn van toepassing op alle huidige en toekomstige opdrachten, werkzaamheden en diensten van Tsang Law Firm, en al diegenen die voor Tsang Law Firm werkzaam zijn (al dan niet in dienstbetrekking).</p></div>
-      <div class="voorwaarden-article"><h3>Artikel 3 — Opdracht</h3><p>Alle opdrachten worden, met terzijdestelling van de artikelen 7:404 BW en 7:407 lid 2 BW, geacht uitsluitend te zijn opgedragen aan en aanvaard door Tsang Law Firm ten behoeve van de opdrachtgever. Opdrachten worden uitsluitend ten behoeve van de opdrachtgever uitgevoerd en niet ten behoeve van derden.</p></div>
-      <div class="voorwaarden-article"><h3>Artikel 4 — Inschakeling van derden</h3><p>Tsang Law Firm is gerechtigd bij uitvoering van haar werkzaamheden derden (waaronder deurwaarders, procureurs, deskundigen, buitenlandse advocaten) in te schakelen. Tsang Law Firm zal bij de inschakeling de nodige zorgvuldigheid betrachten en dit vooraf met de klant bespreken. Tsang Law Firm is niet aansprakelijk voor fouten van ingeschakelde derden.</p></div>
-      <div class="voorwaarden-article"><h3>Artikel 5 — Aansprakelijkheid</h3><p>Tsang Law Firm is verzekerd conform de Verordening op Advocatuur. Iedere aansprakelijkheid is beperkt tot het bedrag dat onder de beroepsaansprakelijkheidsverzekering wordt uitbetaald. Indien geen uitkering plaatsvindt, is aansprakelijkheid beperkt tot het factuurbedrag met een maximum van € 15.000,-.</p></div>
-      <div class="voorwaarden-article"><h3>Artikel 6 — Klachten- en Geschillenregeling</h3><p>Op de dienstverlening is de Klachten- en Geschillenregeling Advocatuur van toepassing. Aanspreekpunt voor klachten is mr. T.Y. Tsang. Indien dit niet tot een oplossing leidt, kan de klacht worden ingediend bij de Geschillencommissie Advocatuur.</p></div>
-      <div class="voorwaarden-article"><h3>Artikel 7 — Gefinancierde Rechtsbijstand</h3><p>De opdrachtgever is ermee bekend dat de Raad voor Rechtsbijstand bij een toevoegingsaanvraag informatie kan opvragen bij overheidsdiensten. De Raad stelt bij toekenning een eigen bijdrage vast en kan de toevoeging na afloop intrekken.</p></div>
-      <div class="voorwaarden-article"><h3>Artikel 8 — Honorarium</h3><p>Het honorarium wordt berekend aan de hand van bestede uren maal het overeengekomen uurtarief. Bijzondere onkosten worden separaat in rekening gebracht. Alle bedragen zijn vermeerderd met BTW. Een voorschot kan worden verlangd.</p></div>
-      <div class="voorwaarden-article"><h3>Artikel 9 — Betaling</h3><p>Betaling dient te geschieden binnen 14 dagen na factuurdatum. Bij niet-tijdige betaling is de opdrachtgever zonder ingebrekestelling in verzuim en is de wettelijke rente verschuldigd, alsmede buitengerechtelijke incassokosten van 15% van de hoofdsom (minimaal € 100,-).</p></div>
-      <div class="voorwaarden-article"><h3>Artikel 10 — Wwft (Wet witwassen)</h3><p>Op grond van de Wet ter voorkoming van witwassen is Tsang Law Firm verplicht de identiteit van de opdrachtgever te verifiëren. Kopieën van identiteitsdocumenten worden in het dossier opgenomen.</p></div>
-      <div class="voorwaarden-article"><h3>Artikel 11 — Privacy</h3><p>Tsang Law Firm verwerkt persoonsgegevens conform de Algemene verordening gegevensbescherming (AVG). Gegevens worden niet voor andere doelen gebruikt dan waarvoor ze zijn verkregen.</p></div>
-      <div class="voorwaarden-article"><h3>Artikel 12 — Archivering</h3><p>Dossiers worden 5 jaar na afsluiting van een zaak uit het archief verwijderd en vernietigd, zonder nadere aankondiging.</p></div>
-      <div class="voorwaarden-article"><h3>Artikel 13 — Derdengelden</h3><p>Tsang Law Firm beschikt niet over een derdengeldenrekening. Gelden ten behoeve van opdrachtgever worden gestort op de bankrekening van Tsang Law Firm te Den Haag.</p></div>
-      <div class="voorwaarden-article"><h3>Artikel 14 — Rechts- en forumkeuze</h3><p>Op de rechtsverhouding is uitsluitend Nederlands recht van toepassing. Geschillen worden voorgelegd aan de bevoegde rechtbank Den Haag.</p></div>
-      <div class="voorwaarden-article"><h3>Artikel 15 — Rechtsgebiedenregister</h3><p>T.Y. Tsang heeft in het rechtsgebiedenregister van de Nederlandse Orde van Advocaten de volgende rechtsgebieden geregistreerd: vreemdelingenrecht · personen- en familierecht · erfrecht · algemene praktijk. Zij behaalt jaarlijks 10 opleidingspunten per hoofdrechtsgebied.</p></div>
-      <div class="voorwaarden-article"><h3>Artikel 16 — Zaakwaarneming</h3><p>Bij vakantie of afwezigheid wordt voor vervanging gezorgd. De geplande en niet-geplande zaakwaarneming geschiedt door mr. J.M. Szczerbak van Szczerbak Advocatuur, Parkstraat 83, 2514 JG Den Haag.</p></div>
+      <p class="voorwaarden-intro" data-i18n="voorwaarden.intro">Tsang Law Firm is een eenmanskantoor waarin de praktijk door mr. T.Y. Tsang wordt uitgeoefend. Deze voorwaarden zijn van toepassing op alle huidige en toekomstige opdrachten, werkzaamheden en diensten van Tsang Law Firm.</p>
+      <div class="voorwaarden-article" data-i18n-html="voorwaarden.art1"><h3>Artikel 1 — Naam</h3><p>Tsang Law Firm is een eenmanskantoor waarin de praktijk door mr. T.Y. Tsang wordt uitgeoefend.</p></div>
+      <div class="voorwaarden-article" data-i18n-html="voorwaarden.art2"><h3>Artikel 2 — Toepasselijkheid</h3><p>Deze voorwaarden zijn van toepassing op alle huidige en toekomstige opdrachten, werkzaamheden en diensten van Tsang Law Firm, en al diegenen die voor Tsang Law Firm werkzaam zijn (al dan niet in dienstbetrekking).</p></div>
+      <div class="voorwaarden-article" data-i18n-html="voorwaarden.art3"><h3>Artikel 3 — Opdracht</h3><p>Alle opdrachten worden, met terzijdestelling van de artikelen 7:404 BW en 7:407 lid 2 BW, geacht uitsluitend te zijn opgedragen aan en aanvaard door Tsang Law Firm ten behoeve van de opdrachtgever. Opdrachten worden uitsluitend ten behoeve van de opdrachtgever uitgevoerd en niet ten behoeve van derden.</p></div>
+      <div class="voorwaarden-article" data-i18n-html="voorwaarden.art4"><h3>Artikel 4 — Inschakeling van derden</h3><p>Tsang Law Firm is gerechtigd bij uitvoering van haar werkzaamheden derden (waaronder deurwaarders, procureurs, deskundigen, buitenlandse advocaten) in te schakelen. Tsang Law Firm zal bij de inschakeling de nodige zorgvuldigheid betrachten en dit vooraf met de klant bespreken. Tsang Law Firm is niet aansprakelijk voor fouten van ingeschakelde derden.</p></div>
+      <div class="voorwaarden-article" data-i18n-html="voorwaarden.art5"><h3>Artikel 5 — Aansprakelijkheid</h3><p>Tsang Law Firm is verzekerd conform de Verordening op Advocatuur. Iedere aansprakelijkheid is beperkt tot het bedrag dat onder de beroepsaansprakelijkheidsverzekering wordt uitbetaald. Indien geen uitkering plaatsvindt, is aansprakelijkheid beperkt tot het factuurbedrag met een maximum van € 15.000,-.</p></div>
+      <div class="voorwaarden-article" data-i18n-html="voorwaarden.art6"><h3>Artikel 6 — Klachten- en Geschillenregeling</h3><p>Op de dienstverlening is de Klachten- en Geschillenregeling Advocatuur van toepassing. Aanspreekpunt voor klachten is mr. T.Y. Tsang. Indien dit niet tot een oplossing leidt, kan de klacht worden ingediend bij de Geschillencommissie Advocatuur.</p></div>
+      <div class="voorwaarden-article" data-i18n-html="voorwaarden.art7"><h3>Artikel 7 — Gefinancierde Rechtsbijstand</h3><p>De opdrachtgever is ermee bekend dat de Raad voor Rechtsbijstand bij een toevoegingsaanvraag informatie kan opvragen bij overheidsdiensten. De Raad stelt bij toekenning een eigen bijdrage vast en kan de toevoeging na afloop intrekken.</p></div>
+      <div class="voorwaarden-article" data-i18n-html="voorwaarden.art8"><h3>Artikel 8 — Honorarium</h3><p>Het honorarium wordt berekend aan de hand van bestede uren maal het overeengekomen uurtarief. Bijzondere onkosten worden separaat in rekening gebracht. Alle bedragen zijn vermeerderd met BTW. Een voorschot kan worden verlangd.</p></div>
+      <div class="voorwaarden-article" data-i18n-html="voorwaarden.art9"><h3>Artikel 9 — Betaling</h3><p>Betaling dient te geschieden binnen 14 dagen na factuurdatum. Bij niet-tijdige betaling is de opdrachtgever zonder ingebrekestelling in verzuim en is de wettelijke rente verschuldigd, alsmede buitengerechtelijke incassokosten van 15% van de hoofdsom (minimaal € 100,-).</p></div>
+      <div class="voorwaarden-article" data-i18n-html="voorwaarden.art10"><h3>Artikel 10 — Wwft (Wet witwassen)</h3><p>Op grond van de Wet ter voorkoming van witwassen is Tsang Law Firm verplicht de identiteit van de opdrachtgever te verifiëren. Kopieën van identiteitsdocumenten worden in het dossier opgenomen.</p></div>
+      <div class="voorwaarden-article" data-i18n-html="voorwaarden.art11"><h3>Artikel 11 — Privacy</h3><p>Tsang Law Firm verwerkt persoonsgegevens conform de Algemene verordening gegevensbescherming (AVG). Gegevens worden niet voor andere doelen gebruikt dan waarvoor ze zijn verkregen.</p></div>
+      <div class="voorwaarden-article" data-i18n-html="voorwaarden.art12"><h3>Artikel 12 — Archivering</h3><p>Dossiers worden 5 jaar na afsluiting van een zaak uit het archief verwijderd en vernietigd, zonder nadere aankondiging.</p></div>
+      <div class="voorwaarden-article" data-i18n-html="voorwaarden.art13"><h3>Artikel 13 — Derdengelden</h3><p>Tsang Law Firm beschikt niet over een derdengeldenrekening. Gelden ten behoeve van opdrachtgever worden gestort op de bankrekening van Tsang Law Firm te Den Haag.</p></div>
+      <div class="voorwaarden-article" data-i18n-html="voorwaarden.art14"><h3>Artikel 14 — Rechts- en forumkeuze</h3><p>Op de rechtsverhouding is uitsluitend Nederlands recht van toepassing. Geschillen worden voorgelegd aan de bevoegde rechtbank Den Haag.</p></div>
+      <div class="voorwaarden-article" data-i18n-html="voorwaarden.art15"><h3>Artikel 15 — Rechtsgebiedenregister</h3><p>T.Y. Tsang heeft in het rechtsgebiedenregister van de Nederlandse Orde van Advocaten de volgende rechtsgebieden geregistreerd: vreemdelingenrecht · personen- en familierecht · erfrecht · algemene praktijk. Zij behaalt jaarlijks 10 opleidingspunten per hoofdrechtsgebied.</p></div>
+      <div class="voorwaarden-article" data-i18n-html="voorwaarden.art16"><h3>Artikel 16 — Zaakwaarneming</h3><p>Bij vakantie of afwezigheid wordt voor vervanging gezorgd. De geplande en niet-geplande zaakwaarneming geschiedt door mr. J.M. Szczerbak van Szczerbak Advocatuur, Parkstraat 83, 2514 JG Den Haag.</p></div>
     </div>
   </section>
 </div>
@@ -1011,12 +1011,12 @@ footer{background:var(--ink);border-top:1px solid rgba(247,245,242,.08);padding:
 <div class="page" id="page-disclaimer">
   <div class="page-hero">
     <div class="page-hero-content">
-      <div class="page-hero-eyebrow"><div class="page-hero-eyebrow-line"></div><span>Juridisch</span></div>
-      <h1 class="page-hero-title">Disclaimer &<br><em>Klachtregeling</em></h1>
+      <div class="page-hero-eyebrow"><div class="page-hero-eyebrow-line"></div><span data-i18n="disclaimer.tag">Juridisch</span></div>
+      <h1 class="page-hero-title" data-i18n-html="disclaimer.title">Disclaimer &<br><em>Klachtregeling</em></h1>
     </div>
   </div>
   <section style="background:var(--bg);padding:80px 60px">
-    <div class="disclaimer-content">
+    <div class="disclaimer-content" data-i18n-html="disclaimer.content">
       <h2>Disclaimer</h2>
       <p>Tsang Law Firm besteedt de grootst mogelijke zorg aan de betrouwbaarheid en actualiteit van de gegevens op deze website. Onjuistheden en onvolledigheden zijn echter niet uit te sluiten. Tsang Law Firm is niet aansprakelijk voor schade die ontstaat als gevolg van onjuiste of onvolledige informatie op de website.</p>
       <p>De informatie op deze website is uitsluitend bedoeld als algemene informatie en kan niet worden beschouwd als juridisch advies. Voor juridisch advies op maat kunt u contact opnemen met Tsang Law Firm.</p>
@@ -1314,7 +1314,33 @@ const TRANSLATIONS = {
       { title: "Ondernemings\u00adrecht", items: ["Opstellen contracten","Oprichting ondernemingen","Aandeelhoudersgeschillen","Bestuurdersaansprakelijkheid"] },
       { title: "Letsel\u00adschade", items: ["Vaststellen aansprakelijkheid","Claimen schadevergoeding","Onderhandelingen verzekeraars"] },
       { title: "Straf\u00adrecht", items: ["Overtredingen","Misdrijven","Verdediging & advies"] }
-    ]
+    ],
+    "team.angel.uni": "Rijksuniversiteit Groningen — Rechtsgeleerdheid",
+    "team.tansu.uni": "Universiteit van Amsterdam — Rechtsgeleerdheid",
+    "team.expertise": "Expertise",
+    "voorwaarden.tag": "Juridisch",
+    "voorwaarden.title": "Algemene<br><em>Voorwaarden</em>",
+    "voorwaarden.sub": "De algemene voorwaarden van Tsang Law Firm zijn van toepassing op alle opdrachten en dienstverlening van ons kantoor.",
+    "voorwaarden.intro": "Tsang Law Firm is een eenmanskantoor waarin de praktijk door mr. T.Y. Tsang wordt uitgeoefend. Deze voorwaarden zijn van toepassing op alle huidige en toekomstige opdrachten, werkzaamheden en diensten van Tsang Law Firm.",
+    "voorwaarden.art1": "<h3>Artikel 1 — Naam</h3><p>Tsang Law Firm is een eenmanskantoor waarin de praktijk door mr. T.Y. Tsang wordt uitgeoefend.</p>",
+    "voorwaarden.art2": "<h3>Artikel 2 — Toepasselijkheid</h3><p>Deze voorwaarden zijn van toepassing op alle huidige en toekomstige opdrachten, werkzaamheden en diensten van Tsang Law Firm, en al diegenen die voor Tsang Law Firm werkzaam zijn (al dan niet in dienstbetrekking).</p>",
+    "voorwaarden.art3": "<h3>Artikel 3 — Opdracht</h3><p>Alle opdrachten worden, met terzijdestelling van de artikelen 7:404 BW en 7:407 lid 2 BW, geacht uitsluitend te zijn opgedragen aan en aanvaard door Tsang Law Firm ten behoeve van de opdrachtgever. Opdrachten worden uitsluitend ten behoeve van de opdrachtgever uitgevoerd en niet ten behoeve van derden.</p>",
+    "voorwaarden.art4": "<h3>Artikel 4 — Inschakeling van derden</h3><p>Tsang Law Firm is gerechtigd bij uitvoering van haar werkzaamheden derden (waaronder deurwaarders, procureurs, deskundigen, buitenlandse advocaten) in te schakelen. Tsang Law Firm zal bij de inschakeling de nodige zorgvuldigheid betrachten en dit vooraf met de klant bespreken. Tsang Law Firm is niet aansprakelijk voor fouten van ingeschakelde derden.</p>",
+    "voorwaarden.art5": "<h3>Artikel 5 — Aansprakelijkheid</h3><p>Tsang Law Firm is verzekerd conform de Verordening op Advocatuur. Iedere aansprakelijkheid is beperkt tot het bedrag dat onder de beroepsaansprakelijkheidsverzekering wordt uitbetaald. Indien geen uitkering plaatsvindt, is aansprakelijkheid beperkt tot het factuurbedrag met een maximum van \u20ac 15.000,-.</p>",
+    "voorwaarden.art6": "<h3>Artikel 6 — Klachten- en Geschillenregeling</h3><p>Op de dienstverlening is de Klachten- en Geschillenregeling Advocatuur van toepassing. Aanspreekpunt voor klachten is mr. T.Y. Tsang. Indien dit niet tot een oplossing leidt, kan de klacht worden ingediend bij de Geschillencommissie Advocatuur.</p>",
+    "voorwaarden.art7": "<h3>Artikel 7 — Gefinancierde Rechtsbijstand</h3><p>De opdrachtgever is ermee bekend dat de Raad voor Rechtsbijstand bij een toevoegingsaanvraag informatie kan opvragen bij overheidsdiensten. De Raad stelt bij toekenning een eigen bijdrage vast en kan de toevoeging na afloop intrekken.</p>",
+    "voorwaarden.art8": "<h3>Artikel 8 — Honorarium</h3><p>Het honorarium wordt berekend aan de hand van bestede uren maal het overeengekomen uurtarief. Bijzondere onkosten worden separaat in rekening gebracht. Alle bedragen zijn vermeerderd met BTW. Een voorschot kan worden verlangd.</p>",
+    "voorwaarden.art9": "<h3>Artikel 9 — Betaling</h3><p>Betaling dient te geschieden binnen 14 dagen na factuurdatum. Bij niet-tijdige betaling is de opdrachtgever zonder ingebrekestelling in verzuim en is de wettelijke rente verschuldigd, alsmede buitengerechtelijke incassokosten van 15% van de hoofdsom (minimaal \u20ac 100,-).</p>",
+    "voorwaarden.art10": "<h3>Artikel 10 — Wwft (Wet witwassen)</h3><p>Op grond van de Wet ter voorkoming van witwassen is Tsang Law Firm verplicht de identiteit van de opdrachtgever te verifi\u00ebren. Kopie\u00ebn van identiteitsdocumenten worden in het dossier opgenomen.</p>",
+    "voorwaarden.art11": "<h3>Artikel 11 — Privacy</h3><p>Tsang Law Firm verwerkt persoonsgegevens conform de Algemene verordening gegevensbescherming (AVG). Gegevens worden niet voor andere doelen gebruikt dan waarvoor ze zijn verkregen.</p>",
+    "voorwaarden.art12": "<h3>Artikel 12 — Archivering</h3><p>Dossiers worden 5 jaar na afsluiting van een zaak uit het archief verwijderd en vernietigd, zonder nadere aankondiging.</p>",
+    "voorwaarden.art13": "<h3>Artikel 13 — Derdengelden</h3><p>Tsang Law Firm beschikt niet over een derdengeldenrekening. Gelden ten behoeve van opdrachtgever worden gestort op de bankrekening van Tsang Law Firm te Den Haag.</p>",
+    "voorwaarden.art14": "<h3>Artikel 14 — Rechts- en forumkeuze</h3><p>Op de rechtsverhouding is uitsluitend Nederlands recht van toepassing. Geschillen worden voorgelegd aan de bevoegde rechtbank Den Haag.</p>",
+    "voorwaarden.art15": "<h3>Artikel 15 — Rechtsgebiedenregister</h3><p>T.Y. Tsang heeft in het rechtsgebiedenregister van de Nederlandse Orde van Advocaten de volgende rechtsgebieden geregistreerd: vreemdelingenrecht \u00b7 personen- en familierecht \u00b7 erfrecht \u00b7 algemene praktijk. Zij behaalt jaarlijks 10 opleidingspunten per hoofdrechtsgebied.</p>",
+    "voorwaarden.art16": "<h3>Artikel 16 — Zaakwaarneming</h3><p>Bij vakantie of afwezigheid wordt voor vervanging gezorgd. De geplande en niet-geplande zaakwaarneming geschiedt door mr. J.M. Szczerbak van Szczerbak Advocatuur, Parkstraat 83, 2514 JG Den Haag.</p>",
+    "disclaimer.tag": "Juridisch",
+    "disclaimer.title": "Disclaimer &<br><em>Klachtregeling</em>",
+    "disclaimer.content": "<h2>Disclaimer</h2><p>Tsang Law Firm besteedt de grootst mogelijke zorg aan de betrouwbaarheid en actualiteit van de gegevens op deze website. Onjuistheden en onvolledigheden zijn echter niet uit te sluiten. Tsang Law Firm is niet aansprakelijk voor schade die ontstaat als gevolg van onjuiste of onvolledige informatie op de website.</p><p>De informatie op deze website is uitsluitend bedoeld als algemene informatie en kan niet worden beschouwd als juridisch advies. Voor juridisch advies op maat kunt u contact opnemen met Tsang Law Firm.</p><h3>Intellectueel eigendom</h3><p>Alle rechten van intellectueel eigendom op de inhoud van deze website berusten bij Tsang Law Firm. Niets van deze website mag worden verveelvoudigd, opgeslagen of openbaar gemaakt zonder voorafgaande schriftelijke toestemming van Tsang Law Firm.</p><h2>Kantoorklachtenregeling</h2><p>Tsang Law Firm hecht groot belang aan de tevredenheid van haar cli\u00ebnten. Mocht u desondanks niet tevreden zijn over de dienstverlening, dan kunt u een klacht indienen.</p><h3>Artikel 1 — Begripsbepalingen</h3><p>In deze kantoorklachtenregeling wordt verstaan onder: <strong style=\"color:var(--accent)\">klacht</strong>: iedere schriftelijke uiting van ongenoegen van of namens de cli\u00ebnt; <strong style=\"color:var(--accent)\">klager</strong>: de cli\u00ebnt of diens vertegenwoordiger die een klacht indient; <strong style=\"color:var(--accent)\">klachtenfunctionaris</strong>: mr. T.Y. Tsang.</p><h3>Artikel 2 — Toepasselijkheid</h3><p>Deze kantoorklachtenregeling is van toepassing op iedere overeenkomst van opdracht tussen Tsang Law Firm en de cli\u00ebnt.</p><h3>Artikel 3 — Doelstelling</h3><p>Deze kantoorklachtenregeling heeft tot doel het vastleggen van een procedure om klachten van cli\u00ebnten binnen een redelijke termijn op een constructieve wijze af te handelen.</p><h3>Artikel 4 — Indiening en behandeling</h3><p>Klachten dienen schriftelijk te worden ingediend bij mr. T.Y. Tsang via <a href=\"mailto:info@tsanglawfirm.nl\" style=\"color:var(--gold)\">info@tsanglawfirm.nl</a>. De klacht wordt binnen 4 weken in behandeling genomen. Indien de klacht niet naar tevredenheid wordt afgehandeld, kunt u deze indienen bij de Geschillencommissie Advocatuur.</p><h3>Geschillencommissie Advocatuur</h3><p>Postbus 90600, 2509 LP Den Haag \u00b7 <a href=\"https://www.degeschillencommissieadvocatuur.nl\" style=\"color:var(--gold)\" target=\"_blank\" rel=\"noopener noreferrer\">www.degeschillencommissieadvocatuur.nl</a></p>"
   },
   en: {
     "nav.team": "Team",
@@ -1478,7 +1504,33 @@ const TRANSLATIONS = {
       { title: "Corporate Law", items: ["Drafting contracts","Company incorporation","Shareholder disputes","Directors' liability"] },
       { title: "Personal Injury", items: ["Establishing liability","Claiming compensation","Negotiations with insurers"] },
       { title: "Criminal Law", items: ["Offences","Crimes","Defence & advice"] }
-    ]
+    ],
+    "team.angel.uni": "University of Groningen — Law",
+    "team.tansu.uni": "University of Amsterdam — Law",
+    "team.expertise": "Expertise",
+    "voorwaarden.tag": "Legal",
+    "voorwaarden.title": "General<br><em>Terms & Conditions</em>",
+    "voorwaarden.sub": "The general terms and conditions of Tsang Law Firm apply to all assignments and services provided by our firm.",
+    "voorwaarden.intro": "Tsang Law Firm is a sole practitioner firm in which the practice is conducted by mr. T.Y. Tsang. These terms and conditions apply to all current and future assignments, activities and services of Tsang Law Firm.",
+    "voorwaarden.art1": "<h3>Article 1 — Name</h3><p>Tsang Law Firm is a sole practitioner firm in which the practice is conducted by mr. T.Y. Tsang.</p>",
+    "voorwaarden.art2": "<h3>Article 2 — Applicability</h3><p>These terms and conditions apply to all current and future assignments, activities and services of Tsang Law Firm, and all those who work for Tsang Law Firm (whether or not in employment).</p>",
+    "voorwaarden.art3": "<h3>Article 3 — Assignment</h3><p>All assignments, with the exclusion of articles 7:404 and 7:407 paragraph 2 of the Dutch Civil Code, are deemed to have been exclusively assigned to and accepted by Tsang Law Firm on behalf of the client. Assignments are exclusively carried out on behalf of the client and not on behalf of third parties.</p>",
+    "voorwaarden.art4": "<h3>Article 4 — Engagement of Third Parties</h3><p>Tsang Law Firm is entitled to engage third parties (including bailiffs, attorneys, experts, foreign lawyers) in the performance of its work. Tsang Law Firm will exercise due care in engaging third parties and discuss this with the client in advance. Tsang Law Firm is not liable for errors by engaged third parties.</p>",
+    "voorwaarden.art5": "<h3>Article 5 — Liability</h3><p>Tsang Law Firm is insured in accordance with the Bar Regulation. Any liability is limited to the amount paid out under the professional liability insurance. If no payment is made, liability is limited to the invoice amount with a maximum of \u20ac 15,000.</p>",
+    "voorwaarden.art6": "<h3>Article 6 — Complaints and Dispute Resolution</h3><p>The Complaints and Dispute Resolution Scheme for the Legal Profession applies to our services. The contact person for complaints is mr. T.Y. Tsang. If this does not lead to a solution, the complaint can be submitted to the Disputes Committee for the Legal Profession.</p>",
+    "voorwaarden.art7": "<h3>Article 7 — Government-Funded Legal Aid</h3><p>The client is aware that the Legal Aid Board may request information from government services when processing a legal aid application. Upon approval, the Board sets a personal contribution and may withdraw the legal aid after completion.</p>",
+    "voorwaarden.art8": "<h3>Article 8 — Fees</h3><p>Fees are calculated based on hours spent multiplied by the agreed hourly rate. Special expenses are charged separately. All amounts are subject to VAT. A retainer may be required.</p>",
+    "voorwaarden.art9": "<h3>Article 9 — Payment</h3><p>Payment must be made within 14 days of the invoice date. In the event of late payment, the client is in default without notice and statutory interest is due, as well as extrajudicial collection costs of 15% of the principal amount (minimum \u20ac 100).</p>",
+    "voorwaarden.art10": "<h3>Article 10 — Anti-Money Laundering Act</h3><p>Under the Prevention of Money Laundering and Terrorist Financing Act, Tsang Law Firm is required to verify the identity of the client. Copies of identity documents are included in the file.</p>",
+    "voorwaarden.art11": "<h3>Article 11 — Privacy</h3><p>Tsang Law Firm processes personal data in accordance with the General Data Protection Regulation (GDPR). Data is not used for purposes other than those for which it was obtained.</p>",
+    "voorwaarden.art12": "<h3>Article 12 — Archiving</h3><p>Files are removed from the archive and destroyed 5 years after closing a case, without further notice.</p>",
+    "voorwaarden.art13": "<h3>Article 13 — Third-Party Funds</h3><p>Tsang Law Firm does not have a third-party funds account. Funds on behalf of the client are deposited into the bank account of Tsang Law Firm in The Hague.</p>",
+    "voorwaarden.art14": "<h3>Article 14 — Choice of Law and Forum</h3><p>Dutch law exclusively applies to the legal relationship. Disputes are submitted to the competent court in The Hague.</p>",
+    "voorwaarden.art15": "<h3>Article 15 — Practice Areas Register</h3><p>T.Y. Tsang has registered the following practice areas in the practice areas register of the Netherlands Bar Association: immigration law \u00b7 personal and family law \u00b7 inheritance law \u00b7 general practice. She obtains 10 training points per core practice area annually.</p>",
+    "voorwaarden.art16": "<h3>Article 16 — Substitute Arrangement</h3><p>In case of holiday or absence, a substitute arrangement is in place. Planned and unplanned substitution is handled by mr. J.M. Szczerbak of Szczerbak Advocatuur, Parkstraat 83, 2514 JG The Hague.</p>",
+    "disclaimer.tag": "Legal",
+    "disclaimer.title": "Disclaimer &<br><em>Complaints Procedure</em>",
+    "disclaimer.content": "<h2>Disclaimer</h2><p>Tsang Law Firm takes the utmost care to ensure the reliability and accuracy of the information on this website. However, inaccuracies and omissions cannot be excluded. Tsang Law Firm is not liable for any damage resulting from incorrect or incomplete information on the website.</p><p>The information on this website is intended solely as general information and cannot be considered legal advice. For tailored legal advice, please contact Tsang Law Firm.</p><h3>Intellectual Property</h3><p>All intellectual property rights to the content of this website belong to Tsang Law Firm. Nothing from this website may be reproduced, stored or made public without prior written permission from Tsang Law Firm.</p><h2>Office Complaints Procedure</h2><p>Tsang Law Firm attaches great importance to the satisfaction of its clients. Should you nevertheless be dissatisfied with our services, you may file a complaint.</p><h3>Article 1 — Definitions</h3><p>In this office complaints procedure, the following terms mean: <strong style=\"color:var(--accent)\">complaint</strong>: any written expression of dissatisfaction by or on behalf of the client; <strong style=\"color:var(--accent)\">complainant</strong>: the client or their representative filing a complaint; <strong style=\"color:var(--accent)\">complaints officer</strong>: mr. T.Y. Tsang.</p><h3>Article 2 — Applicability</h3><p>This office complaints procedure applies to every engagement agreement between Tsang Law Firm and the client.</p><h3>Article 3 — Objective</h3><p>This office complaints procedure aims to establish a procedure for handling client complaints in a constructive manner within a reasonable timeframe.</p><h3>Article 4 — Filing and Handling</h3><p>Complaints must be submitted in writing to mr. T.Y. Tsang via <a href=\"mailto:info@tsanglawfirm.nl\" style=\"color:var(--gold)\">info@tsanglawfirm.nl</a>. The complaint will be addressed within 4 weeks. If the complaint is not resolved to your satisfaction, you may submit it to the Disputes Committee for the Legal Profession.</p><h3>Disputes Committee for the Legal Profession</h3><p>PO Box 90600, 2509 LP The Hague \u00b7 <a href=\"https://www.degeschillencommissieadvocatuur.nl\" style=\"color:var(--gold)\" target=\"_blank\" rel=\"noopener noreferrer\">www.degeschillencommissieadvocatuur.nl</a></p>"
   },
   tr: {
     "nav.team": "Ekip",
@@ -1642,7 +1694,33 @@ const TRANSLATIONS = {
       { title: "Şirketler Hukuku", items: ["Sözleşme hazırlama","Şirket kuruluşu","Hissedar uyuşmazlıkları","Yönetici sorumluluğu"] },
       { title: "Tazminat Hukuku", items: ["Sorumluluk belirleme","Tazminat talebi","Sigorta müzakereleri"] },
       { title: "Ceza Hukuku", items: ["Kabahatler","Suçlar","Savunma & danışmanlık"] }
-    ]
+    ],
+    "team.angel.uni": "Groningen \u00dcniversitesi — Hukuk",
+    "team.tansu.uni": "Amsterdam \u00dcniversitesi — Hukuk",
+    "team.expertise": "Uzmanl\u0131k",
+    "voorwaarden.tag": "Hukuki",
+    "voorwaarden.title": "Genel<br><em>\u015eartlar ve Ko\u015fullar</em>",
+    "voorwaarden.sub": "Tsang Law Firm'in genel \u015fartlar\u0131, ofisimizin t\u00fcm g\u00f6revleri ve hizmetleri i\u00e7in ge\u00e7erlidir.",
+    "voorwaarden.intro": "Tsang Law Firm, uygulaman\u0131n mr. T.Y. Tsang taraf\u0131ndan y\u00fcr\u00fct\u00fcld\u00fc\u011f\u00fc tek ki\u015filik bir b\u00fcrodur. Bu ko\u015fullar, Tsang Law Firm'in t\u00fcm mevcut ve gelecekteki g\u00f6revleri, faaliyetleri ve hizmetleri i\u00e7in ge\u00e7erlidir.",
+    "voorwaarden.art1": "<h3>Madde 1 — \u0130sim</h3><p>Tsang Law Firm, uygulaman\u0131n mr. T.Y. Tsang taraf\u0131ndan y\u00fcr\u00fct\u00fcld\u00fc\u011f\u00fc tek ki\u015filik bir b\u00fcrodur.</p>",
+    "voorwaarden.art2": "<h3>Madde 2 — Uygulanabilirlik</h3><p>Bu ko\u015fullar, Tsang Law Firm'in t\u00fcm mevcut ve gelecekteki g\u00f6revleri, faaliyetleri ve hizmetleri ile Tsang Law Firm i\u00e7in \u00e7al\u0131\u015fan herkes i\u00e7in ge\u00e7erlidir.</p>",
+    "voorwaarden.art3": "<h3>Madde 3 — G\u00f6rev</h3><p>T\u00fcm g\u00f6revler, Hollanda Medeni Kanunu'nun 7:404 ve 7:407/2 maddeleri hari\u00e7 tutularak, yaln\u0131zca Tsang Law Firm'e m\u00fcvekkil ad\u0131na verilmi\u015f ve kabul edilmi\u015f say\u0131l\u0131r.</p>",
+    "voorwaarden.art4": "<h3>Madde 4 — \u00dc\u00e7\u00fcnc\u00fc Taraflar\u0131n G\u00f6revlendirilmesi</h3><p>Tsang Law Firm, \u00e7al\u0131\u015fmalar\u0131n\u0131n y\u00fcr\u00fct\u00fclmesinde \u00fc\u00e7\u00fcnc\u00fc taraflar\u0131 g\u00f6revlendirme hakk\u0131na sahiptir. Tsang Law Firm, \u00fc\u00e7\u00fcnc\u00fc taraflar\u0131n hatalar\u0131ndan sorumlu de\u011fildir.</p>",
+    "voorwaarden.art5": "<h3>Madde 5 — Sorumluluk</h3><p>Tsang Law Firm, Baro Y\u00f6netmeli\u011fine uygun olarak sigortal\u0131d\u0131r. Sorumluluk, mesleki sorumluluk sigortas\u0131 kapsam\u0131nda \u00f6denen m\u0131ktarla s\u0131n\u0131rl\u0131d\u0131r. \u00d6deme yap\u0131lmazsa, sorumluluk fatura tutar\u0131yla maksimum 15.000 \u20ac ile s\u0131n\u0131rl\u0131d\u0131r.</p>",
+    "voorwaarden.art6": "<h3>Madde 6 — \u015eik\u00e2yet ve Uyu\u015fmazl\u0131k \u00c7\u00f6z\u00fcm\u00fc</h3><p>Hizmetlerimize Hukuk Mesle\u011fi \u015eik\u00e2yet ve Uyu\u015fmazl\u0131k \u00c7\u00f6z\u00fcm D\u00fczenlemesi uygulan\u0131r. \u015eik\u00e2yet irtibat ki\u015fisi mr. T.Y. Tsang'd\u0131r.</p>",
+    "voorwaarden.art7": "<h3>Madde 7 — Devlet Destekli Hukuki Yard\u0131m</h3><p>M\u00fcvekkil, Hukuki Yard\u0131m Kurulu'nun bir toevoeging ba\u015fvurusunda devlet hizmetlerinden bilgi talep edebilece\u011finin bilincindedir.</p>",
+    "voorwaarden.art8": "<h3>Madde 8 — \u00dccretler</h3><p>\u00dccretler, harcanan saat say\u0131s\u0131 ile \u00fczerinde an\u0131la\u015f\u0131lan saatlik \u00fccretin \u00e7arp\u0131m\u0131yla hesaplan\u0131r. \u00d6zel giderler ayr\u0131ca faturaland\u0131r\u0131l\u0131r. T\u00fcm tutarlara KDV eklenir.</p>",
+    "voorwaarden.art9": "<h3>Madde 9 — \u00d6deme</h3><p>\u00d6deme, fatura tarihinden itibaren 14 g\u00fcn i\u00e7inde yap\u0131lmal\u0131d\u0131r. Ge\u00e7 \u00f6demede, m\u00fcvekkil ihtar olmaks\u0131z\u0131n temerr\u00fcde d\u00fc\u015fer ve yasal faiz ile %15 tahsilat masraf\u0131 bor\u00e7lan\u0131r.</p>",
+    "voorwaarden.art10": "<h3>Madde 10 — Kara Para Aklama \u00d6nleme</h3><p>Tsang Law Firm, m\u00fcvekkilin kimli\u011fini do\u011frulamakla y\u00fck\u00fcml\u00fcd\u00fcr. Kimlik belgesi kopyalar\u0131 dosyaya eklenir.</p>",
+    "voorwaarden.art11": "<h3>Madde 11 — Gizlilik</h3><p>Tsang Law Firm, ki\u015fisel verileri KVKK'ya uygun olarak i\u015fler.</p>",
+    "voorwaarden.art12": "<h3>Madde 12 — Ar\u015fivleme</h3><p>Dosyalar, bir davan\u0131n kapanmas\u0131ndan 5 y\u0131l sonra ar\u015fivden \u00e7\u0131kar\u0131l\u0131r ve imha edilir.</p>",
+    "voorwaarden.art13": "<h3>Madde 13 — \u00dc\u00e7\u00fcnc\u00fc Taraf Fonlar\u0131</h3><p>Tsang Law Firm'in \u00fc\u00e7\u00fcnc\u00fc taraf fon hesab\u0131 bulunmamaktad\u0131r.</p>",
+    "voorwaarden.art14": "<h3>Madde 14 — Hukuk ve Yetki Se\u00e7imi</h3><p>Hollanda hukuku m\u00fcnhas\u0131ran uygulan\u0131r. Uyu\u015fmazl\u0131klar Lahey'deki yetkili mahkemeye sunulur.</p>",
+    "voorwaarden.art15": "<h3>Madde 15 — Hukuk Alanlar\u0131 Sicili</h3><p>T.Y. Tsang, Hollanda Barosu'nun hukuk alanlar\u0131 siciline \u015fu alanlar\u0131 kaydetmi\u015ftir: g\u00f6\u00e7menlik hukuku \u00b7 \u015fah\u0131slar ve aile hukuku \u00b7 miras hukuku \u00b7 genel uygulama.</p>",
+    "voorwaarden.art16": "<h3>Madde 16 — Vek\u00e2let D\u00fczenlemesi</h3><p>Tatil veya yokluklarda vek\u00e2let d\u00fczenlemesi mevcuttur. mr. J.M. Szczerbak, Szczerbak Advocatuur, Parkstraat 83, 2514 JG Lahey.</p>",
+    "disclaimer.tag": "Hukuki",
+    "disclaimer.title": "Sorumluluk Reddi &<br><em>\u015eik\u00e2yet Prosed\u00fcr\u00fc</em>",
+    "disclaimer.content": "<h2>Sorumluluk Reddi</h2><p>Tsang Law Firm, bu web sitesindeki bilgilerin g\u00fcvenilirli\u011fi ve g\u00fcncelli\u011fi konusunda azami \u00f6zen g\u00f6sterir. Ancak yanl\u0131\u015fl\u0131klar ve eksiklikler g\u00f6z ard\u0131 edilemez. Tsang Law Firm, web sitesindeki yanl\u0131\u015f veya eksik bilgilerden kaynaklanan zararlardan sorumlu de\u011fildir.</p><p>Bu web sitesindeki bilgiler yaln\u0131zca genel bilgi ama\u00e7l\u0131d\u0131r ve hukuki dan\u0131\u015fmanl\u0131k olarak de\u011ferlendirilemez.</p><h3>Fikri M\u00fclkiyet</h3><p>Bu web sitesinin i\u00e7eri\u011fine ili\u015fkin t\u00fcm fikri m\u00fclkiyet haklar\u0131 Tsang Law Firm'e aittir.</p><h2>Ofis \u015eik\u00e2yet Prosed\u00fcr\u00fc</h2><p>Tsang Law Firm, m\u00fcvekkillerinin memnuniyetine b\u00fcy\u00fck \u00f6nem verir. Hizmetlerimizden memnun de\u011filseniz, \u015fik\u00e2yet bildirebilirsiniz.</p><h3>Madde 1 — Tan\u0131mlar</h3><p>Bu \u015fik\u00e2yet prosed\u00fcr\u00fcnde: <strong style=\"color:var(--accent)\">\u015fik\u00e2yet</strong>: m\u00fcvekkil ad\u0131na yaz\u0131l\u0131 memnuniyetsizlik ifadesi; <strong style=\"color:var(--accent)\">\u015fik\u00e2yet\u00e7i</strong>: \u015fik\u00e2yet bildiren m\u00fcvekkil; <strong style=\"color:var(--accent)\">\u015fik\u00e2yet g\u00f6revlisi</strong>: mr. T.Y. Tsang.</p><h3>Madde 2 — Uygulanabilirlik</h3><p>Bu prosed\u00fcr, Tsang Law Firm ile m\u00fcvekkil aras\u0131ndaki her s\u00f6zle\u015fme i\u00e7in ge\u00e7erlidir.</p><h3>Madde 3 — Ama\u00e7</h3><p>Bu prosed\u00fcr, m\u00fcvekkil \u015fik\u00e2yetlerini makul s\u00fcrede yap\u0131c\u0131 \u015fekilde ele almay\u0131 ama\u00e7lar.</p><h3>Madde 4 — Ba\u015fvuru ve \u0130\u015flem</h3><p>\u015eik\u00e2yetler yaz\u0131l\u0131 olarak mr. T.Y. Tsang'a <a href=\"mailto:info@tsanglawfirm.nl\" style=\"color:var(--gold)\">info@tsanglawfirm.nl</a> \u00fczerinden iletilmelidir. 4 hafta i\u00e7inde ele al\u0131n\u0131r.</p><h3>Uyu\u015fmazl\u0131k Komisyonu</h3><p>Postbus 90600, 2509 LP Lahey \u00b7 <a href=\"https://www.degeschillencommissieadvocatuur.nl\" style=\"color:var(--gold)\" target=\"_blank\" rel=\"noopener noreferrer\">www.degeschillencommissieadvocatuur.nl</a></p>"
   },
   ar: {
     "nav.team": "الفريق",
@@ -1806,7 +1884,33 @@ const TRANSLATIONS = {
       { title: "قانون الشركات", items: ["صياغة العقود","تأسيس الشركات","نزاعات المساهمين","مسؤولية المديرين"] },
       { title: "تعويض الإصابات", items: ["تحديد المسؤولية","المطالبة بالتعويض","التفاوض مع التأمين"] },
       { title: "القانون الجنائي", items: ["المخالفات","الجرائم","الدفاع والمشورة"] }
-    ]
+    ],
+    "team.angel.uni": "جامعة غرونينغن — القانون",
+    "team.tansu.uni": "جامعة أمستردام — القانون",
+    "team.expertise": "الخبرات",
+    "voorwaarden.tag": "قانوني",
+    "voorwaarden.title": "الشروط<br><em>والأحكام العامة</em>",
+    "voorwaarden.sub": "تسري الشروط والأحكام العامة لـ Tsang Law Firm على جميع التكليفات والخدمات المقدمة من مكتبنا.",
+    "voorwaarden.intro": "Tsang Law Firm مكتب محاماة فردي يمارس فيه mr. T.Y. Tsang. تنطبق هذه الشروط على جميع التكليفات والأنشطة والخدمات الحالية والمستقبلية.",
+    "voorwaarden.art1": "<h3>المادة 1 — الاسم</h3><p>Tsang Law Firm مكتب محاماة فردي يمارس فيه mr. T.Y. Tsang.</p>",
+    "voorwaarden.art2": "<h3>المادة 2 — الانطباق</h3><p>تنطبق هذه الشروط على جميع التكليفات والأنشطة والخدمات الحالية والمستقبلية.</p>",
+    "voorwaarden.art3": "<h3>المادة 3 — التكليف</h3><p>جميع التكليفات تُعتبر مُسندة حصرياً إلى Tsang Law Firm نيابةً عن الموكل.</p>",
+    "voorwaarden.art4": "<h3>المادة 4 — الاستعانة بأطراف ثالثة</h3><p>يحق لـ Tsang Law Firm الاستعانة بأطراف ثالثة في تنفيذ عملها. المكتب غير مسؤول عن أخطاء الأطراف الثالثة.</p>",
+    "voorwaarden.art5": "<h3>المادة 5 — المسؤولية</h3><p>Tsang Law Firm مؤمَّن وفقاً لنظام المحاماة. المسؤولية محدودة بالمبلغ المدفوع بموجب تأمين المسؤولية المهنية، بحد أقصى 15,000 يورو.</p>",
+    "voorwaarden.art6": "<h3>المادة 6 — الشكاوى وتسوية النزاعات</h3><p>ينطبق نظام الشكاوى وتسوية النزاعات للمحاماة. الشخص المسؤول عن الشكاوى هو mr. T.Y. Tsang.</p>",
+    "voorwaarden.art7": "<h3>المادة 7 — المساعدة القانونية الممولة</h3><p>يعلم الموكل أن مجلس المساعدة القانونية قد يطلب معلومات من الجهات الحكومية.</p>",
+    "voorwaarden.art8": "<h3>المادة 8 — الأتعاب</h3><p>تُحسب الأتعاب على أساس الساعات المنفقة مضروبة في السعر الساعي المتفق عليه. تُضاف ضريبة القيمة المضافة.</p>",
+    "voorwaarden.art9": "<h3>المادة 9 — الدفع</h3><p>يجب الدفع خلال 14 يوماً من تاريخ الفاتورة. في حالة التأخر، تترتب فوائد قانونية وتكاليف تحصيل بنسبة 15%.</p>",
+    "voorwaarden.art10": "<h3>المادة 10 — مكافحة غسل الأموال</h3><p>يُلزم Tsang Law Firm بالتحقق من هوية الموكل بموجب قانون مكافحة غسل الأموال.</p>",
+    "voorwaarden.art11": "<h3>المادة 11 — الخصوصية</h3><p>يعالج Tsang Law Firm البيانات الشخصية وفقاً للائحة العامة لحماية البيانات (GDPR).</p>",
+    "voorwaarden.art12": "<h3>المادة 12 — الأرشفة</h3><p>تُزال الملفات من الأرشيف وتُتلف بعد 5 سنوات من إغلاق القضية.</p>",
+    "voorwaarden.art13": "<h3>المادة 13 — أموال الأطراف الثالثة</h3><p>لا يمتلك Tsang Law Firm حساباً لأموال الأطراف الثالثة.</p>",
+    "voorwaarden.art14": "<h3>المادة 14 — اختيار القانون والمحكمة</h3><p>ينطبق القانون الهولندي حصرياً. تُقدَّم النزاعات إلى المحكمة المختصة في لاهاي.</p>",
+    "voorwaarden.art15": "<h3>المادة 15 — سجل مجالات القانون</h3><p>سجلت T.Y. Tsang المجالات التالية في سجل نقابة المحامين الهولندية: قانون الهجرة · قانون الأشخاص والأسرة · قانون الإرث · الممارسة العامة.</p>",
+    "voorwaarden.art16": "<h3>المادة 16 — ترتيب الإنابة</h3><p>في حالة الإجازة أو الغياب، يتم ترتيب إنابة مع mr. J.M. Szczerbak من Szczerbak Advocatuur، Parkstraat 83، 2514 JG لاهاي.</p>",
+    "disclaimer.tag": "قانوني",
+    "disclaimer.title": "إخلاء المسؤولية &<br><em>إجراء الشكاوى</em>",
+    "disclaimer.content": "<h2>إخلاء المسؤولية</h2><p>يبذل Tsang Law Firm أقصى عناية لضمان موثوقية ودقة المعلومات على هذا الموقع. لكن لا يمكن استبعاد الأخطاء والنقص. Tsang Law Firm غير مسؤول عن أي ضرر ناتج عن معلومات غير صحيحة أو غير كاملة.</p><p>المعلومات على هذا الموقع مخصصة كمعلومات عامة فقط ولا تُعتبر مشورة قانونية.</p><h3>الملكية الفكرية</h3><p>جميع حقوق الملكية الفكرية لمحتوى هذا الموقع ملك لـ Tsang Law Firm.</p><h2>إجراء الشكاوى المكتبية</h2><p>يولي Tsang Law Firm أهمية كبيرة لرضا عملائه. إذا لم تكونوا راضين عن خدماتنا، يمكنكم تقديم شكوى.</p><h3>المادة 1 — التعريفات</h3><p>في هذا الإجراء: <strong style=\"color:var(--accent)\">شكوى</strong>: أي تعبير كتابي عن عدم الرضا؛ <strong style=\"color:var(--accent)\">مُشتكٍ</strong>: الموكل أو ممثله؛ <strong style=\"color:var(--accent)\">مسؤول الشكاوى</strong>: mr. T.Y. Tsang.</p><h3>المادة 2 — الانطباق</h3><p>ينطبق هذا الإجراء على كل اتفاقية بين Tsang Law Firm والموكل.</p><h3>المادة 3 — الهدف</h3><p>يهدف هذا الإجراء إلى وضع آلية لمعالجة شكاوى العملاء بشكل بنّاء خلال فترة معقولة.</p><h3>المادة 4 — التقديم والمعالجة</h3><p>يجب تقديم الشكاوى كتابياً إلى mr. T.Y. Tsang عبر <a href=\"mailto:info@tsanglawfirm.nl\" style=\"color:var(--gold)\">info@tsanglawfirm.nl</a>. تُعالج الشكوى خلال 4 أسابيع.</p><h3>لجنة المنازعات</h3><p>Postbus 90600, 2509 LP لاهاي · <a href=\"https://www.degeschillencommissieadvocatuur.nl\" style=\"color:var(--gold)\" target=\"_blank\" rel=\"noopener noreferrer\">www.degeschillencommissieadvocatuur.nl</a></p>"
   },
   zh: {
     "nav.team": "团队",
@@ -1970,7 +2074,33 @@ const TRANSLATIONS = {
       { title: "公司法", items: ["起草合同","公司注册","股东纠纷","董事责任"] },
       { title: "人身伤害", items: ["确定责任","索取赔偿","与保险公司谈判"] },
       { title: "刑事法", items: ["违法行为","犯罪","辩护与建议"] }
-    ]
+    ],
+    "team.angel.uni": "格罗宁根大学 — 法学",
+    "team.tansu.uni": "阿姆斯特丹大学 — 法学",
+    "team.expertise": "专业领域",
+    "voorwaarden.tag": "法律文件",
+    "voorwaarden.title": "一般<br><em>条款与条件</em>",
+    "voorwaarden.sub": "Tsang Law Firm的一般条款与条件适用于本所的所有委托和服务。",
+    "voorwaarden.intro": "Tsang Law Firm是由mr. T.Y. Tsang执业的独立律师事务所。本条款适用于Tsang Law Firm当前和未来的所有委托、活动和服务。",
+    "voorwaarden.art1": "<h3>第1条 — 名称</h3><p>Tsang Law Firm是由mr. T.Y. Tsang执业的独立律师事务所。</p>",
+    "voorwaarden.art2": "<h3>第2条 — 适用范围</h3><p>本条款适用于Tsang Law Firm当前和未来的所有委托、活动和服务。</p>",
+    "voorwaarden.art3": "<h3>第3条 — 委托</h3><p>所有委托均被视为专属交付Tsang Law Firm并由其代表委托人接受。委托仅代表委托人执行，不代表第三方。</p>",
+    "voorwaarden.art4": "<h3>第4条 — 委托第三方</h3><p>Tsang Law Firm有权委托第三方执行工作。Tsang Law Firm不对受委托第三方的错误承担责任。</p>",
+    "voorwaarden.art5": "<h3>第5条 — 责任</h3><p>Tsang Law Firm按律师条例投保。责任限于职业责任保险赔付金额。如未获赔付，责任限于发票金额，最高15,000欧元。</p>",
+    "voorwaarden.art6": "<h3>第6条 — 投诉与争议解决</h3><p>律师行业投诉与争议解决制度适用于我们的服务。投诉联系人为mr. T.Y. Tsang。</p>",
+    "voorwaarden.art7": "<h3>第7条 — 政府资助法律援助</h3><p>委托人知悉法律援助委员会可在申请中向政府机构查询信息。</p>",
+    "voorwaarden.art8": "<h3>第8条 — 费用</h3><p>费用按所用小时数乘以约定时薪计算。特别费用另行收取。所有金额需加收增值税。</p>",
+    "voorwaarden.art9": "<h3>第9条 — 付款</h3><p>付款须在发票日期后14天内完成。逾期付款将产生法定利息及15%的催收费用（最低100欧元）。</p>",
+    "voorwaarden.art10": "<h3>第10条 — 反洗钱法</h3><p>根据反洗钱法，Tsang Law Firm有义务验证委托人身份。身份证件副本将存入档案。</p>",
+    "voorwaarden.art11": "<h3>第11条 — 隐私</h3><p>Tsang Law Firm依据《通用数据保护条例》(GDPR)处理个人数据。</p>",
+    "voorwaarden.art12": "<h3>第12条 — 归档</h3><p>案件结案5年后，档案将从存档中移除并销毁。</p>",
+    "voorwaarden.art13": "<h3>第13条 — 第三方资金</h3><p>Tsang Law Firm没有第三方资金账户。</p>",
+    "voorwaarden.art14": "<h3>第14条 — 法律和管辖选择</h3><p>荷兰法律专属适用。争议提交海牙主管法院。</p>",
+    "voorwaarden.art15": "<h3>第15条 — 执业领域登记</h3><p>T.Y. Tsang在荷兰律师协会登记了以下执业领域：移民法·人身及家庭法·继承法·一般法律实务。</p>",
+    "voorwaarden.art16": "<h3>第16条 — 代理安排</h3><p>假期或缺席时，由mr. J.M. Szczerbak (Szczerbak Advocatuur, Parkstraat 83, 2514 JG 海牙) 代理。</p>",
+    "disclaimer.tag": "法律文件",
+    "disclaimer.title": "免责声明 &<br><em>投诉程序</em>",
+    "disclaimer.content": "<h2>免责声明</h2><p>Tsang Law Firm尽最大努力确保本网站信息的可靠性和准确性。但不能排除错误和遗漏。Tsang Law Firm不对因网站信息不正确或不完整而造成的损害承担责任。</p><p>本网站信息仅作为一般性信息，不构成法律建议。如需定制法律建议，请联系Tsang Law Firm。</p><h3>知识产权</h3><p>本网站内容的所有知识产权归Tsang Law Firm所有。</p><h2>办公室投诉程序</h2><p>Tsang Law Firm非常重视客户满意度。如果您对我们的服务不满意，可以提出投诉。</p><h3>第1条 — 定义</h3><p>在本投诉程序中：<strong style=\"color:var(--accent)\">投诉</strong>：客户或其代表的任何书面不满表达；<strong style=\"color:var(--accent)\">投诉人</strong>：提出投诉的客户或其代表；<strong style=\"color:var(--accent)\">投诉负责人</strong>：mr. T.Y. Tsang。</p><h3>第2条 — 适用范围</h3><p>本程序适用于Tsang Law Firm与客户之间的每份委托协议。</p><h3>第3条 — 目的</h3><p>本程序旨在建立一套在合理时间内以建设性方式处理客户投诉的流程。</p><h3>第4条 — 提交与处理</h3><p>投诉须书面提交给mr. T.Y. Tsang，邮箱：<a href=\"mailto:info@tsanglawfirm.nl\" style=\"color:var(--gold)\">info@tsanglawfirm.nl</a>。投诉将在4周内处理。</p><h3>争议委员会</h3><p>Postbus 90600, 2509 LP 海牙 · <a href=\"https://www.degeschillencommissieadvocatuur.nl\" style=\"color:var(--gold)\" target=\"_blank\" rel=\"noopener noreferrer\">www.degeschillencommissieadvocatuur.nl</a></p>"
   }
 };
 
@@ -1979,6 +2109,7 @@ let currentLang = 'nl';
 function setLanguage(lang) {
   if (!TRANSLATIONS[lang]) return;
   currentLang = lang;
+  localStorage.setItem('tsangLang', lang);
   const T = TRANSLATIONS[lang];
 
   // 1. Update language button active states
@@ -2162,6 +2293,8 @@ document.getElementById('mobileLangSwitcher').addEventListener('click', e => {
 });
 
 // ====== INIT ======
+const savedLang = localStorage.getItem('tsangLang');
+if (savedLang && TRANSLATIONS[savedLang]) setLanguage(savedLang);
 showPage('home');
 setTimeout(()=>{const bg=document.querySelector('.hero-bg');if(bg)bg.classList.add('loaded');},100);
 applyStagger();
