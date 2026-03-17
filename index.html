@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self';">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Tsang Law Firm – gespecialiseerde juridische dienstverlening in Amsterdam. Expertise in arbeidsrecht, familierecht, strafrecht en meer. Meertalig: Nederlands, Engels, Turks, Arabisch en Chinees.">
+<meta name="description" content="Tsang Law Firm – gespecialiseerde juridische dienstverlening in Den Haag. Expertise in vreemdelingenrecht, familierecht, arbeidsrecht en meer. Meertalig: Nederlands, Engels, Turks, Arabisch en Chinees.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Tsang Law Firm — Uw Partner in Rechtvaardigheid">
-<meta property="og:description" content="Gespecialiseerde juridische dienstverlening in Amsterdam. Meertalig team met expertise in arbeidsrecht, familierecht en strafrecht.">
+<meta property="og:description" content="Gespecialiseerde juridische dienstverlening in Den Haag. Meertalig team met expertise in vreemdelingenrecht, familierecht en arbeidsrecht.">
 <meta property="og:locale" content="nl_NL">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Tsang Law Firm — Uw Partner in Rechtvaardigheid">
@@ -240,7 +240,7 @@ section{padding:120px 60px}
 .process-extra-card p{font-size:1rem;line-height:1.9;color:var(--ink-soft)}
 
 /* CONTACT PAGE */
-.contact-section{display:grid;grid-template-columns:1fr;padding:0;max-width:800px;margin:0 auto}
+.contact-section{display:grid;grid-template-columns:1fr 1fr;padding:0}
 .contact-left{padding:100px 80px 100px 60px}
 .contact-left .section-title{margin-top:24px;margin-bottom:36px}
 .contact-body{font-size:1rem;line-height:1.95;color:var(--ink-soft);margin-bottom:52px}
@@ -334,6 +334,7 @@ footer{background:var(--ink);border-top:1px solid rgba(247,245,242,.08);padding:
 .footer-langs{display:flex;gap:8px}
 .footer-lang-btn{font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(247,245,242,.65);padding:5px 12px;border:1px solid rgba(247,245,242,.25);border-radius:100px;cursor:none;transition:color .3s,border-color .3s;background:none}
 .footer-lang-btn:hover{color:var(--accent-light);border-color:rgba(184,154,106,.4)}
+.footer-lang-btn.active{color:var(--accent-light);border-color:rgba(184,154,106,.6)}
 /* LANGUAGE SWITCHER */
 .lang-switcher{display:flex;align-items:center;gap:2px;margin-right:8px}
 .lang-btn{font-family:'Outfit',sans-serif;font-size:.78rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);padding:4px 10px;border:1px solid transparent;border-radius:100px;cursor:none;background:none;transition:color .25s,border-color .25s,background .25s}
@@ -563,7 +564,7 @@ footer{background:var(--ink);border-top:1px solid rgba(247,245,242,.08);padding:
   </div>
 
   <!-- PRACTICE PREVIEW -->
-  <section class="practice">
+  <section class="practices">
     <div class="practice-header">
       <div>
         <div class="section-tag reveal"><div class="section-tag-line"></div><span>Specialisaties</span></div>
@@ -582,7 +583,7 @@ footer{background:var(--ink);border-top:1px solid rgba(247,245,242,.08);padding:
   </section>
 
   <!-- TEAM PREVIEW -->
-  <section style="padding:0;background:var(--dark-mid)">
+  <section class="team-preview" style="padding:0;background:var(--dark-mid)">
     <div style="padding:80px 60px 0">
       <div class="section-tag reveal"><div class="section-tag-line"></div><span>Ons Team</span></div>
       <h2 class="section-title reveal" style="transition-delay:.1s">Ontmoet de <em>Advocaten</em></h2>
@@ -611,7 +612,7 @@ footer{background:var(--ink);border-top:1px solid rgba(247,245,242,.08);padding:
   </section>
 
   <!-- CONTACT CTA -->
-  <section style="background:var(--bg);text-align:center;padding:100px 60px">
+  <section class="cta-section" style="background:var(--bg);text-align:center;padding:100px 60px">
     <div class="section-tag reveal" style="justify-content:center"><div class="section-tag-line"></div><span>Contact</span><div class="section-tag-line"></div></div>
     <h2 class="section-title reveal" style="transition-delay:.1s;margin-top:20px;margin-bottom:24px">Heeft u een <em>juridische vraag?</em></h2>
     <p class="reveal" style="transition-delay:.2s;font-size:1rem;color:var(--mid);max-width:480px;margin:0 auto 40px;line-height:1.8">Neem vrijblijvend contact op. Wij bespreken uw situatie graag in een persoonlijk gesprek.</p>
@@ -905,7 +906,7 @@ footer{background:var(--ink);border-top:1px solid rgba(247,245,242,.08);padding:
       <p class="contact-body reveal" style="transition-delay:.2s">Wij staan klaar om uw situatie te bespreken en de beste juridische oplossing voor u te vinden. Neem contact op via telefoon, e-mail of WhatsApp.</p>
       <div class="contact-details">
         <div class="contact-item reveal" style="transition-delay:.3s"><div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.05 2.2 2 2 0 012 .04h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div><div><div class="contact-label">Telefoon</div><a href="tel:+31703311480" class="contact-value">+31 70 331 1480</a></div></div>
-        <div class="contact-item reveal" style="transition-delay:.35s"><div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><div class="contact-label">WhatsApp</div><a href="https://wa.me/31629332677" class="contact-value">+31 6 2933 2677</a></div></div>
+        <div class="contact-item reveal" style="transition-delay:.35s"><div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></div><div><div class="contact-label">WhatsApp</div><a href="https://wa.me/31629332677" class="contact-value">+31 6 2933 2677</a></div></div>
         <div class="contact-item reveal" style="transition-delay:.4s"><div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div><div class="contact-label">E-mail</div><a href="mailto:info@tsanglawfirm.nl" class="contact-value">info@tsanglawfirm.nl</a></div></div>
         <div class="contact-item reveal" style="transition-delay:.45s"><div class="contact-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><div><div class="contact-label">Adres</div><span class="contact-value">Prinsegracht 38, 2512 GA Den Haag</span></div></div>
         <div class="contact-item reveal" style="transition-delay:.5s"><div class="contact-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg></div><div><div class="contact-label">Openingstijden</div><span class="contact-value">Maandag – Vrijdag: 9:00 – 17:00</span></div></div>
@@ -918,10 +919,58 @@ footer{background:var(--ink);border-top:1px solid rgba(247,245,242,.08);padding:
               <div style="font-family:'Playfair Display',serif;font-size:1rem;color:var(--ink);margin-bottom:4px;">Prinsegracht 38</div>
               <div style="font-size:.84rem;color:var(--ink-soft);">2512 GA Den Haag</div>
             </div>
-            <div style="font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);padding:6px 18px;border-radius:100px;">Bekijk op kaart →</div>
+            <div id="mapLinkLabel" style="font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);padding:6px 18px;border-radius:100px;" data-i18n="map.view">Bekijk op kaart →</div>
           </div>
         </a>
       </div>
+    </div>
+    <div class="contact-right">
+      <h3>Stuur een bericht</h3>
+      <form id="contactForm" onsubmit="submitContactForm(event)" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Voornaam</label>
+            <input type="text" placeholder="Jan" autocomplete="given-name">
+          </div>
+          <div class="form-group">
+            <label>Achternaam</label>
+            <input type="text" placeholder="de Vries" autocomplete="family-name">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>E-mailadres</label>
+          <input type="email" placeholder="jan@email.nl" autocomplete="email">
+        </div>
+        <div class="form-group">
+          <label>Telefoonnummer</label>
+          <input type="tel" placeholder="+31 6 ..." autocomplete="tel">
+        </div>
+        <div class="form-group">
+          <label>Rechtsgebied</label>
+          <select>
+            <option value="">Selecteer een rechtsgebied</option>
+            <option value="vreemdelingenrecht">Vreemdelingenrecht</option>
+            <option value="familierecht">Personen- en familierecht</option>
+            <option value="arbeidsrecht">Arbeidsrecht</option>
+            <option value="ondernemingsrecht">Ondernemingsrecht</option>
+            <option value="letselschade">Letselschade</option>
+            <option value="strafrecht">Strafrecht</option>
+            <option value="anders">Anders</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Bericht</label>
+          <textarea rows="4" placeholder="Beschrijf kort uw situatie..."></textarea>
+        </div>
+        <div class="form-group" style="margin-bottom:28px">
+          <label style="display:flex;align-items:flex-start;gap:10px;text-transform:none;letter-spacing:0;font-size:.9rem;font-weight:300;color:var(--ink-soft);cursor:pointer">
+            <input type="checkbox" id="consentCheck" required style="width:auto;margin-top:4px;flex-shrink:0;accent-color:var(--accent);">
+            <span><span data-i18n="form.consent">Ik ga akkoord met de </span><a href="#" data-page="voorwaarden" style="color:var(--accent);" data-i18n="form.consent.link">algemene voorwaarden</a><span data-i18n="form.consent.end"> en het privacybeleid.</span></span>
+          </label>
+        </div>
+        <div id="formSuccess" style="display:none;padding:14px 20px;background:rgba(184,154,106,.1);border:1px solid rgba(184,154,106,.3);border-radius:4px;color:var(--ink);font-size:.9rem;margin-bottom:16px;line-height:1.6;"></div>
+        <button type="submit" class="btn-submit">Verstuur bericht →</button>
+      </form>
     </div>
   </div>
 </div>
@@ -1024,7 +1073,7 @@ footer{background:var(--ink);border-top:1px solid rgba(247,245,242,.08);padding:
     </div>
   </div>
   <div class="footer-bottom">
-    <span class="footer-copy">© 2025 Tsang Law Firm · <a href="#" data-page="disclaimer">Disclaimer</a> · <a href="#" data-page="voorwaarden">Algemene Voorwaarden</a></span>
+    <span class="footer-copy">© 2026 Tsang Law Firm · <a href="#" data-page="disclaimer">Disclaimer</a> · <a href="#" data-page="voorwaarden">Algemene Voorwaarden</a></span>
     <div class="footer-langs">
       <button class="footer-lang-btn" data-lang="nl" onclick="setLanguage('nl')" aria-label="Taal: Nederlands">NL</button>
       <button class="footer-lang-btn" data-lang="en" onclick="setLanguage('en')" aria-label="Language: English">EN</button>
@@ -1179,7 +1228,8 @@ const TRANSLATIONS = {
     "form.consent": "Ik ga akkoord met de ",
     "form.consent.link": "algemene voorwaarden",
     "form.consent.end": " en het privacybeleid.",
-    "form.submit": "Verstuur bericht →"
+    "form.submit": "Verstuur bericht →",
+    "map.view": "Bekijk op kaart →"
   },
   en: {
     "nav.team": "Team",
@@ -1255,7 +1305,8 @@ const TRANSLATIONS = {
     "form.consent": "I agree to the ",
     "form.consent.link": "terms and conditions",
     "form.consent.end": " and privacy policy.",
-    "form.submit": "Send message →"
+    "form.submit": "Send message →",
+    "map.view": "View on map →"
   },
   tr: {
     "nav.team": "Ekip",
@@ -1331,7 +1382,8 @@ const TRANSLATIONS = {
     "form.consent": "Kabul ediyorum: ",
     "form.consent.link": "genel şartlar",
     "form.consent.end": " ve gizlilik politikası.",
-    "form.submit": "Mesaj gönder →"
+    "form.submit": "Mesaj gönder →",
+    "map.view": "Haritada görüntüle →"
   },
   ar: {
     "nav.team": "الفريق",
@@ -1407,7 +1459,8 @@ const TRANSLATIONS = {
     "form.consent": "أوافق على ",
     "form.consent.link": "الشروط والأحكام",
     "form.consent.end": " وسياسة الخصوصية.",
-    "form.submit": "إرسال الرسالة →"
+    "form.submit": "إرسال الرسالة →",
+    "map.view": "عرض على الخريطة →"
   },
   zh: {
     "nav.team": "团队",
@@ -1483,7 +1536,8 @@ const TRANSLATIONS = {
     "form.consent": "我同意 ",
     "form.consent.link": "条款和条件",
     "form.consent.end": " 及隐私政策。",
-    "form.submit": "发送消息 →"
+    "form.submit": "发送消息 →",
+    "map.view": "在地图上查看 →"
   }
 };
 
@@ -1504,8 +1558,8 @@ function setLanguage(lang) {
   currentLang = lang;
   const T = TRANSLATIONS[lang];
 
-  // Update lang-btn active state (desktop + mobile)
-  document.querySelectorAll('.lang-btn, .mobile-lang-btn').forEach(btn => {
+  // Update lang-btn active state (desktop, mobile + footer)
+  document.querySelectorAll('.lang-btn, .mobile-lang-btn, .footer-lang-btn').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.lang === lang);
   });
 
@@ -1707,6 +1761,28 @@ function setLanguage(lang) {
   }
   const submitBtn = document.querySelector('.btn-submit');
   if (submitBtn) submitBtn.textContent = T["form.submit"];
+}
+
+// ====== CONTACT FORM SUBMIT ======
+const formSuccessMessages = {
+  nl: 'Bedankt voor uw bericht! Wij nemen zo snel mogelijk contact met u op.',
+  en: 'Thank you for your message! We will get back to you as soon as possible.',
+  tr: 'Mesajınız için teşekkürler! En kısa sürede sizinle iletişime geçeceğiz.',
+  ar: 'شكراً لرسالتكم! سنتواصل معكم في أقرب وقت ممكن.',
+  zh: '感谢您的留言！我们将尽快与您联系。'
+};
+function submitContactForm(e) {
+  e.preventDefault();
+  const form = document.getElementById('contactForm');
+  const consent = document.getElementById('consentCheck');
+  if (!consent || !consent.checked) return;
+  const successEl = document.getElementById('formSuccess');
+  if (successEl) {
+    successEl.textContent = formSuccessMessages[currentLang] || formSuccessMessages.nl;
+    successEl.style.display = 'block';
+  }
+  form.reset();
+  setTimeout(() => { if (successEl) successEl.style.display = 'none'; }, 6000);
 }
 
 // ====== LANG BTN CLICKS ======
