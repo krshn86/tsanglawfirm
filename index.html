@@ -99,7 +99,7 @@ nav.scrolled .nav-brand-img{height:64px}
 .hero-eyebrow{display:flex;align-items:center;gap:16px;margin-bottom:40px;opacity:0;transform:translateY(20px);animation:fadeUp .8s ease .3s forwards}
 .hero-eyebrow-line{width:32px;height:1px;background:var(--accent)}
 .hero-eyebrow span{font-size:.75rem;letter-spacing:.28em;text-transform:uppercase;color:var(--accent-light);font-weight:400}
-.hero-title{font-family:'Playfair Display',serif;font-size:clamp(3.8rem,9vw,7.5rem);font-weight:400;line-height:.92;letter-spacing:-.02em;margin-bottom:40px;color:#F7F5F2;opacity:0;transform:translateY(30px);animation:fadeUp .9s ease .5s forwards}
+.hero-title{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,5vw,3.8rem);font-weight:400;line-height:1.08;letter-spacing:-.02em;margin-bottom:40px;color:#F7F5F2;opacity:0;transform:translateY(30px);animation:fadeUp .9s ease .5s forwards}
 .hero-title em{font-style:italic;color:var(--accent-pale)}
 .hero-sub{font-size:1.15rem;line-height:1.9;color:rgba(247,245,242,.55);max-width:480px;margin-bottom:56px;font-weight:300;opacity:0;transform:translateY(20px);animation:fadeUp .8s ease .7s forwards}
 .hero-actions{display:flex;gap:24px;align-items:center;flex-wrap:wrap;opacity:0;transform:translateY(20px);animation:fadeUp .8s ease .9s forwards}
@@ -188,7 +188,7 @@ section{padding:120px 60px}
 .team-card:hover .team-card-tags{opacity:1;transform:translateY(0)}
 .team-card .lang-tag{font-size:.72rem;letter-spacing:.1em;padding:5px 13px;border:1px solid rgba(247,245,242,.4);color:#F7F5F2;background:rgba(247,245,242,.1);border-radius:100px}
 .contact-cta{background:var(--ink);padding:120px 60px;text-align:center}
-.contact-cta-title{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,6vw,5rem);font-weight:400;color:#F7F5F2;margin-bottom:24px;line-height:1.05}
+.contact-cta-title{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,5vw,3.8rem);font-weight:400;color:#F7F5F2;margin-bottom:24px;line-height:1.08}
 .contact-cta-title em{font-style:italic;color:var(--accent-pale)}
 .contact-cta-sub{font-size:1.15rem;color:rgba(247,245,242,.5);margin-bottom:48px;font-weight:300}
 .contact-cta-actions{display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
@@ -335,7 +335,7 @@ footer{background:var(--ink);color:rgba(247,245,242,.6);padding:80px 60px 40px}
   .nav-links{display:none}.hamburger{display:flex}
   .hero{padding:110px 20px 56px;min-height:100svh}
   .hero-right{display:none}.hero-content{flex-direction:column}
-  .hero-title{font-size:clamp(2.8rem,13vw,5rem)}
+  .hero-title{font-size:clamp(2rem,8vw,3rem)}
   .hero-sub{font-size:1rem;max-width:100%}
   .stats-bar{grid-template-columns:1fr 1fr;padding:28px 20px}
   .stat-item{padding:16px 12px}
@@ -384,7 +384,7 @@ footer{background:var(--ink);color:rgba(247,245,242,.6);padding:80px 60px 40px}
 @media(max-width:480px){
   .stats-bar{grid-template-columns:1fr 1fr}
   .stat-item:nth-child(3){border-right:none}
-  .hero-title{font-size:clamp(2.4rem,14vw,3.8rem)}
+  .hero-title{font-size:clamp(1.8rem,9vw,2.8rem)}
   .section-title{font-size:clamp(1.8rem,9vw,2.8rem)}
   .team-grid{grid-template-columns:1fr}
   .rechtsgebieden-grid{grid-template-columns:1fr}
@@ -426,9 +426,35 @@ body.rtl select{text-align:right}
   .wa-btn svg{width:26px;height:26px}
   .wa-label{display:none}
 }
+/* ===== COOKIE BANNER ===== */
+.cookie-banner{position:fixed;bottom:0;left:0;right:0;z-index:9995;background:var(--ink);color:rgba(247,245,242,.85);padding:20px 60px;display:flex;align-items:center;justify-content:space-between;gap:24px;border-top:1px solid rgba(247,245,242,.1);transform:translateY(0);transition:transform .4s cubic-bezier(.16,1,.3,1)}
+.cookie-banner.hidden{transform:translateY(110%)}
+.cookie-banner-text{font-size:.95rem;line-height:1.65;flex:1}
+.cookie-banner-text a{color:var(--accent-light);text-decoration:underline;text-decoration-color:rgba(201,169,110,.4)}
+.cookie-banner-text a:hover{color:var(--accent-pale)}
+.cookie-banner-actions{display:flex;gap:12px;flex-shrink:0}
+.cookie-btn-accept{background:var(--accent);color:#F7F5F2;border:none;padding:10px 22px;font-family:'Outfit',sans-serif;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;font-weight:500;cursor:pointer;transition:background .2s;border-radius:100px}
+.cookie-btn-accept:hover{background:var(--accent-light)}
+.cookie-btn-decline{background:transparent;color:rgba(247,245,242,.5);border:1px solid rgba(247,245,242,.2);padding:10px 22px;font-family:'Outfit',sans-serif;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;font-weight:400;cursor:pointer;transition:color .2s,border-color .2s;border-radius:100px}
+.cookie-btn-decline:hover{color:rgba(247,245,242,.8);border-color:rgba(247,245,242,.4)}
+@media(max-width:768px){
+  .cookie-banner{flex-direction:column;align-items:flex-start;padding:20px 20px 28px;gap:16px}
+  .cookie-banner-actions{width:100%}
+  .cookie-btn-accept,.cookie-btn-decline{flex:1;text-align:center}
+}
 </style>
 </head>
 <body>
+
+<!-- GDPR Cookie Consent Banner -->
+<div class="cookie-banner hidden" id="cookieBanner">
+  <p class="cookie-banner-text">Wij gebruiken cookies en vergelijkbare technologieën voor het verwerken van contactformuliergegevens en het laden van externe inhoud (Google Maps, Google Fonts). Uw gegevens worden verwerkt conform de <a href="#" data-page="disclaimer">AVG / privacybeleid</a>. Door op "Accepteren" te klikken gaat u akkoord met het gebruik van cookies. U kunt uw keuze op elk moment wijzigen.</p>
+  <div class="cookie-banner-actions">
+    <button class="cookie-btn-decline" id="cookieDecline">Alleen noodzakelijk</button>
+    <button class="cookie-btn-accept" id="cookieAccept">Accepteren</button>
+  </div>
+</div>
+
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursorRing"></div>
 
@@ -519,7 +545,7 @@ body.rtl select{text-align:right}
       <p class="about-body reveal" style="transition-delay:.2s" data-i18n="about.body">Wij geloven in een persoonlijke benadering waarbij uw belangen altijd centraal staan.</p>
       <div class="about-values">
         <div class="about-value"><div class="about-value-num">01</div><div class="about-value-text"><strong data-i18n="about.v1.title">Persoonlijk &amp; Oplossingsgericht</strong><p data-i18n="about.v1.body">Wij luisteren naar uw situatie en zoeken samen de beste juridische oplossing.</p></div></div>
-        <div class="about-value"><div class="about-value-num">02</div><div class="about-value-text"><strong data-i18n="about.v2.title">Internationale Expertise</strong><p data-i18n="about.v2.body">Ervaring met buitenlandse ondernemers en particulieren bij procedures in Nederland.</p></div></div>
+        <div class="about-value"><div class="about-value-num">02</div><div class="about-value-text"><strong data-i18n="about.v2.title">Internationale Expertise</strong><p data-i18n="about.v2.body">Ruime ervaring met internationale cliënten die te maken hebben met Nederlandse en internationale wet- en regelgeving.</p></div></div>
         <div class="about-value"><div class="about-value-num">03</div><div class="about-value-text"><strong data-i18n="about.v3.title">Toegankelijk &amp; Betaalbaar</strong><p data-i18n="about.v3.body">Mogelijkheden voor rechtsbijstandsverzekering en gefinancierde rechtsbijstand.</p></div></div>
         <div class="about-value"><div class="about-value-num">04</div><div class="about-value-text"><strong data-i18n="about.v4.title">Meertalige Dienstverlening</strong><p data-i18n="about.v4.body">Wij adviseren in Nederlands, Engels, Chinees, Turks en Arabisch.</p></div></div>
       </div>
@@ -542,12 +568,12 @@ body.rtl select{text-align:right}
       <a href="#" class="btn-primary dark" data-page="rechtsgebieden" data-i18n="practice.all">Alle gebieden</a>
     </div>
     <div class="practice-grid">
-      <div class="practice-card"><span class="practice-num">01</span><div class="practice-name" data-i18n="pa1.name">Vreemdelingenrecht</div><ul class="practice-items"><li data-i18n="pa1.li1">Verblijfsvergunningen</li><li data-i18n="pa1.li2">Naturalisatie</li><li data-i18n="pa1.li3">Gezinshereniging</li><li data-i18n="pa1.li4">Asiel &amp; Bescherming</li></ul><div class="practice-card-arrow"><svg viewBox="0 0 10 10"><polyline points="0,5 10,5"/><polyline points="6,1 10,5 6,9"/></svg></div></div>
+      <div class="practice-card"><span class="practice-num">01</span><div class="practice-name" data-i18n="pa1.name">Vreemdelingenrecht</div><ul class="practice-items"><li data-i18n="pa1.li1">Verblijfsvergunningen</li><li data-i18n="pa1.li2">Naturalisatie</li><li data-i18n="pa1.li3">Gezinshereniging</li><li data-i18n="pa1.li4">Kennismigranten</li></ul><div class="practice-card-arrow"><svg viewBox="0 0 10 10"><polyline points="0,5 10,5"/><polyline points="6,1 10,5 6,9"/></svg></div></div>
       <div class="practice-card"><span class="practice-num">02</span><div class="practice-name" data-i18n="pa2.name">Familierecht</div><ul class="practice-items"><li data-i18n="pa2.li1">Echtscheiding</li><li data-i18n="pa2.li2">Alimentatie</li><li data-i18n="pa2.li3">Ouderlijk gezag</li><li data-i18n="pa2.li4">Omgangsregeling</li></ul><div class="practice-card-arrow"><svg viewBox="0 0 10 10"><polyline points="0,5 10,5"/><polyline points="6,1 10,5 6,9"/></svg></div></div>
       <div class="practice-card"><span class="practice-num">03</span><div class="practice-name" data-i18n="pa3.name">Arbeidsrecht</div><ul class="practice-items"><li data-i18n="pa3.li1">Ontslagprocedures</li><li data-i18n="pa3.li2">Arbeidsovereenkomsten</li><li data-i18n="pa3.li3">Loonvorderingen</li><li data-i18n="pa3.li4">Arbeidsconflicten</li></ul><div class="practice-card-arrow"><svg viewBox="0 0 10 10"><polyline points="0,5 10,5"/><polyline points="6,1 10,5 6,9"/></svg></div></div>
       <div class="practice-card"><span class="practice-num">04</span><div class="practice-name" data-i18n="pa4.name">Ondernemingsrecht</div><ul class="practice-items"><li data-i18n="pa4.li1">Contracten</li><li data-i18n="pa4.li2">Oprichting onderneming</li><li data-i18n="pa4.li3">Aandeelhoudersgeschillen</li><li data-i18n="pa4.li4">Fusies &amp; Overnames</li></ul><div class="practice-card-arrow"><svg viewBox="0 0 10 10"><polyline points="0,5 10,5"/><polyline points="6,1 10,5 6,9"/></svg></div></div>
       <div class="practice-card"><span class="practice-num">05</span><div class="practice-name" data-i18n="pa5.name">Letselschade</div><ul class="practice-items"><li data-i18n="pa5.li1">Aansprakelijkheid</li><li data-i18n="pa5.li2">Schadevergoeding</li><li data-i18n="pa5.li3">Smartengeld</li><li data-i18n="pa5.li4">Verzekeraarsonderhandelingen</li></ul><div class="practice-card-arrow"><svg viewBox="0 0 10 10"><polyline points="0,5 10,5"/><polyline points="6,1 10,5 6,9"/></svg></div></div>
-      <div class="practice-card"><span class="practice-num">06</span><div class="practice-name" data-i18n="pa6.name">Strafrecht</div><ul class="practice-items"><li data-i18n="pa6.li1">Verdediging</li><li data-i18n="pa6.li2">Bijstand bij verhoor</li><li data-i18n="pa6.li3">Hoger beroep</li><li data-i18n="pa6.li4">Ontneming voordeel</li></ul><div class="practice-card-arrow"><svg viewBox="0 0 10 10"><polyline points="0,5 10,5"/><polyline points="6,1 10,5 6,9"/></svg></div></div>
+      <div class="practice-card"><span class="practice-num">06</span><div class="practice-name" data-i18n="pa6.name">Strafrecht</div><ul class="practice-items"><li data-i18n="pa6.li1">Verdediging</li><li data-i18n="pa6.li2">Bijstand bij verhoor</li><li data-i18n="pa6.li3">Strafbeschikkingen</li><li data-i18n="pa6.li4">Ontneming voordeel</li></ul><div class="practice-card-arrow"><svg viewBox="0 0 10 10"><polyline points="0,5 10,5"/><polyline points="6,1 10,5 6,9"/></svg></div></div>
     </div>
   </section>
 
@@ -560,7 +586,7 @@ body.rtl select{text-align:right}
         <div class="team-card-content">
           <div class="team-card-role" data-i18n="tsang.role">Advocaat - Kantoorhouder</div>
           <div class="team-card-name">Mr. T.Y. Tsang</div>
-          <div class="team-card-tags"><span class="lang-tag" data-i18n="pa1.name">Vreemdelingenrecht</span><span class="lang-tag" data-i18n="pa2.name">Familierecht</span><span class="lang-tag" data-i18n="pa3.name">Arbeidsrecht</span></div>
+          <div class="team-card-tags"><span class="lang-tag" data-i18n="pa1.name">Vreemdelingenrecht</span><span class="lang-tag" data-i18n="pa2.name">Personen- en Familierecht</span><span class="lang-tag" data-i18n="pa4.name">Ondernemingsrecht</span></div>
         </div>
       </div>
       <div class="team-card">
@@ -578,7 +604,7 @@ body.rtl select{text-align:right}
         <div class="team-card-content">
           <div class="team-card-role" data-i18n="sarican.role">Advocaat</div>
           <div class="team-card-name">Mr. R. Sarican</div>
-          <div class="team-card-tags"><span class="lang-tag" data-i18n="pa6.name">Strafrecht</span><span class="lang-tag" data-i18n="tag.privaatrecht">Privaatrecht</span><span class="lang-tag" data-i18n="tag.contractenrecht">Contractenrecht</span></div>
+          <div class="team-card-tags"><span class="lang-tag" data-i18n="pa6.name">Strafrecht</span><span class="lang-tag" data-i18n="pa2.name">Personen- en Familierecht</span><span class="lang-tag" data-i18n="pa3.name">Arbeidsrecht</span></div>
         </div>
       </div>
     </div>
@@ -597,7 +623,7 @@ body.rtl select{text-align:right}
   <footer>
     <div class="footer-grid">
       <div><span class="footer-brand">Tsang Law Firm</span><p class="footer-desc" data-i18n="footer.desc">Uw betrouwbare juridische partner in Den Haag.</p></div>
-      <div class="footer-col"><h4 data-i18n="footer.col.areas">Rechtsgebieden</h4><ul><li><a href="#" data-page="rechtsgebieden" data-i18n="pa1.name">Vreemdelingenrecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa2.name">Familierecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa3.name">Arbeidsrecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa6.name">Strafrecht</a></li></ul></div>
+      <div class="footer-col"><h4 data-i18n="footer.col.areas">Rechtsgebieden</h4><ul><li><a href="#" data-page="rechtsgebieden" data-i18n="pa1.name">Vreemdelingenrecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa2.name">Personen- en Familierecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa4.name">Ondernemingsrecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa6.name">Strafrecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa3.name">Arbeidsrecht</a></li></ul></div>
       <div class="footer-col"><h4 data-i18n="footer.col.office">Kantoor</h4><ul><li><a href="#" data-page="team" data-i18n="footer.link.team">Ons Team</a></li><li><a href="#" data-page="werkwijze" data-i18n="nav.werkwijze">Werkwijze</a></li><li><a href="#" data-page="prodeo">Pro Deo</a></li><li><a href="#" data-page="contact" data-i18n="nav.contact">Contact</a></li></ul></div>
       <div class="footer-col"><h4 data-i18n="footer.col.hours">Openingstijden</h4><p class="footer-hours" data-i18n="footer.hours">Maandag &ndash; Vrijdag<br>9:00 &ndash; 17:00 uur<br><br>Prinsegracht 38<br>2512 GA Den Haag</p></div>
     </div>
@@ -624,12 +650,12 @@ body.rtl select{text-align:right}
       <div class="team-profile-info">
         <div class="team-profile-role" data-i18n="tsang.role">Advocaat - Kantoorhouder</div>
         <h2 class="team-profile-name">Mr. T.Y. (Angel) Tsang</h2>
-        <div class="team-profile-uni" data-i18n="tsang.uni">Universiteit Leiden - Rechtsgeleerdheid</div>
-        <p class="team-profile-bio" data-i18n="tsang.bio1">Angel Tsang is de drijvende kracht achter Tsang Law Firm. Met een brede praktijk in vreemdelingenrecht, personen- en familierecht en arbeidsrecht staat zij cliënten bij in uitdagende juridische situaties.</p>
+        <div class="team-profile-uni" data-i18n="tsang.uni">tsang@tsanglawfirm.nl</div>
+        <p class="team-profile-bio" data-i18n="tsang.bio1">Angel Tsang is de oprichtster van Tsang Law Firm. Zij staat haar cliënten onder meer op het gebied van vreemdelingenrecht, personen- en familierecht en ondernemingsrecht bij. Met oog voor detail en een warme benadering begeleidt zij mensen door soms ingrijpende juridische trajecten.</p>
         <p class="team-profile-bio" data-i18n="tsang.bio2">Haar internationale achtergrond en meertalige vaardigheid stellen haar in staat om cliënten uit diverse culturen op een toegankelijke en empathische manier te begeleiden.</p>
         <div class="team-expertise">
           <div class="team-expertise-label" data-i18n="expertise.label">Expertise</div>
-          <div class="team-expertise-tags"><span class="tag" data-i18n="pa1.name">Vreemdelingenrecht</span><span class="tag" data-i18n="pa2.name">Familierecht</span><span class="tag" data-i18n="pa3.name">Arbeidsrecht</span><span class="tag" data-i18n="tag.erfrecht">Erfrecht</span></div>
+          <div class="team-expertise-tags"><span class="tag" data-i18n="pa1.name">Vreemdelingenrecht</span><span class="tag" data-i18n="pa2.name">Personen- en Familierecht</span><span class="tag" data-i18n="pa4.name">Ondernemingsrecht</span><span class="tag" data-i18n="tag.erfrecht">Erfrecht</span></div>
         </div>
       </div>
     </div>
@@ -649,12 +675,12 @@ body.rtl select{text-align:right}
       <div class="team-profile-info">
         <div class="team-profile-role" data-i18n="sarican.role">Advocaat</div>
         <h2 class="team-profile-name">Mr. R. (Tansu) Sarican</h2>
-        <div class="team-profile-uni" data-i18n="sarican.uni">Universiteit van Amsterdam - Rechtsgeleerdheid</div>
-        <p class="team-profile-bio" data-i18n="sarican.bio1">Tansu is een ambitieuze en gedreven advocaat met een specialisatie in strafrecht en privaatrecht.</p>
-        <p class="team-profile-bio" data-i18n="sarican.bio2">Na haar studie aan de UvA heeft zij ervaring opgedaan bij een advocatenkantoor, waarna zij in 2025 werd be&euml;digd als advocaat.</p>
+        <div class="team-profile-uni" data-i18n="sarican.uni">sarican@tsanglawfirm.nl</div>
+        <p class="team-profile-bio" data-i18n="sarican.bio1">Tansu heeft na haar rechtenstudie aan de Universiteit van Amsterdam en Erasmus Universiteit waardevolle werkervaring opgedaan binnen de overheid en de advocatuur, waarna zij in 2025 beëdigd is als advocaat. Zij staat ingeschreven bij de Nederlandse Orde van Advocaten.</p>
+        <p class="team-profile-bio" data-i18n="sarican.bio2">Door haar internationale oriëntatie en haar beheersing van meerdere talen weet zij cliënten met verschillende culturele achtergronden goed te begrijpen en op een heldere, betrokken manier te begeleiden. Zij verleent juridische bijstand in het Nederlands, Turks en Engels.</p>
         <div class="team-expertise">
           <div class="team-expertise-label" data-i18n="expertise.label">Expertise</div>
-          <div class="team-expertise-tags"><span class="tag" data-i18n="pa6.name">Strafrecht</span><span class="tag" data-i18n="tag.privaatrecht">Privaatrecht</span><span class="tag" data-i18n="tag.contractenrecht">Contractenrecht</span><span class="tag" data-i18n="tag.aansprakelijkheid">Aansprakelijkheidsrecht</span></div>
+          <div class="team-expertise-tags"><span class="tag" data-i18n="pa6.name">Strafrecht</span><span class="tag" data-i18n="pa2.name">Personen- en Familierecht</span><span class="tag" data-i18n="pa3.name">Arbeidsrecht</span></div>
         </div>
       </div>
     </div>
@@ -666,7 +692,7 @@ body.rtl select{text-align:right}
   <footer>
     <div class="footer-grid">
       <div><span class="footer-brand">Tsang Law Firm</span><p class="footer-desc" data-i18n="footer.desc">Uw betrouwbare juridische partner in Den Haag.</p></div>
-      <div class="footer-col"><h4 data-i18n="footer.col.areas">Rechtsgebieden</h4><ul><li><a href="#" data-page="rechtsgebieden" data-i18n="pa1.name">Vreemdelingenrecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa2.name">Familierecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa3.name">Arbeidsrecht</a></li></ul></div>
+      <div class="footer-col"><h4 data-i18n="footer.col.areas">Rechtsgebieden</h4><ul><li><a href="#" data-page="rechtsgebieden" data-i18n="pa1.name">Vreemdelingenrecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa2.name">Personen- en Familierecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa4.name">Ondernemingsrecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa6.name">Strafrecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa3.name">Arbeidsrecht</a></li></ul></div>
       <div class="footer-col"><h4 data-i18n="footer.col.office">Kantoor</h4><ul><li><a href="#" data-page="home">Home</a></li><li><a href="#" data-page="werkwijze" data-i18n="nav.werkwijze">Werkwijze</a></li><li><a href="#" data-page="contact" data-i18n="nav.contact">Contact</a></li></ul></div>
       <div class="footer-col"><h4 data-i18n="footer.col.contact">Contact</h4><p class="footer-hours">+31 70 331 1480<br><a href="mailto:info@tsanglawfirm.nl" style="color:inherit;text-decoration:none">info@tsanglawfirm.nl</a><br>Prinsegracht 38<br>2512 GA Den Haag</p></div>
     </div>
@@ -687,7 +713,7 @@ body.rtl select{text-align:right}
   <div class="rg-intro reveal">
     <div class="rg-intro-left">
       <div class="section-tag" style="margin-bottom:24px"><div class="section-tag-line"></div><span data-i18n="rg.intro.tag">Expertise</span></div>
-      <h2 class="section-title" style="margin:0" data-i18n="rg.intro.title">Zes gebieden,<br><em>&eacute;&eacute;n aanspreekpunt</em></h2>
+      <h2 class="section-title" style="margin:0" data-i18n="rg.intro.title">Meerdere gebieden,<br><em>&eacute;&eacute;n aanspreekpunt</em></h2>
     </div>
     <div class="rg-intro-right"><p data-i18n="rg.intro.body">Tsang Law Firm biedt juridische bijstand op zes kerngebieden van het recht.</p></div>
   </div>
@@ -696,7 +722,7 @@ body.rtl select{text-align:right}
       <div class="rg-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
       <span class="rechtsgebied-num">01</span><h3 class="rechtsgebied-title" data-i18n="pa1.name">Vreemdelingenrecht</h3>
       <p class="rechtsgebied-desc" data-i18n="rg1.desc">Wij begeleiden u bij alle aspecten van het vreemdelingenrecht.</p>
-      <ul class="rechtsgebied-items"><li data-i18n="rg1.li1">Aanvraag en verlenging verblijfsvergunning</li><li data-i18n="rg1.li2">Bezwaar en beroep bij afwijzingen</li><li data-i18n="rg1.li3">Naturalisatie en Optie tot Nederlanderschap</li><li data-i18n="rg1.li4">Inburgering en inburgeringsexamen</li><li data-i18n="rg1.li5">Gezinshereniging</li><li data-i18n="rg1.li6">Asiel en bescherming</li></ul>
+      <ul class="rechtsgebied-items"><li data-i18n="rg1.li1">Aanvraag en verlenging verblijfsvergunning</li><li data-i18n="rg1.li2">Bezwaar en beroep bij afwijzingen</li><li data-i18n="rg1.li3">Naturalisatie en Optie tot Nederlanderschap</li><li data-i18n="rg1.li4">Inburgering en inburgeringsexamen</li><li data-i18n="rg1.li5">Gezinshereniging</li><li data-i18n="rg1.li6">Kennismigranten</li></ul>
     </div>
     <div class="rechtsgebied-card">
       <div class="rg-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
@@ -739,7 +765,7 @@ body.rtl select{text-align:right}
   <footer>
     <div class="footer-grid">
       <div><span class="footer-brand">Tsang Law Firm</span><p class="footer-desc" data-i18n="footer.desc">Uw betrouwbare juridische partner in Den Haag.</p></div>
-      <div class="footer-col"><h4 data-i18n="footer.col.areas">Rechtsgebieden</h4><ul><li><a href="#" data-page="rechtsgebieden" data-i18n="pa1.name">Vreemdelingenrecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa2.name">Familierecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa3.name">Arbeidsrecht</a></li></ul></div>
+      <div class="footer-col"><h4 data-i18n="footer.col.areas">Rechtsgebieden</h4><ul><li><a href="#" data-page="rechtsgebieden" data-i18n="pa1.name">Vreemdelingenrecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa2.name">Personen- en Familierecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa4.name">Ondernemingsrecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa6.name">Strafrecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa3.name">Arbeidsrecht</a></li></ul></div>
       <div class="footer-col"><h4 data-i18n="footer.col.office">Kantoor</h4><ul><li><a href="#" data-page="home">Home</a></li><li><a href="#" data-page="team" data-i18n="footer.link.team">Ons Team</a></li><li><a href="#" data-page="contact" data-i18n="nav.contact">Contact</a></li></ul></div>
       <div class="footer-col"><h4 data-i18n="footer.col.contact">Contact</h4><p class="footer-hours">+31 70 331 1480<br><a href="mailto:info@tsanglawfirm.nl" style="color:inherit;text-decoration:none">info@tsanglawfirm.nl</a><br>Prinsegracht 38<br>2512 GA Den Haag</p></div>
     </div>
@@ -785,7 +811,7 @@ body.rtl select{text-align:right}
   <footer>
     <div class="footer-grid">
       <div><span class="footer-brand">Tsang Law Firm</span><p class="footer-desc" data-i18n="footer.desc">Uw betrouwbare juridische partner in Den Haag.</p></div>
-      <div class="footer-col"><h4 data-i18n="footer.col.areas">Rechtsgebieden</h4><ul><li><a href="#" data-page="rechtsgebieden" data-i18n="pa1.name">Vreemdelingenrecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa2.name">Familierecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa3.name">Arbeidsrecht</a></li></ul></div>
+      <div class="footer-col"><h4 data-i18n="footer.col.areas">Rechtsgebieden</h4><ul><li><a href="#" data-page="rechtsgebieden" data-i18n="pa1.name">Vreemdelingenrecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa2.name">Personen- en Familierecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa4.name">Ondernemingsrecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa6.name">Strafrecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa3.name">Arbeidsrecht</a></li></ul></div>
       <div class="footer-col"><h4 data-i18n="footer.col.office">Kantoor</h4><ul><li><a href="#" data-page="home">Home</a></li><li><a href="#" data-page="prodeo">Pro Deo</a></li><li><a href="#" data-page="contact" data-i18n="nav.contact">Contact</a></li></ul></div>
       <div class="footer-col"><h4 data-i18n="footer.col.contact">Contact</h4><p class="footer-hours">+31 70 331 1480<br><a href="mailto:info@tsanglawfirm.nl" style="color:inherit;text-decoration:none">info@tsanglawfirm.nl</a><br>Prinsegracht 38<br>2512 GA Den Haag</p></div>
     </div>
@@ -810,7 +836,6 @@ body.rtl select{text-align:right}
         <div class="prodeo-step reveal" style="transition-delay:.08s"><div class="prodeo-step-num">02</div><div><h3 data-i18n="pd.step2.title">Aanvraag bij Raad voor Rechtsbijstand</h3><p data-i18n="pd.step2.body">Wij dienen namens u een toevoegingsaanvraag in bij de Raad voor Rechtsbijstand.</p></div></div>
         <div class="prodeo-step reveal" style="transition-delay:.15s"><div class="prodeo-step-num">03</div><div><h3 data-i18n="pd.step3.title">Eigen Bijdrage</h3><p data-i18n="pd.step3.body">Bij toekenning stelt de Raad een eigen bijdrage vast op basis van uw inkomen.</p></div></div>
         <div class="prodeo-step reveal" style="transition-delay:.22s"><div class="prodeo-step-num">04</div><div><h3 data-i18n="pd.step4.title">Behandeling van uw Zaak</h3><p data-i18n="pd.step4.body">Na toekenning behandelen wij uw zaak volledig.</p></div></div>
-        <div class="prodeo-step reveal" style="transition-delay:.28s"><div class="prodeo-step-num">05</div><div><h3 data-i18n="pd.step5.title">Rechtsbijstandsverzekering</h3><p data-i18n="pd.step5.body">Heeft u een rechtsbijstandsverzekering? Dan is het mogelijk dat uw verzekeraar de kosten dekt.</p></div></div>
       </div>
       <div class="prodeo-cta-box reveal">
         <h3 data-i18n="pd.cta.title">Weet u niet of u in aanmerking komt?</h3>
@@ -822,7 +847,7 @@ body.rtl select{text-align:right}
   <footer>
     <div class="footer-grid">
       <div><span class="footer-brand">Tsang Law Firm</span><p class="footer-desc" data-i18n="footer.desc">Uw betrouwbare juridische partner in Den Haag.</p></div>
-      <div class="footer-col"><h4 data-i18n="footer.col.areas">Rechtsgebieden</h4><ul><li><a href="#" data-page="rechtsgebieden" data-i18n="pa1.name">Vreemdelingenrecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa2.name">Familierecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa3.name">Arbeidsrecht</a></li></ul></div>
+      <div class="footer-col"><h4 data-i18n="footer.col.areas">Rechtsgebieden</h4><ul><li><a href="#" data-page="rechtsgebieden" data-i18n="pa1.name">Vreemdelingenrecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa2.name">Personen- en Familierecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa4.name">Ondernemingsrecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa6.name">Strafrecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa3.name">Arbeidsrecht</a></li></ul></div>
       <div class="footer-col"><h4 data-i18n="footer.col.office">Kantoor</h4><ul><li><a href="#" data-page="home">Home</a></li><li><a href="#" data-page="werkwijze" data-i18n="nav.werkwijze">Werkwijze</a></li><li><a href="#" data-page="contact" data-i18n="nav.contact">Contact</a></li></ul></div>
       <div class="footer-col"><h4 data-i18n="footer.col.contact">Contact</h4><p class="footer-hours">+31 70 331 1480<br><a href="mailto:info@tsanglawfirm.nl" style="color:inherit;text-decoration:none">info@tsanglawfirm.nl</a><br>Prinsegracht 38<br>2512 GA Den Haag</p></div>
     </div>
@@ -902,7 +927,7 @@ body.rtl select{text-align:right}
   <footer>
     <div class="footer-grid">
       <div><span class="footer-brand">Tsang Law Firm</span><p class="footer-desc" data-i18n="footer.desc">Uw betrouwbare juridische partner in Den Haag.</p></div>
-      <div class="footer-col"><h4 data-i18n="footer.col.areas">Rechtsgebieden</h4><ul><li><a href="#" data-page="rechtsgebieden" data-i18n="pa1.name">Vreemdelingenrecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa2.name">Familierecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa3.name">Arbeidsrecht</a></li></ul></div>
+      <div class="footer-col"><h4 data-i18n="footer.col.areas">Rechtsgebieden</h4><ul><li><a href="#" data-page="rechtsgebieden" data-i18n="pa1.name">Vreemdelingenrecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa2.name">Personen- en Familierecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa4.name">Ondernemingsrecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa6.name">Strafrecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa3.name">Arbeidsrecht</a></li></ul></div>
       <div class="footer-col"><h4 data-i18n="footer.col.office">Kantoor</h4><ul><li><a href="#" data-page="home">Home</a></li><li><a href="#" data-page="team" data-i18n="footer.link.team">Ons Team</a></li><li><a href="#" data-page="werkwijze" data-i18n="nav.werkwijze">Werkwijze</a></li></ul></div>
       <div class="footer-col"><h4 data-i18n="footer.col.contact">Contact</h4><p class="footer-hours">+31 70 331 1480<br><a href="mailto:info@tsanglawfirm.nl" style="color:inherit;text-decoration:none">info@tsanglawfirm.nl</a><br>Prinsegracht 38<br>2512 GA Den Haag<br><br><span data-i18n="footer.hours.short">Ma &ndash; Vr: 9:00 &ndash; 17:00</span></p></div>
     </div>
@@ -984,19 +1009,19 @@ const TRANSLATIONS = {
     "about.title":"Uw belangen,<br><em>onze prioriteit</em>",
     "about.body":"Bij Tsang Law Firm staat uw situatie centraal. Wij bieden heldere juridische begeleiding, eerlijk advies en een aanpak die past bij uw persoonlijke omstandigheden. Geen jargon, geen verrassingen. Gewoon resultaatgericht werken.",
     "about.v1.title":"Persoonlijk &amp; Resultaatgericht","about.v1.body":"Wij nemen de tijd om uw situatie goed te begrijpen en werken doelgericht naar de best mogelijke uitkomst.",
-    "about.v2.title":"Internationale Expertise","about.v2.body":"Ruime ervaring met internationale cliënten die te maken hebben met Nederlandse wet- en regelgeving.",
+    "about.v2.title":"Internationale Expertise","about.v2.body":"Ruime ervaring met internationale cliënten die te maken hebben met Nederlandse en internationale wet- en regelgeving.",
     "about.v3.title":"Toegankelijk &amp; Betaalbaar","about.v3.body":"Wij bekijken samen welke financieringsmogelijkheden voor u beschikbaar zijn, waaronder rechtsbijstandsverzekering en gefinancierde rechtsbijstand.",
     "about.v4.title":"Meertalige Dienstverlening","about.v4.body":"Wij adviseren in het Nederlands, Engels, Chinees, Turks en Arabisch, zodat u zich altijd volledig begrepen voelt.",
     "about.quote":"&ldquo;Wij zijn er voor u, met de expertise die uw zaak verdient en de aandacht die u nodig heeft.&rdquo;",
     "practice.tag":"Onze Expertise","practice.title":"Onze<br><em>Rechtsgebieden</em>","practice.all":"Alle gebieden",
-    "pa1.name":"Vreemdelingenrecht","pa2.name":"Familierecht","pa3.name":"Arbeidsrecht",
+    "pa1.name":"Vreemdelingenrecht","pa2.name":"Personen- en Familierecht","pa3.name":"Arbeidsrecht",
     "pa4.name":"Ondernemingsrecht","pa5.name":"Letselschade","pa6.name":"Strafrecht",
-    "pa1.li1":"Verblijfsvergunningen","pa1.li2":"Naturalisatie","pa1.li3":"Gezinshereniging","pa1.li4":"Asiel &amp; Bescherming",
+    "pa1.li1":"Verblijfsvergunningen","pa1.li2":"Naturalisatie","pa1.li3":"Gezinshereniging","pa1.li4":"Kennismigranten",
     "pa2.li1":"Echtscheiding","pa2.li2":"Alimentatie","pa2.li3":"Ouderlijk gezag","pa2.li4":"Omgangsregeling",
     "pa3.li1":"Ontslagprocedures","pa3.li2":"Arbeidsovereenkomsten","pa3.li3":"Loonvorderingen","pa3.li4":"Arbeidsconflicten",
     "pa4.li1":"Contracten","pa4.li2":"Oprichting onderneming","pa4.li3":"Aandeelhoudersgeschillen","pa4.li4":"Fusies &amp; Overnames",
     "pa5.li1":"Aansprakelijkheid","pa5.li2":"Schadevergoeding","pa5.li3":"Smartengeld","pa5.li4":"Verzekeraarsonderhandelingen",
-    "pa6.li1":"Verdediging","pa6.li2":"Bijstand bij verhoor","pa6.li3":"Hoger beroep","pa6.li4":"Ontneming voordeel",
+    "pa6.li1":"Verdediging","pa6.li2":"Bijstand bij verhoor","pa6.li3":"Strafbeschikkingen","pa6.li4":"Ontneming voordeel",
     "team.tag":"Ons Team","team.title":"Advocaten met<br><em>Passie &amp; Expertise</em>",
     "team.sub":"Een hecht team van betrokken advocaten, klaar om u professioneel en persoonlijk te ondersteunen.",
     "team.more":"Maak kennis met ons team",
@@ -1010,21 +1035,21 @@ const TRANSLATIONS = {
     "footer.link.team":"Ons Team","footer.link.terms":"Algemene Voorwaarden",
     "footer.hours":"Maandag &ndash; Vrijdag<br>9:00 &ndash; 17:00 uur<br><br>Prinsegracht 38<br>2512 GA Den Haag",
     "footer.hours.short":"Ma &ndash; Vr: 9:00 &ndash; 17:00",
-    "tsang.uni":"Universiteit Leiden - Rechtsgeleerdheid",
-    "tsang.bio1":"Angel Tsang is de oprichtster van Tsang Law Firm. Zij staat haar cliënten bij op het gebied van vreemdelingenrecht, personen- en familierecht en arbeidsrecht. Met oog voor detail en een warme benadering begeleidt zij mensen door soms ingrijpende juridische trajecten.",
+    "tsang.uni":"tsang@tsanglawfirm.nl",
+    "tsang.bio1":"Angel Tsang is de oprichtster van Tsang Law Firm. Zij staat haar cliënten onder meer op het gebied van vreemdelingenrecht, personen- en familierecht en ondernemingsrecht bij. Met oog voor detail en een warme benadering begeleidt zij mensen door soms ingrijpende juridische trajecten.",
     "tsang.bio2":"Haar internationale achtergrond en meertalige vaardigheid stellen haar in staat om cliënten uit uiteenlopende culturen op een toegankelijke en empathische manier te begeleiden. Zij is ingeschreven bij de Nederlandse Orde van Advocaten.",
-    "sarican.uni":"Universiteit van Amsterdam - Rechtsgeleerdheid",
-    "sarican.bio1":"Tansu Sarican is een bevlogen advocaat met een specialisatie in strafrecht en privaatrecht. Zij staat bekend om haar heldere communicatie, scherpe analyses en de vasthoudendheid waarmee zij haar cliënten verdedigt.",
-    "sarican.bio2":"Na haar studie aan de Universiteit van Amsterdam deed zij praktijkervaring op bij een advocatenkantoor en werd in 2025 beëdigd. Dankzij haar Turkse achtergrond helpt Tansu cliënten in het Nederlands, Engels én Turks.",
+    "sarican.uni":"sarican@tsanglawfirm.nl",
+    "sarican.bio1":"Tansu heeft na haar rechtenstudie aan de Universiteit van Amsterdam en Erasmus Universiteit waardevolle werkervaring opgedaan binnen de overheid en de advocatuur, waarna zij in 2025 beëdigd is als advocaat. Zij staat ingeschreven bij de Nederlandse Orde van Advocaten.",
+    "sarican.bio2":"Door haar internationale oriëntatie en haar beheersing van meerdere talen weet zij cliënten met verschillende culturele achtergronden goed te begrijpen en op een heldere, betrokken manier te begeleiden. Zij verleent juridische bijstand in het Nederlands, Turks en Engels.",
     "expertise.label":"Expertise",
     "waarneming.tag":"Continuïteit &amp; Waarneming",
     "waarneming.body":"Voor continuïteit in onze dienstverlening hebben wij een waarnemings- en vervangingsregeling met mr. J.M. Szczerbak van <strong style='color:var(--ink-mid)'>Szczerbak Advocatuur</strong>, Parkstraat 83, 2514 JG Den Haag.",
     "rg.eyebrow":"Specialisaties","rg.hero.title":"Onze<br><em>Rechtsgebieden</em>",
     "rg.hero.sub":"Bij Tsang Law Firm kunt u terecht met juridische kwesties op een breed scala aan rechtsgebieden. Wij bieden deskundig advies en bijstand op maat.",
-    "rg.intro.tag":"Expertise","rg.intro.title":"Zes gebieden,<br><em>één aanspreekpunt</em>",
+    "rg.intro.tag":"Expertise","rg.intro.title":"Meerdere gebieden,<br><em>één aanspreekpunt</em>",
     "rg.intro.body":"Tsang Law Firm biedt gerichte juridische ondersteuning op zes kerngebieden. Of het nu gaat om een verblijfsrechtelijk vraagstuk, een arbeidsconflict of een familiezaak: u staat er niet alleen voor. Wij spreken uw taal, letterlijk en figuurlijk.",
     "rg1.desc":"Wij begeleiden u bij alle aspecten van het vreemdelingenrecht: van verblijfsvergunning tot naturalisatie. Onze meertalige expertise maakt het verschil voor internationale cliënten.",
-    "rg1.li1":"Aanvraag en verlenging verblijfsvergunning","rg1.li2":"Bezwaar en beroep bij afwijzingen","rg1.li3":"Naturalisatie en Optie tot Nederlanderschap","rg1.li4":"Inburgering en inburgeringsexamen","rg1.li5":"Gezinshereniging","rg1.li6":"Asiel en bescherming",
+    "rg1.li1":"Aanvraag en verlenging verblijfsvergunning","rg1.li2":"Bezwaar en beroep bij afwijzingen","rg1.li3":"Naturalisatie en Optie tot Nederlanderschap","rg1.li4":"Inburgering en inburgeringsexamen","rg1.li5":"Gezinshereniging","rg1.li6":"Kennismigranten",
     "rg2.desc":"Familiezaken vragen om een delicate en persoonlijke aanpak. Wij ondersteunen u bij echtscheidingen en alle overige familierechtzaken met empathie en deskundigheid.",
     "rg2.li1":"Echtscheiding en scheiding van tafel en bed","rg2.li2":"Kinder- en partneralimentatie","rg2.li3":"Ouderlijk gezag en omgangsregeling","rg2.li4":"Erkenning en ontkenning vaderschap","rg2.li5":"Naamswijzigingen","rg2.li6":"Verdeling van huwelijksgemeenschap",
     "rg3.desc":"Arbeidsrechtelijke kwesties raken zowel werknemers als werkgevers. Wij adviseren en procederen over arbeidsovereenkomsten, ontslag en conflicten op de werkvloer.",
@@ -1811,6 +1836,36 @@ if (heroBgEl) {
   img.onload = () => heroBgEl.classList.add('loaded');
   img.src = 'https://images.squarespace-cdn.com/content/v1/67caff9a90b609682b5b8b1f/902ef867-7ba5-4f4d-9a61-ecb0f7fdc2bc/La_haye_palais_paix_jardin_face.jpg';
 }
+
+// ============================================================
+// GDPR COOKIE CONSENT
+// ============================================================
+(function() {
+  const banner = document.getElementById('cookieBanner');
+  const acceptBtn = document.getElementById('cookieAccept');
+  const declineBtn = document.getElementById('cookieDecline');
+  if (!banner) return;
+
+  function hideBanner() {
+    banner.classList.add('hidden');
+  }
+
+  // Show banner if consent not yet given
+  const consent = localStorage.getItem('cookieConsent');
+  if (!consent) {
+    setTimeout(function() { banner.classList.remove('hidden'); }, 1200);
+  }
+
+  acceptBtn.addEventListener('click', function() {
+    localStorage.setItem('cookieConsent', 'accepted');
+    hideBanner();
+  });
+
+  declineBtn.addEventListener('click', function() {
+    localStorage.setItem('cookieConsent', 'declined');
+    hideBanner();
+  });
+})();
 </script>
 <!-- WhatsApp bubble -->
 <a class="wa-bubble" href="https://wa.me/31629332677" target="_blank" rel="noopener" aria-label="Contact via WhatsApp">
