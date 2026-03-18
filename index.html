@@ -23,8 +23,12 @@ html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--ink);font-family:'Outfit',sans-serif;font-size:1rem;font-weight:300;overflow-x:hidden;cursor:auto}
 .cursor{display:none;position:fixed;width:8px;height:8px;background:var(--ink);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .25s,height .25s,background .25s}
 .cursor-ring{display:none;position:fixed;width:32px;height:32px;border:1px solid rgba(12,12,13,.25);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .3s,height .3s,border-color .3s}
-.cursor.hover{width:5px;height:5px;background:var(--accent)}
-.cursor-ring.hover{width:46px;height:46px;border-color:var(--accent)}
+.cursor.hover{width:5px;height:5px;background:#C9A96E}
+.cursor-ring.hover{width:46px;height:46px;border-color:#C9A96E}
+.cursor.dark{background:#C9A96E}
+.cursor-ring.dark{border-color:rgba(201,169,110,.5)}
+.cursor.dark.hover{background:#C9A96E}
+.cursor-ring.dark.hover{border-color:#C9A96E}
 @media(hover:hover) and (pointer:fine){
   body{cursor:none}
   .cursor,.cursor-ring{display:block}
@@ -1602,11 +1606,48 @@ let mx = 0, my = 0, rx = 0, ry = 0;
 
 // Only enable custom cursor on non-touch pointer devices
 const isTouch = window.matchMedia('(hover:none) and (pointer:coarse)').matches;
+
+// Dark background detection — sections with dark bg get gold cursor
+const DARK_BG_SELECTORS = [
+  '.hero', '.contact-cta', '.tarieven-section', '.prodeo-section',
+  '.team-card', '.footer', 'nav'
+];
+
+function isDarkUnderCursor(x, y) {
+  // Temporarily hide cursor to hit-test correctly
+  cursor.style.display = 'none';
+  ring.style.display = 'none';
+  const el = document.elementFromPoint(x, y);
+  cursor.style.display = '';
+  ring.style.display = '';
+  if (!el) return false;
+  // Walk up the DOM to check for dark-bg ancestors
+  let node = el;
+  while (node && node !== document.body) {
+    if (DARK_BG_SELECTORS.some(sel => node.matches && node.matches(sel))) return true;
+    // Also check computed background
+    const bg = window.getComputedStyle(node).backgroundColor;
+    if (bg) {
+      const m = bg.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)/);
+      if (m) {
+        const luminance = (0.299*+m[1] + 0.587*+m[2] + 0.114*+m[3]);
+        if (luminance < 80) return true;
+      }
+    }
+    node = node.parentElement;
+  }
+  return false;
+}
+
 if (!isTouch) {
   document.addEventListener('mousemove', e => {
     mx = e.clientX; my = e.clientY;
     cursor.style.left = mx + 'px';
     cursor.style.top  = my + 'px';
+    // Dark bg detection
+    const dark = isDarkUnderCursor(mx, my);
+    cursor.classList.toggle('dark', dark);
+    ring.classList.toggle('dark', dark);
   });
   (function lerpRing() {
     rx += (mx - rx) * .12;
