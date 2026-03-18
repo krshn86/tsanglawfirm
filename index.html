@@ -2,11 +2,17 @@
 <html lang="nl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#4A1E24">
+<meta name="format-detection" content="telephone=yes">
 <title>Tsang Law Firm — Uw Partner in Rechtvaardigheid</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Outfit:wght@200;300;400;500&display=swap" rel="stylesheet">
 <style>
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+a,button{touch-action:manipulation}
+input,select,textarea{font-size:16px!important;-webkit-appearance:none;appearance:none;border-radius:0}
 html{scroll-behavior:smooth}
 :root{
   --bg:#F7F5F2;--bg-alt:#EFECE7;--ink:#0C0C0D;--ink-mid:#3A3A3C;--ink-soft:#6E6E73;--ink-faint:#A8A8AE;
@@ -14,13 +20,18 @@ html{scroll-behavior:smooth}
   --line:rgba(12,12,13,0.09);--line-strong:rgba(12,12,13,0.16);
   --shadow:0 1px 3px rgba(12,12,13,0.06),0 8px 32px rgba(12,12,13,0.08);
 }
-body{background:var(--bg);color:var(--ink);font-family:'Outfit',sans-serif;font-size:1rem;font-weight:300;overflow-x:hidden;cursor:none}
-.cursor{position:fixed;width:8px;height:8px;background:var(--ink);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .25s,height .25s,background .25s}
-.cursor-ring{position:fixed;width:32px;height:32px;border:1px solid rgba(12,12,13,.25);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .3s,height .3s,border-color .3s}
+body{background:var(--bg);color:var(--ink);font-family:'Outfit',sans-serif;font-size:1rem;font-weight:300;overflow-x:hidden;cursor:auto}
+.cursor{display:none;position:fixed;width:8px;height:8px;background:var(--ink);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .25s,height .25s,background .25s}
+.cursor-ring{display:none;position:fixed;width:32px;height:32px;border:1px solid rgba(12,12,13,.25);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .3s,height .3s,border-color .3s}
 .cursor.hover{width:5px;height:5px;background:var(--accent)}
 .cursor-ring.hover{width:46px;height:46px;border-color:var(--accent)}
+@media(hover:hover) and (pointer:fine){
+  body{cursor:none}
+  .cursor,.cursor-ring{display:block}
+  a,button,.practice-card,.team-card,.rechtsgebied-card,.process-step,select,input,textarea{cursor:none}
+}
 body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");pointer-events:none;z-index:9997;opacity:.5;mix-blend-mode:multiply}
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:14px 60px;display:flex;align-items:center;justify-content:space-between;transition:all .5s cubic-bezier(.16,1,.3,1);background:rgba(74,30,36,0.18);backdrop-filter:blur(28px) saturate(180%);-webkit-backdrop-filter:blur(28px) saturate(180%);border-bottom:1px solid rgba(74,30,36,0.15)}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:14px 60px;padding-top:max(14px,env(safe-area-inset-top));padding-left:max(60px,env(safe-area-inset-left));padding-right:max(60px,env(safe-area-inset-right));display:flex;align-items:center;justify-content:space-between;transition:all .5s cubic-bezier(.16,1,.3,1);background:rgba(74,30,36,0.18);backdrop-filter:blur(28px) saturate(180%);-webkit-backdrop-filter:blur(28px) saturate(180%);border-bottom:1px solid rgba(74,30,36,0.15)}
 nav.scrolled{background:rgba(74,30,36,0.28);backdrop-filter:blur(36px) saturate(220%);-webkit-backdrop-filter:blur(36px) saturate(220%);padding:8px 60px;border-bottom:1px solid rgba(74,30,36,0.22)}
 .nav-logo{font-family:'Outfit',sans-serif;font-size:1rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);text-decoration:none;display:flex;align-items:center;gap:12px;cursor:none}
 .nav-brand-img{height:84px;width:auto;object-fit:contain;display:block}
@@ -44,20 +55,25 @@ nav.scrolled .nav-brand-img{height:64px}
 .hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
 .hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
 .hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
-.mobile-overlay{display:none;position:fixed;inset:0;background:rgba(12,12,13,.55);z-index:98;backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px)}
-.mobile-overlay.open{display:block}
-.mobile-menu{display:block;position:fixed;top:0;right:0;width:min(300px,82vw);height:100%;background:var(--bg);z-index:99;transform:translateX(100%);transition:transform .4s cubic-bezier(.16,1,.3,1);box-shadow:-8px 0 40px rgba(12,12,13,.2);visibility:hidden}
+.mobile-overlay{display:none;position:fixed;inset:0;background:rgba(12,12,13,.45);z-index:98;backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);transition:opacity .35s ease;opacity:0}
+.mobile-overlay.open{display:block;opacity:1}
+.mobile-menu{position:fixed;top:0;right:0;width:65vw;max-width:340px;min-width:260px;height:100%;background:var(--bg);z-index:99;transform:translateX(100%);transition:transform .4s cubic-bezier(.16,1,.3,1);visibility:hidden;display:flex;flex-direction:column}
 .mobile-menu.open{transform:translateX(0);visibility:visible}
-.mobile-menu-inner{display:flex;flex-direction:column;height:100%}
-.mobile-menu-header{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--line)}
-.mobile-menu-logo{height:40px;width:auto;object-fit:contain}
-.mobile-close{background:none;border:none;cursor:pointer;color:var(--ink-soft);width:34px;height:34px;display:flex;align-items:center;justify-content:center;border-radius:50%;transition:background .2s;font-size:1rem}
-.mobile-close:hover{background:var(--bg-alt)}
-.mobile-nav-links{display:flex;flex-direction:column;padding:4px 0;flex:1;overflow-y:auto}
-.mobile-menu a{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:400;color:var(--ink);text-decoration:none;letter-spacing:.01em;transition:color .2s,background .2s;cursor:pointer;padding:10px 24px;display:block;border-left:2px solid transparent}
-.mobile-menu a:hover,.mobile-menu a.active{color:var(--accent);border-left-color:var(--accent);background:rgba(184,154,106,.05)}
-.mobile-lang-row{display:flex;gap:8px;padding:16px 24px;border-top:1px solid var(--line);flex-wrap:wrap}
-.mobile-lang-btn{font-size:.65rem;letter-spacing:.1em;font-weight:500;text-transform:uppercase;padding:6px 13px;border-radius:100px;border:1px solid var(--line-strong);background:transparent;color:var(--ink-soft);cursor:pointer;transition:background .2s,color .2s,border-color .2s;font-family:'Outfit',sans-serif}
+.mobile-menu-inner{display:flex;flex-direction:column;height:100%;position:relative}
+.mobile-menu-header{display:none}
+.mobile-nav-links{display:flex;flex-direction:column;padding-top:120px;padding-bottom:24px;flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch}
+.mobile-menu a{font-family:'Playfair Display',serif;font-size:1.55rem;font-weight:400;color:var(--ink);text-decoration:none;letter-spacing:.01em;transition:color .25s,background .25s,border-left-color .25s;cursor:pointer;padding:8px 32px;display:block;text-align:left;border-left:2px solid transparent;position:relative}
+.mobile-menu a::after{content:'';position:absolute;inset:0;background:rgba(74,30,36,0);transition:background .25s ease;pointer-events:none}
+.mobile-menu a:hover{color:#4A1E24;border-left-color:#4A1E24}
+.mobile-menu a:hover::after{background:rgba(74,30,36,0.06)}
+.mobile-menu a:active::after{background:rgba(74,30,36,0.14)}
+.mobile-menu a.active{color:#4A1E24;border-left-color:#4A1E24;background:rgba(74,30,36,0.06)}
+.mobile-menu a:hover,.mobile-menu a.active{color:var(--accent);background:transparent}
+.mobile-close{position:absolute;top:18px;left:-52px;width:44px;height:44px;background:var(--bg);border:1px solid var(--line-strong);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--ink-soft);font-size:.9rem;transition:background .2s,color .2s;box-shadow:0 2px 12px rgba(12,12,13,.12)}
+.mobile-close:hover{background:var(--bg-alt);color:var(--ink)}
+.mobile-close:hover{background:var(--bg-alt);color:var(--ink)}
+.mobile-lang-row{display:flex;gap:8px;flex-wrap:wrap;padding:20px 32px 40px;border-top:1px solid var(--line)}
+.mobile-lang-btn{font-size:.68rem;letter-spacing:.1em;font-weight:500;text-transform:uppercase;padding:7px 16px;border-radius:100px;border:1px solid var(--line-strong);background:transparent;color:var(--ink-soft);cursor:pointer;transition:background .2s,color .2s,border-color .2s;font-family:'Outfit',sans-serif}
 .mobile-lang-btn:hover{color:var(--ink);border-color:var(--ink-soft)}
 .mobile-lang-btn.active{background:var(--accent);color:#F7F5F2;border-color:var(--accent)}
 .page{display:none;min-height:100vh}
@@ -68,7 +84,7 @@ nav.scrolled .nav-brand-img{height:64px}
 @keyframes scrollPulse{0%,100%{opacity:.3}50%{opacity:1}}
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .65s cubic-bezier(.16,1,.3,1),transform .65s cubic-bezier(.16,1,.3,1)}
 .reveal.visible{opacity:1;transform:translateY(0)}
-.hero{min-height:100vh;position:relative;display:flex;align-items:center;padding:120px 80px 80px;overflow:hidden;background:var(--ink)}
+.hero{min-height:100svh;min-height:100vh;position:relative;display:flex;align-items:center;padding:120px 80px 80px;overflow:hidden;background:var(--ink)}
 .hero-bg{position:absolute;inset:0;background:url('https://images.squarespace-cdn.com/content/v1/67caff9a90b609682b5b8b1f/902ef867-7ba5-4f4d-9a61-ecb0f7fdc2bc/La_haye_palais_paix_jardin_face.jpg') center/cover no-repeat;transform:scale(1.06);transition:transform 10s ease;filter:brightness(.28) saturate(.4)}
 .hero-bg.loaded{transform:scale(1)}
 .hero-gradient{position:absolute;inset:0;background:linear-gradient(to top,rgba(12,12,13,.95) 0%,rgba(12,12,13,.5) 50%,rgba(12,12,13,.1) 100%)}
@@ -294,23 +310,82 @@ footer{background:var(--ink);color:rgba(247,245,242,.6);padding:80px 60px 40px}
   .process-steps{grid-template-columns:1fr}
   .team-profile{grid-template-columns:1fr}
 }
+/* ── TABLET (768–1024px) ── */
+@media(max-width:1024px) and (min-width:769px){
+  nav{padding:12px 32px}
+  .nav-brand-img{height:60px}
+  nav.scrolled .nav-brand-img{height:48px}
+  .stats-bar{padding:40px 32px}
+  section{padding:100px 40px}
+  .page-hero{padding:140px 40px 60px}
+  .about-left{padding:100px 40px}
+  .rechtsgebied-card{padding:48px 36px}
+  .team-page-section{padding:60px 40px 100px}
+}
+/* ── MOBILE (≤768px) ── */
 @media(max-width:768px){
-  nav{padding:16px 24px}nav.scrolled{padding:12px 24px}
+  nav{padding:10px 20px}
+  nav.scrolled{padding:8px 20px}
+  .nav-brand-img{height:52px}
+  nav.scrolled .nav-brand-img{height:42px}
   .nav-links{display:none}.hamburger{display:flex}
-  .hero{padding:100px 28px 60px}.hero-right{display:none}.hero-content{flex-direction:column}
-  .stats-bar{grid-template-columns:1fr 1fr;padding:32px 24px}.stat-item{padding:20px}.stat-item:nth-child(2){border-right:none}
-  section{padding:80px 28px}.page-hero{padding:120px 28px 60px}.about-left{padding:80px 28px}
-  .practice-grid{grid-template-columns:1fr}.practice-header{flex-direction:column;align-items:flex-start;gap:20px}
-  .rg-intro{grid-template-columns:1fr;padding:60px 28px;gap:32px}
-  .rechtsgebieden-grid{grid-template-columns:1fr}.rechtsgebied-card{padding:40px 28px}
-  .rg-bar-notice{flex-direction:column;align-items:flex-start;padding:40px 28px}
-  .contact-left,.contact-right{padding:60px 28px}.form-grid{grid-template-columns:1fr}
-  .footer-grid{grid-template-columns:1fr;gap:32px;margin-bottom:32px;padding-bottom:32px}
+  .hero{padding:110px 20px 56px;min-height:100svh}
+  .hero-right{display:none}.hero-content{flex-direction:column}
+  .hero-title{font-size:clamp(2.8rem,13vw,5rem)}
+  .hero-sub{font-size:1rem;max-width:100%}
+  .stats-bar{grid-template-columns:1fr 1fr;padding:28px 20px}
+  .stat-item{padding:16px 12px}
+  .stat-item:nth-child(2){border-right:none}
+  .stat-number{font-size:2.4rem}
+  section{padding:72px 20px}
+  .page-hero{padding:110px 20px 52px}
+  .about-left{padding:72px 20px}
+  .about-body{max-width:100%}
+  .practice-grid{grid-template-columns:1fr}
+  .practice-header{flex-direction:column;align-items:flex-start;gap:16px}
+  .practice-card{padding:36px 24px}
+  .team-section{padding:72px 20px}
+  .team-grid{gap:12px;max-width:100%}
+  .rg-intro{grid-template-columns:1fr;padding:52px 20px;gap:24px}
+  .rechtsgebieden-grid{grid-template-columns:1fr}
+  .rechtsgebied-card{padding:36px 20px}
+  .rg-bar-notice{flex-direction:column;align-items:flex-start;padding:36px 20px;gap:24px}
+  .contact-left,.contact-right{padding:52px 20px}
+  .contact-left{border-right:none;border-bottom:1px solid var(--line)}
+  .form-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr;gap:28px;margin-bottom:28px;padding-bottom:28px}
   .footer-bottom{flex-direction:column;align-items:flex-start}
-  .process-extra{grid-template-columns:1fr}.tarieven-grid{grid-template-columns:1fr}
-  .contact-cta{padding:80px 28px}.team-page-section{padding:60px 28px 80px}
-  .prodeo-section{padding:80px 28px}.prodeo-step{padding:28px}.prodeo-cta-box{padding:36px 28px}
-  .tarieven-section{padding:80px 28px}.legal-section{padding:60px 28px 80px}.waarneming-box{margin:40px 28px 0}
+  .process-extra{grid-template-columns:1fr}
+  .tarieven-grid{grid-template-columns:1fr}
+  .contact-cta{padding:72px 20px}
+  .team-page-section{padding:52px 20px 72px}
+  .team-profile{grid-template-columns:1fr;gap:32px;padding:48px 0}
+  .prodeo-section{padding:72px 20px}
+  .prodeo-step{padding:24px 20px;gap:20px}
+  .prodeo-cta-box{padding:32px 20px}
+  .tarieven-section{padding:72px 20px}
+  .legal-section{padding:52px 20px 72px;max-width:100%}
+  .waarneming-box{margin:36px 0 0;padding:32px 20px}
+  .process-step{padding:40px 28px}
+  .section-title{font-size:clamp(2rem,8vw,3rem)}
+  .page-hero-title{font-size:clamp(2.4rem,10vw,4rem)}
+  .about-overlay-quote{font-size:1.1rem}
+  .team-card{max-height:440px}
+  .btn-primary{padding:14px 28px}
+  .contact-cta-actions{flex-direction:column;align-items:center}
+  .scroll-indicator{display:none}
+  .tarief-item{padding:32px 20px}
+}
+/* ── SMALL MOBILE (≤480px) ── */
+@media(max-width:480px){
+  .stats-bar{grid-template-columns:1fr 1fr}
+  .stat-item:nth-child(3){border-right:none}
+  .hero-title{font-size:clamp(2.4rem,14vw,3.8rem)}
+  .section-title{font-size:clamp(1.8rem,9vw,2.8rem)}
+  .team-grid{grid-template-columns:1fr}
+  .rechtsgebieden-grid{grid-template-columns:1fr}
+  .process-steps{grid-template-columns:1fr}
+  .mobile-menu{width:80vw}
 }
 /* ===== RTL (Arabic) ===== */
 body.rtl{font-family:'Outfit',sans-serif;direction:rtl;text-align:right}
@@ -341,10 +416,7 @@ body.rtl select{text-align:right}
 <div class="mobile-overlay" id="mobileOverlay"></div>
 <div class="mobile-menu" id="mobileMenu">
   <div class="mobile-menu-inner">
-    <div class="mobile-menu-header">
-      <img class="mobile-menu-logo" src="https://raw.githubusercontent.com/krshn86/tsanglawfirm/main/images/brandinginvisible.png" alt="Tsang Law Firm">
-      <button class="mobile-close" id="mobileClose">&#x2715;</button>
-    </div>
+    <button class="mobile-close" id="mobileClose">&#x2715;</button>
     <div class="mobile-nav-links">
       <a href="#" data-page="team" data-i18n="nav.team">Team</a>
       <a href="#" data-page="rechtsgebieden" data-i18n="nav.areas">Rechtsgebieden</a>
@@ -1513,19 +1585,26 @@ const cursor = document.getElementById('cursor');
 const ring   = document.getElementById('cursorRing');
 let mx = 0, my = 0, rx = 0, ry = 0;
 
-document.addEventListener('mousemove', e => {
-  mx = e.clientX; my = e.clientY;
-  cursor.style.left = mx + 'px';
-  cursor.style.top  = my + 'px';
-});
-
-(function lerpRing() {
-  rx += (mx - rx) * .12;
-  ry += (my - ry) * .12;
-  ring.style.left = rx + 'px';
-  ring.style.top  = ry + 'px';
-  requestAnimationFrame(lerpRing);
-})();
+// Only enable custom cursor on non-touch pointer devices
+const isTouch = window.matchMedia('(hover:none) and (pointer:coarse)').matches;
+if (!isTouch) {
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX; my = e.clientY;
+    cursor.style.left = mx + 'px';
+    cursor.style.top  = my + 'px';
+  });
+  (function lerpRing() {
+    rx += (mx - rx) * .12;
+    ry += (my - ry) * .12;
+    ring.style.left = rx + 'px';
+    ring.style.top  = ry + 'px';
+    requestAnimationFrame(lerpRing);
+  })();
+} else {
+  cursor.style.display = 'none';
+  ring.style.display = 'none';
+  document.body.style.cursor = 'auto';
+}
 
 function bindCursorTargets() {
   document.querySelectorAll('a, button, .practice-card, .team-card, .rechtsgebied-card, .process-step, select, input, textarea').forEach(el => {
@@ -1581,7 +1660,7 @@ document.addEventListener('click', e => {
 });
 
 // ============================================================
-// HAMBURGER + MOBILE DRAWER
+// HAMBURGER + MOBILE FULLSCREEN MENU
 // ============================================================
 const hamburger   = document.getElementById('hamburger');
 const mobileMenu  = document.getElementById('mobileMenu');
@@ -1590,13 +1669,11 @@ const mobileOverlay = document.getElementById('mobileOverlay');
 
 function openMenu() {
   mobileMenu.classList.add('open');
-  mobileOverlay.classList.add('open');
   hamburger.classList.add('open');
   document.body.style.overflow = 'hidden';
 }
 function closeMenu() {
   mobileMenu.classList.remove('open');
-  mobileOverlay.classList.remove('open');
   hamburger.classList.remove('open');
   document.body.style.overflow = '';
 }
@@ -1605,14 +1682,6 @@ hamburger.addEventListener('click', () => {
   mobileMenu.classList.contains('open') ? closeMenu() : openMenu();
 });
 mobileClose.addEventListener('click', closeMenu);
-mobileOverlay.addEventListener('click', closeMenu);
-
-// Close on swipe right
-let touchStartX = 0;
-mobileMenu.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
-mobileMenu.addEventListener('touchend', e => {
-  if (e.changedTouches[0].clientX - touchStartX > 60) closeMenu();
-}, { passive: true });
 
 // ============================================================
 // SCROLL
