@@ -11,3 +11,1878 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https://raw.githubusercontent.com https://images.squarespace-cdn.com data: blob:; frame-src https://www.google.com; connect-src 'self' https://formspree.io; form-action 'self' https://formspree.io; base-uri 'self'; object-src 'none'; frame-ancestors 'self';">
 <title>Tsang Law Firm — Uw Partner in Rechtvaardigheid</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Outfit:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+a,button{touch-action:manipulation}
+input,select,textarea{font-size:16px!important;-webkit-appearance:none;appearance:none;border-radius:0}
+html{scroll-behavior:smooth}
+:root{
+  --bg:#F7F5F2;--bg-alt:#EFECE7;--ink:#0C0C0D;--ink-mid:#3A3A3C;--ink-soft:#6E6E73;--ink-faint:#A8A8AE;
+  --accent:#B89A6A;--accent-light:#D4B98A;--accent-pale:#EDD9B4;--steel:#5C6B75;
+  --line:rgba(12,12,13,0.09);--line-strong:rgba(12,12,13,0.16);
+  --shadow:0 1px 3px rgba(12,12,13,0.06),0 8px 32px rgba(12,12,13,0.08);
+}
+body{background:var(--bg);color:var(--ink);font-family:'Outfit',sans-serif;font-size:1rem;font-weight:300;overflow-x:hidden;cursor:auto}
+.cursor{display:none;position:fixed;width:8px;height:8px;background:var(--ink);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .25s,height .25s,background .25s}
+.cursor-ring{display:none;position:fixed;width:32px;height:32px;border:1px solid rgba(12,12,13,.25);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .3s,height .3s,border-color .3s}
+.cursor.hover{width:5px;height:5px;background:#C9A96E}
+.cursor-ring.hover{width:46px;height:46px;border-color:#C9A96E}
+.cursor.dark{background:#C9A96E}
+.cursor-ring.dark{border-color:rgba(201,169,110,.5)}
+.cursor.dark.hover{background:#C9A96E}
+.cursor-ring.dark.hover{border-color:#C9A96E}
+@media(hover:hover) and (pointer:fine){
+  body{cursor:none}
+  .cursor,.cursor-ring{display:block}
+  a,button,.practice-card,.team-card,.rechtsgebied-card,.process-step,select,input,textarea{cursor:none}
+}
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");pointer-events:none;z-index:9997;opacity:.5;mix-blend-mode:multiply}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:14px 60px;padding-top:max(14px,env(safe-area-inset-top));padding-left:max(60px,env(safe-area-inset-left));padding-right:max(60px,env(safe-area-inset-right));display:flex;align-items:center;justify-content:space-between;transition:all .5s cubic-bezier(.16,1,.3,1);background:rgba(74,30,36,0.18);backdrop-filter:blur(28px) saturate(180%);-webkit-backdrop-filter:blur(28px) saturate(180%);border-bottom:1px solid rgba(74,30,36,0.15)}
+nav.scrolled{background:rgba(74,30,36,0.28);backdrop-filter:blur(36px) saturate(220%);-webkit-backdrop-filter:blur(36px) saturate(220%);padding:8px 60px;border-bottom:1px solid rgba(74,30,36,0.22)}
+.nav-logo{font-family:'Outfit',sans-serif;font-size:1rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);text-decoration:none;display:flex;align-items:center;gap:12px;cursor:none}
+.nav-brand-img{height:84px;width:auto;object-fit:contain;display:block}
+.nav-brand-fallback{display:none}
+nav.scrolled .nav-brand-img{height:64px}
+.nav-right{display:flex;align-items:center;gap:20px}
+.nav-links{display:flex;gap:32px;list-style:none;align-items:center}
+.nav-links a{color:rgba(247,245,242,.7);text-decoration:none;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;font-weight:400;transition:color .3s;position:relative;cursor:none}
+.nav-links a::after{content:'';position:absolute;bottom:-3px;left:0;width:0;height:1px;background:var(--accent-light);transition:width .35s cubic-bezier(.16,1,.3,1)}
+.nav-links a:hover,.nav-links a.active{color:#F7F5F2}
+.nav-links a:hover::after,.nav-links a.active::after{width:100%}
+.nav-cta{color:#F7F5F2!important;border:1px solid rgba(247,245,242,.4)!important;padding:8px 20px;border-radius:100px;transition:background .3s,color .3s,border-color .3s!important}
+.nav-cta::after{display:none!important}
+.nav-cta:hover{background:var(--accent)!important;color:#F7F5F2!important;border-color:var(--accent)!important}
+.lang-switcher{display:flex;align-items:center;gap:2px;border:1px solid rgba(247,245,242,.25);border-radius:100px;padding:3px;background:rgba(247,245,242,0.08)}
+.lang-btn{font-size:.62rem;letter-spacing:.1em;font-weight:500;text-transform:uppercase;padding:5px 10px;border-radius:100px;border:none;background:transparent;color:rgba(247,245,242,.6);cursor:none;transition:background .2s,color .2s;font-family:'Outfit',sans-serif}
+.lang-btn:hover{color:#F7F5F2}
+.lang-btn.active{background:var(--accent);color:#F7F5F2}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none;z-index:102;position:relative}
+.hamburger span{width:22px;height:1.5px;background:#F7F5F2;transition:all .35s cubic-bezier(.16,1,.3,1);display:block;transform-origin:center}
+.hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.mobile-overlay{display:none;position:fixed;inset:0;background:rgba(12,12,13,.45);z-index:98;backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);transition:opacity .35s ease;opacity:0}
+.mobile-overlay.open{display:block;opacity:1}
+.mobile-menu{position:fixed;top:0;right:0;width:65vw;max-width:340px;min-width:260px;height:100%;background:var(--bg);z-index:99;transform:translateX(100%);transition:transform .4s cubic-bezier(.16,1,.3,1);visibility:hidden;display:flex;flex-direction:column}
+.mobile-menu.open{transform:translateX(0);visibility:visible}
+.mobile-menu-inner{display:flex;flex-direction:column;height:100%;position:relative}
+.mobile-menu-header{display:none}
+.mobile-nav-links{display:flex;flex-direction:column;padding-top:120px;padding-bottom:24px;flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch}
+.mobile-menu a{font-family:'Playfair Display',serif;font-size:1.55rem;font-weight:400;color:var(--ink);text-decoration:none;letter-spacing:.01em;transition:color .25s,background .25s,border-left-color .25s;cursor:pointer;padding:8px 32px;display:block;text-align:left;border-left:2px solid transparent;position:relative}
+.mobile-menu a::after{content:'';position:absolute;inset:0;background:rgba(74,30,36,0);transition:background .25s ease;pointer-events:none}
+.mobile-menu a:hover{color:#4A1E24;border-left-color:#4A1E24}
+.mobile-menu a:hover::after{background:rgba(74,30,36,0.06)}
+.mobile-menu a:active::after{background:rgba(74,30,36,0.14)}
+.mobile-menu a.active{color:#4A1E24;border-left-color:#4A1E24;background:rgba(74,30,36,0.06)}
+.mobile-menu a:hover,.mobile-menu a.active{color:var(--accent);background:transparent}
+.mobile-close{position:absolute;top:18px;left:-52px;width:44px;height:44px;background:var(--bg);border:1px solid var(--line-strong);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--ink-soft);font-size:.9rem;transition:background .2s,color .2s;box-shadow:0 2px 12px rgba(12,12,13,.12)}
+.mobile-close:hover{background:var(--bg-alt);color:var(--ink)}
+.mobile-close:hover{background:var(--bg-alt);color:var(--ink)}
+.mobile-lang-row{display:flex;gap:8px;flex-wrap:wrap;padding:20px 32px 40px;border-top:1px solid var(--line)}
+.mobile-lang-btn{font-size:.68rem;letter-spacing:.1em;font-weight:500;text-transform:uppercase;padding:7px 16px;border-radius:100px;border:1px solid var(--line-strong);background:transparent;color:var(--ink-soft);cursor:pointer;transition:background .2s,color .2s,border-color .2s;font-family:'Outfit',sans-serif}
+.mobile-lang-btn:hover{color:var(--ink);border-color:var(--ink-soft)}
+.mobile-lang-btn.active{background:var(--accent);color:#F7F5F2;border-color:var(--accent)}
+.page{display:none;min-height:100vh}
+.page.active{display:block}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@keyframes scrollPulse{0%,100%{opacity:.3}50%{opacity:1}}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .65s cubic-bezier(.16,1,.3,1),transform .65s cubic-bezier(.16,1,.3,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.hero{min-height:100svh;min-height:100vh;position:relative;display:flex;align-items:center;padding:120px 80px 80px;overflow:hidden;background:var(--ink)}
+.hero-bg{position:absolute;inset:0;background:url('https://images.squarespace-cdn.com/content/v1/67caff9a90b609682b5b8b1f/902ef867-7ba5-4f4d-9a61-ecb0f7fdc2bc/La_haye_palais_paix_jardin_face.jpg') center/cover no-repeat;transform:scale(1.06);transition:transform 10s ease;filter:brightness(.28) saturate(.4)}
+.hero-bg.loaded{transform:scale(1)}
+.hero-gradient{position:absolute;inset:0;background:linear-gradient(to top,rgba(12,12,13,.95) 0%,rgba(12,12,13,.5) 50%,rgba(12,12,13,.1) 100%)}
+.hero-content{position:relative;z-index:2;width:100%;max-width:1300px;display:flex;align-items:center;justify-content:space-between;gap:60px}
+.hero-left{flex:1;min-width:0}
+.hero-right{flex:0 0 auto;display:flex;align-items:center;justify-content:center}
+.hero-brand-logo{width:clamp(360px,38vw,560px);height:auto;object-fit:contain;opacity:0;transform:translateY(20px);animation:fadeUp .9s ease .6s forwards}
+.hero-eyebrow{display:flex;align-items:center;gap:16px;margin-bottom:40px;opacity:0;transform:translateY(20px);animation:fadeUp .8s ease .3s forwards}
+.hero-eyebrow-line{width:32px;height:1px;background:var(--accent)}
+.hero-eyebrow span{font-size:.75rem;letter-spacing:.28em;text-transform:uppercase;color:var(--accent-light);font-weight:400}
+.hero-title{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,5vw,3.8rem);font-weight:400;line-height:1.08;letter-spacing:-.02em;margin-bottom:40px;color:#F7F5F2;opacity:0;transform:translateY(30px);animation:fadeUp .9s ease .5s forwards}
+.hero-title em{font-style:italic;color:var(--accent-pale)}
+.hero-sub{font-size:1.15rem;line-height:1.9;color:rgba(247,245,242,.55);max-width:480px;margin-bottom:56px;font-weight:300;opacity:0;transform:translateY(20px);animation:fadeUp .8s ease .7s forwards}
+.hero-actions{display:flex;gap:24px;align-items:center;flex-wrap:wrap;opacity:0;transform:translateY(20px);animation:fadeUp .8s ease .9s forwards}
+.btn-primary{background:var(--bg);color:var(--ink);padding:14px 36px;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;font-weight:500;transition:background .3s,color .3s,transform .3s;display:inline-block;border:1px solid transparent;border-radius:100px;cursor:none}
+.btn-primary:hover{background:var(--accent);color:var(--bg);transform:translateY(-2px)}
+.btn-primary.dark{background:var(--ink);color:var(--bg)}
+.btn-primary.dark:hover{background:var(--accent);color:var(--bg)}
+.btn-ghost{color:rgba(247,245,242,.7);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;display:flex;align-items:center;gap:10px;transition:gap .35s,color .3s;border:none;background:none;cursor:none}
+.btn-ghost:hover{gap:18px;color:var(--accent-pale)}
+.btn-ghost-arrow{width:28px;height:1px;background:currentColor;position:relative;flex-shrink:0;display:inline-block}
+.btn-ghost-arrow::after{content:'';position:absolute;right:0;top:-3px;width:7px;height:7px;border-right:1px solid currentColor;border-top:1px solid currentColor;transform:rotate(45deg)}
+.scroll-indicator{position:absolute;right:60px;bottom:80px;display:flex;flex-direction:column;align-items:center;gap:12px;opacity:0;animation:fadeIn 1s ease 1.5s forwards}
+.scroll-indicator span{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(247,245,242,.35);writing-mode:vertical-rl}
+.scroll-line{width:1px;height:56px;background:linear-gradient(to bottom,var(--accent-light),transparent);animation:scrollPulse 2.5s ease-in-out infinite}
+.stats-bar{background:var(--bg);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:48px 60px;display:grid;grid-template-columns:repeat(4,1fr)}
+.stat-item{padding:0 40px;border-right:1px solid var(--line);opacity:0;transform:translateY(12px);transition:opacity .6s,transform .6s}
+.stat-item:first-child{padding-left:0}
+.stat-item:last-child{border-right:none}
+.stat-item.visible{opacity:1;transform:translateY(0)}
+.stat-number{font-family:'Playfair Display',serif;font-size:3.4rem;font-weight:400;color:var(--ink);line-height:1;margin-bottom:8px;letter-spacing:-.03em}
+.stat-number.burgundy{color:#4A1E24}
+.stat-label{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);font-weight:400}
+.marquee-wrap{overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg-alt);padding:16px 0}
+.marquee-track{display:flex;animation:marquee 28s linear infinite;white-space:nowrap}
+.marquee-item{display:flex;align-items:center;gap:40px;padding:0 40px;font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-faint);flex-shrink:0}
+.marquee-dot{width:3px;height:3px;border-radius:50%;background:var(--accent);opacity:.7;flex-shrink:0}
+section{padding:120px 60px}
+.section-tag{display:flex;align-items:center;gap:14px;margin-bottom:24px}
+.section-tag-line{width:24px;height:1px;background:var(--accent);flex-shrink:0}
+.section-tag span{font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;color:var(--accent);font-weight:400}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,5vw,3.8rem);font-weight:400;line-height:1.08;letter-spacing:-.02em;color:var(--ink)}
+.section-title em{font-style:italic;color:var(--accent)}
+.page-hero{padding:160px 60px 80px;position:relative;border-bottom:1px solid var(--line);background:var(--bg)}
+.page-hero-bg{position:absolute;inset:0;opacity:.04;background-size:cover;background-position:center;filter:grayscale(1)}
+.page-hero-content{position:relative;z-index:2;max-width:800px}
+.page-hero-eyebrow{display:flex;align-items:center;gap:14px;margin-bottom:24px}
+.page-hero-eyebrow-line{width:24px;height:1px;background:var(--accent)}
+.page-hero-eyebrow span{font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);font-weight:400}
+.page-hero-title{font-family:'Playfair Display',serif;font-size:clamp(3rem,6vw,5.5rem);font-weight:400;line-height:.95;letter-spacing:-.025em;margin-bottom:28px;color:var(--ink)}
+.page-hero-title em{font-style:italic;color:var(--accent)}
+.page-hero-sub{font-size:1.1rem;line-height:1.9;color:var(--ink-soft);max-width:520px}
+.about{background:var(--bg-alt);color:var(--ink);display:grid;grid-template-columns:1fr 1fr;padding:0}
+.about-left{padding:120px 80px 120px 60px}
+.about-body{margin-top:36px;font-size:1.1rem;line-height:1.95;color:var(--ink-soft);max-width:440px}
+.about-values{margin-top:52px;display:flex;flex-direction:column;gap:24px}
+.about-value{display:flex;gap:20px;align-items:flex-start;opacity:0;transform:translateX(-16px);transition:opacity .6s,transform .6s}
+.about-value.visible{opacity:1;transform:translateX(0)}
+.about-value-num{font-family:'Playfair Display',serif;font-size:.78rem;color:var(--accent);margin-top:2px;flex-shrink:0;font-style:italic}
+.about-value-text strong{display:block;font-size:1.1rem;font-weight:500;color:var(--ink);margin-bottom:4px;letter-spacing:.01em}
+.about-value-text p{font-size:1.05rem;color:var(--ink-soft);line-height:1.75}
+.about-right{position:relative;overflow:hidden;min-height:600px}
+.about-right img{width:100%;height:100%;object-fit:cover;filter:saturate(.5) brightness(.85);transition:transform 10s ease,filter .6s}
+.about-right:hover img{transform:scale(1.03);filter:saturate(.7) brightness(.9)}
+.about-overlay{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(12,12,13,.88) 0%,transparent 100%);padding:60px 50px 50px;color:#F7F5F2}
+.about-overlay-quote{font-family:'Playfair Display',serif;font-size:1.3rem;font-style:italic;font-weight:400;line-height:1.55;color:rgba(247,245,242,.9)}
+.about-overlay-langs{margin-top:18px;display:flex;gap:8px;flex-wrap:wrap}
+.lang-tag{font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;border:1px solid rgba(247,245,242,.25);color:rgba(247,245,242,.65);padding:4px 10px;border-radius:100px}
+.practice{background:var(--bg)}
+.practice-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:64px}
+.practice-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line)}
+.practice-card{background:var(--bg);padding:48px 40px;position:relative;overflow:hidden;cursor:none;opacity:0;transform:translateY(16px);transition:opacity .5s,transform .5s,box-shadow .4s,background .3s}
+.practice-card.visible{opacity:1;transform:translateY(0)}
+.practice-card::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:1px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .5s cubic-bezier(.16,1,.3,1)}
+.practice-card:hover{background:var(--bg-alt);box-shadow:var(--shadow)}
+.practice-card:hover::after{transform:scaleX(1)}
+.practice-num{font-family:'Playfair Display',serif;font-size:.7rem;color:var(--accent);letter-spacing:.14em;margin-bottom:22px;display:block;font-style:italic}
+.practice-name{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:400;color:var(--ink);margin-bottom:18px;line-height:1.2}
+.practice-items{list-style:none;display:flex;flex-direction:column;gap:8px}
+.practice-items li{font-size:1.05rem;color:var(--ink-soft);display:flex;align-items:center;gap:10px;transition:color .3s}
+.practice-card:hover .practice-items li{color:var(--ink-mid)}
+.practice-items li::before{content:'';width:3px;height:3px;border-radius:50%;background:var(--accent);opacity:.6;flex-shrink:0}
+.practice-card-arrow{position:absolute;bottom:24px;right:24px;width:28px;height:28px;border:1px solid var(--line);border-radius:50%;display:flex;align-items:center;justify-content:center;opacity:0;transform:translate(4px,4px);transition:opacity .3s,transform .3s,border-color .3s}
+.practice-card:hover .practice-card-arrow{opacity:1;transform:translate(0,0);border-color:var(--accent)}
+.practice-card-arrow svg{width:10px;height:10px;stroke:var(--accent);fill:none;stroke-width:1.5}
+.team-section{background:var(--bg-alt)}
+.team-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:64px;max-width:860px;margin-left:auto;margin-right:auto}
+.team-card{position:relative;overflow:hidden;background:var(--ink);aspect-ratio:3/4;max-height:520px;opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s;cursor:none}
+.team-card.visible{opacity:1;transform:translateY(0)}
+.team-card img{width:100%;height:100%;object-fit:cover;object-position:center top;filter:saturate(.3) brightness(.55);transition:filter .6s,transform .6s}
+.team-card:hover img{filter:saturate(.55) brightness(.75);transform:scale(1.03)}
+.team-card-content{position:absolute;bottom:0;left:0;right:0;padding:32px 28px 28px;background:linear-gradient(to top,rgba(74,30,36,.97) 0%,rgba(74,30,36,.75) 55%,transparent 100%);backdrop-filter:blur(0px);-webkit-backdrop-filter:blur(0px);transform:translateY(16px);transition:transform .45s cubic-bezier(.16,1,.3,1),backdrop-filter .45s,background .45s}
+.team-card:hover .team-card-content{transform:translateY(0);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.team-card-role{font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent-light);margin-bottom:8px;font-weight:400}
+.team-card-name{font-family:'Playfair Display',serif;font-size:1.75rem;color:#F7F5F2;margin-bottom:16px;font-weight:400}
+.team-card-tags{display:flex;gap:8px;flex-wrap:wrap;opacity:0;transform:translateY(8px);transition:opacity .35s .1s,transform .35s .1s}
+.team-card:hover .team-card-tags{opacity:1;transform:translateY(0)}
+.team-card .lang-tag{font-size:.72rem;letter-spacing:.1em;padding:5px 13px;border:1px solid rgba(247,245,242,.4);color:#F7F5F2;background:rgba(247,245,242,.1);border-radius:100px}
+.contact-cta{background:var(--ink);padding:120px 60px;text-align:center}
+.contact-cta-title{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,5vw,3.8rem);font-weight:400;color:#F7F5F2;margin-bottom:24px;line-height:1.08}
+.contact-cta-title em{font-style:italic;color:var(--accent-pale)}
+.contact-cta-sub{font-size:1.15rem;color:rgba(247,245,242,.5);margin-bottom:48px;font-weight:300}
+.contact-cta-actions{display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
+.team-page-section{padding:80px 60px 120px}
+.team-profile{display:grid;grid-template-columns:280px 1fr;gap:56px;align-items:start;opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s;padding:72px 0;border-bottom:1px solid var(--line)}
+.team-profile:first-child{padding-top:0}
+.team-profile:last-child{border-bottom:none}
+.team-profile.visible{opacity:1;transform:translateY(0)}
+.team-profile-img{position:relative;overflow:hidden;aspect-ratio:3/4}
+.team-profile-img img{width:100%;height:100%;object-fit:cover;object-position:center top;filter:saturate(.4) brightness(.8);transition:filter .6s,transform .6s}
+.team-profile-img:hover img{filter:saturate(.65) brightness(.9);transform:scale(1.03)}
+.team-profile-img-overlay{position:absolute;bottom:0;left:0;right:0;padding:20px;background:linear-gradient(to top,rgba(12,12,13,.9) 0%,transparent 100%)}
+.team-profile-langs{display:flex;gap:6px;flex-wrap:wrap}
+.team-profile-info{padding-top:8px}
+.team-profile-role{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;font-weight:400}
+.team-profile-name{font-family:'Playfair Display',serif;font-size:2.1rem;font-weight:400;color:var(--ink);margin-bottom:4px;line-height:1.1}
+.team-profile-uni{font-size:1rem;color:var(--ink-soft);margin-bottom:24px;font-style:italic}
+.team-profile-bio{font-size:1.15rem;line-height:1.9;color:var(--ink-mid);margin-bottom:16px}
+.team-expertise{margin-top:12px;display:flex;flex-direction:column;gap:8px}
+.team-expertise-label{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:4px}
+.team-expertise-tags{display:flex;gap:8px;flex-wrap:wrap}
+.tag{font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border:1px solid var(--line-strong);color:var(--ink-soft);border-radius:100px}
+.waarneming-box{margin-top:64px;padding:44px;border:1px solid var(--line);background:var(--bg-alt)}
+.rg-intro{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;padding:80px 60px;border-bottom:1px solid var(--line)}
+.rg-intro-right{font-size:1.15rem;line-height:1.95;color:var(--ink-soft)}
+.rechtsgebieden-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line)}
+.rechtsgebied-card{background:var(--bg);padding:56px 48px;position:relative;opacity:0;transform:translateY(16px);transition:opacity .5s,transform .5s,background .3s;cursor:none}
+.rechtsgebied-card.visible{opacity:1;transform:translateY(0)}
+.rechtsgebied-card:hover{background:var(--bg-alt)}
+.rg-icon{width:36px;height:36px;margin-bottom:28px}
+.rg-icon svg{width:100%;height:100%;stroke:var(--accent);fill:none;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round}
+.rechtsgebied-num{font-family:'Playfair Display',serif;font-size:.7rem;color:var(--accent-light);letter-spacing:.14em;margin-bottom:16px;display:block;font-style:italic}
+.rechtsgebied-title{font-family:'Playfair Display',serif;font-size:1.9rem;font-weight:400;color:var(--ink);margin-bottom:20px;line-height:1.1}
+.rechtsgebied-desc{font-size:1.15rem;line-height:1.85;color:var(--ink-soft);margin-bottom:28px;max-width:420px}
+.rechtsgebied-items{list-style:none;display:flex;flex-direction:column;gap:9px}
+.rechtsgebied-items li{font-size:1.08rem;color:var(--ink-soft);display:flex;align-items:center;gap:10px}
+.rechtsgebied-items li::before{content:'';width:3px;height:3px;border-radius:50%;background:var(--accent);opacity:.6;flex-shrink:0}
+.rg-bar-notice{display:flex;align-items:center;justify-content:space-between;gap:40px;padding:60px;border-top:1px solid var(--line);background:var(--bg-alt)}
+.rg-bar-notice h3{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:400;color:var(--ink);margin-bottom:12px;line-height:1.3}
+.rg-bar-notice p{font-size:1.1rem;line-height:1.85;color:var(--ink-soft);max-width:600px}
+.process-steps{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);margin-top:72px}
+.process-step{background:var(--bg);padding:52px 44px;opacity:0;transform:translateY(16px);transition:opacity .5s,transform .5s}
+.process-step.visible{opacity:1;transform:translateY(0)}
+.process-step-num{font-family:'Playfair Display',serif;font-size:3.5rem;color:var(--accent-pale);font-style:italic;line-height:1;margin-bottom:24px;letter-spacing:-.03em}
+.process-step-title{font-family:'Playfair Display',serif;font-size:1.55rem;font-weight:400;color:var(--ink);margin-bottom:16px}
+.process-step p{font-size:1.12rem;line-height:1.9;color:var(--ink-soft)}
+.process-extra{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);margin-top:1px}
+.process-extra-card{background:var(--bg-alt);padding:48px 44px}
+.process-extra-card h3{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:400;color:var(--ink);margin-bottom:14px}
+.process-extra-card p{font-size:1.12rem;line-height:1.85;color:var(--ink-soft)}
+.tarieven-section{background:var(--ink);padding:100px 60px}
+.tarieven-inner{max-width:800px;margin:0 auto;text-align:center}
+.tarieven-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(247,245,242,.08);margin-top:48px;text-align:center}
+.tarief-item{background:rgba(247,245,242,.04);padding:40px 28px}
+.tarief-item-title{font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--accent);margin-bottom:10px;font-style:italic}
+.tarief-item p{font-size:1.08rem;color:rgba(247,245,242,.45);line-height:1.7}
+.prodeo-section{background:var(--ink);padding:100px 60px}
+.prodeo-content{max-width:820px;margin:0 auto}
+.prodeo-intro{font-size:1.2rem;line-height:1.9;color:rgba(247,245,242,.6);margin-bottom:64px}
+.prodeo-intro strong{color:rgba(247,245,242,.9)}
+.prodeo-steps{display:flex;flex-direction:column;gap:1px;background:rgba(247,245,242,.08);margin-bottom:1px}
+.prodeo-step{display:flex;gap:36px;align-items:flex-start;background:rgba(247,245,242,.04);padding:40px 44px}
+.prodeo-step-num{font-family:'Playfair Display',serif;font-size:2.2rem;color:var(--accent);font-style:italic;line-height:1;flex-shrink:0;width:48px}
+.prodeo-step h3{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:400;color:#F7F5F2;margin-bottom:10px}
+.prodeo-step p{font-size:1.12rem;line-height:1.85;color:rgba(247,245,242,.5)}
+.prodeo-cta-box{background:rgba(247,245,242,.06);border:1px solid rgba(247,245,242,.1);padding:52px 44px;margin-top:56px}
+.prodeo-cta-box h3{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:400;color:#F7F5F2;margin-bottom:14px}
+.prodeo-cta-box p{font-size:1.15rem;line-height:1.85;color:rgba(247,245,242,.5);margin-bottom:28px}
+.contact-section{display:grid;grid-template-columns:1fr 1fr;min-height:80vh}
+.contact-left{padding:80px 60px;border-right:1px solid var(--line)}
+.contact-right{padding:80px 60px;background:var(--bg-alt)}
+.contact-details{margin-top:48px;display:flex;flex-direction:column}
+.contact-item{display:flex;gap:20px;align-items:flex-start;padding:20px 0;border-bottom:1px solid var(--line)}
+.contact-item:first-child{border-top:1px solid var(--line)}
+.contact-icon{width:36px;height:36px;flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.contact-icon svg{width:18px;height:18px;stroke:var(--accent);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.contact-label{font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:4px;font-weight:400}
+.contact-value{font-size:1rem;color:var(--ink-mid);text-decoration:none;transition:color .3s}
+.contact-value:hover{color:var(--accent)}
+.map-embed{margin-top:40px;height:220px;border:1px solid var(--line);overflow:hidden}
+.map-embed iframe{width:100%;height:100%;border:none;filter:saturate(.4) contrast(1.1)}
+.contact-form-title{font-family:'Playfair Display',serif;font-size:2rem;font-weight:400;color:var(--ink);margin-bottom:36px;line-height:1.2}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.form-group{display:flex;flex-direction:column;gap:8px;margin-bottom:20px}
+.form-group.full{grid-column:1/-1}
+.form-group label{font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);font-weight:400}
+.form-group input,.form-group select,.form-group textarea{background:var(--bg);border:1px solid var(--line-strong);padding:13px 16px;font-family:'Outfit',sans-serif;font-size:1.05rem;color:var(--ink);outline:none;transition:border-color .3s;border-radius:0;-webkit-appearance:none;appearance:none}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--accent)}
+.form-group textarea{resize:none;height:130px;font-weight:300}
+.btn-submit{width:100%;background:var(--ink);color:var(--bg);border:none;padding:16px 32px;font-family:'Outfit',sans-serif;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;font-weight:500;cursor:none;transition:background .3s,transform .3s;margin-top:4px}
+.btn-submit:hover{background:var(--accent);transform:translateY(-1px)}
+.privacy-note{font-size:.95rem;color:var(--ink-faint);line-height:1.6;margin-top:14px}
+footer{background:var(--ink);color:rgba(247,245,242,.6);padding:80px 60px 40px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:60px;margin-bottom:60px;padding-bottom:60px;border-bottom:1px solid rgba(247,245,242,.08)}
+.footer-brand{font-family:'Outfit',sans-serif;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:#F7F5F2;margin-bottom:20px;display:block}
+.footer-desc{font-size:1.1rem;line-height:1.85}
+.footer-col h4{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(247,245,242,.35);margin-bottom:20px;font-weight:400}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.footer-col ul a{font-size:1.1rem;color:rgba(247,245,242,.6);text-decoration:none;transition:color .3s;cursor:none}
+.footer-col ul a:hover{color:var(--accent-light)}
+.footer-hours{font-size:1.1rem;line-height:1.85}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.footer-copy{font-size:.78rem;color:rgba(247,245,242,.3)}
+.footer-copy a{color:rgba(247,245,242,.3);text-decoration:none;transition:color .3s;cursor:none}
+.footer-copy a:hover{color:rgba(247,245,242,.6)}
+.legal-section{padding:80px 60px 120px;max-width:860px}
+.legal-section h2{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:400;color:var(--ink);margin:48px 0 16px}
+.legal-section h2:first-child{margin-top:0}
+.legal-section p,.legal-section li{font-size:1.15rem;line-height:1.9;color:var(--ink-soft)}
+/* Sarican initials placeholder */
+.team-card-initials-wrap{position:absolute;inset:0;width:100%;height:100%}
+.team-card-initials-svg{width:100%;height:100%;display:block;transition:filter .6s,transform .6s}
+.team-card:hover .team-card-initials-svg{filter:brightness(1.08);transform:scale(1.03)}
+.team-profile-initials-svg{width:100%;height:100%;display:block;transition:filter .6s,transform .6s}
+.team-profile-img:hover .team-profile-initials-svg{transform:scale(1.03)}
+@media(max-width:1100px){.lang-switcher{display:none}}
+@media(max-width:1024px){
+  .about{grid-template-columns:1fr}.about-right{min-height:400px}
+  .team-grid{grid-template-columns:1fr}
+  .contact-section{grid-template-columns:1fr}.contact-left{border-right:none;border-bottom:1px solid var(--line)}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .rechtsgebieden-grid{grid-template-columns:1fr}
+  .process-steps{grid-template-columns:1fr}
+  .team-profile{grid-template-columns:1fr}
+}
+/* ── TABLET (768–1024px) ── */
+@media(max-width:1024px) and (min-width:769px){
+  nav{padding:12px 32px}
+  .nav-brand-img{height:60px}
+  nav.scrolled .nav-brand-img{height:48px}
+  .stats-bar{padding:40px 32px}
+  section{padding:100px 40px}
+  .page-hero{padding:140px 40px 60px}
+  .about-left{padding:100px 40px}
+  .rechtsgebied-card{padding:48px 36px}
+  .team-page-section{padding:60px 40px 100px}
+}
+/* ── MOBILE (≤768px) ── */
+@media(max-width:768px){
+  nav{padding:10px 20px}
+  nav.scrolled{padding:8px 20px}
+  .nav-brand-img{height:52px}
+  nav.scrolled .nav-brand-img{height:42px}
+  .nav-links{display:none}.hamburger{display:flex}
+  .hero{padding:110px 20px 56px;min-height:100svh}
+  .hero-right{display:none}.hero-content{flex-direction:column}
+  .hero-title{font-size:clamp(2rem,8vw,3rem)}
+  .hero-sub{font-size:1rem;max-width:100%}
+  .stats-bar{grid-template-columns:1fr 1fr;padding:28px 20px}
+  .stat-item{padding:16px 12px}
+  .stat-item:nth-child(2){border-right:none}
+  .stat-number{font-size:2.4rem}
+  section{padding:72px 20px}
+  .page-hero{padding:110px 20px 52px}
+  .about-left{padding:72px 20px}
+  .about-body{max-width:100%}
+  .practice-grid{grid-template-columns:1fr}
+  .practice-header{flex-direction:column;align-items:flex-start;gap:16px}
+  .practice-card{padding:36px 24px}
+  .team-section{padding:72px 20px}
+  .team-grid{gap:12px;max-width:100%}
+  .rg-intro{grid-template-columns:1fr;padding:52px 20px;gap:24px}
+  .rechtsgebieden-grid{grid-template-columns:1fr}
+  .rechtsgebied-card{padding:36px 20px}
+  .rg-bar-notice{flex-direction:column;align-items:flex-start;padding:36px 20px;gap:24px}
+  .contact-left,.contact-right{padding:52px 20px}
+  .contact-left{border-right:none;border-bottom:1px solid var(--line)}
+  .form-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr;gap:28px;margin-bottom:28px;padding-bottom:28px}
+  .footer-bottom{flex-direction:column;align-items:flex-start}
+  .process-extra{grid-template-columns:1fr}
+  .tarieven-grid{grid-template-columns:1fr}
+  .contact-cta{padding:72px 20px}
+  .team-page-section{padding:52px 20px 72px}
+  .team-profile{grid-template-columns:1fr;gap:32px;padding:48px 0}
+  .prodeo-section{padding:72px 20px}
+  .prodeo-step{padding:24px 20px;gap:20px}
+  .prodeo-cta-box{padding:32px 20px}
+  .tarieven-section{padding:72px 20px}
+  .legal-section{padding:52px 20px 72px;max-width:100%}
+  .waarneming-box{margin:36px 0 0;padding:32px 20px}
+  .process-step{padding:40px 28px}
+  .section-title{font-size:clamp(2rem,8vw,3rem)}
+  .page-hero-title{font-size:clamp(2.4rem,10vw,4rem)}
+  .about-overlay-quote{font-size:1.1rem}
+  .team-card{max-height:440px}
+  .btn-primary{padding:14px 28px}
+  .contact-cta-actions{flex-direction:column;align-items:center}
+  .scroll-indicator{display:none}
+  .tarief-item{padding:32px 20px}
+}
+/* ── SMALL MOBILE (≤480px) ── */
+@media(max-width:480px){
+  .stats-bar{grid-template-columns:1fr 1fr}
+  .stat-item:nth-child(3){border-right:none}
+  .hero-title{font-size:clamp(1.8rem,9vw,2.8rem)}
+  .section-title{font-size:clamp(1.8rem,9vw,2.8rem)}
+  .team-grid{grid-template-columns:1fr}
+  .rechtsgebieden-grid{grid-template-columns:1fr}
+  .process-steps{grid-template-columns:1fr}
+  .mobile-menu{width:80vw}
+}
+/* ===== RTL (Arabic) ===== */
+body.rtl{font-family:'Outfit',sans-serif;direction:rtl;text-align:right}
+body.rtl .nav-logo{flex-direction:row-reverse}
+body.rtl .nav-links{flex-direction:row-reverse}
+body.rtl .hero-eyebrow,.body.rtl .page-hero-eyebrow,.body.rtl .section-tag{flex-direction:row-reverse}
+body.rtl .hero-actions{flex-direction:row-reverse}
+body.rtl .btn-ghost{flex-direction:row-reverse}
+body.rtl .btn-ghost-arrow{transform:rotate(180deg)}
+body.rtl .about-value{flex-direction:row-reverse}
+body.rtl .contact-item{flex-direction:row-reverse}
+body.rtl .prodeo-step{flex-direction:row-reverse}
+body.rtl .team-profile{direction:rtl}
+body.rtl .footer-grid{direction:rtl}
+body.rtl .footer-bottom{flex-direction:row-reverse}
+body.rtl .about-value{transform:translateX(16px)}
+body.rtl .about-value.visible{transform:translateX(0)}
+body.rtl .scroll-indicator{left:60px;right:auto}
+body.rtl .practice-card-arrow svg{transform:rotate(180deg)}
+body.rtl .rg-bar-notice{flex-direction:row-reverse}
+body.rtl select{text-align:right}
+/* ===== WHATSAPP BUBBLE ===== */
+.wa-bubble{position:fixed;bottom:28px;right:28px;z-index:9990;display:flex;align-items:center;gap:0;filter:drop-shadow(0 4px 16px rgba(12,12,13,.22));transition:transform .3s cubic-bezier(.16,1,.3,1)}
+.wa-bubble:hover{transform:scale(1.08)}
+.wa-bubble:active{transform:scale(.96)}
+.wa-btn{display:flex;align-items:center;justify-content:center;width:58px;height:58px;border-radius:50%;background:#25D366;text-decoration:none;flex-shrink:0;transition:background .2s;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.wa-btn:hover{background:#1ebe5d}
+.wa-btn svg{width:30px;height:30px;fill:#fff}
+.wa-label{background:#25D366;color:#fff;font-family:'Outfit',sans-serif;font-size:.82rem;font-weight:500;padding:0 16px 0 12px;height:40px;border-radius:0 100px 100px 0;display:flex;align-items:center;white-space:nowrap;margin-left:-8px;opacity:0;max-width:0;overflow:hidden;transition:opacity .3s ease,max-width .4s cubic-bezier(.16,1,.3,1);pointer-events:none}
+.wa-bubble:hover .wa-label{opacity:1;max-width:200px}
+@media(max-width:768px){
+  .wa-bubble{bottom:20px;right:20px}
+  .wa-btn{width:52px;height:52px}
+  .wa-btn svg{width:26px;height:26px}
+  .wa-label{display:none}
+}
+/* ===== COOKIE BANNER ===== */
+.cookie-banner{position:fixed;bottom:0;left:0;right:0;z-index:9995;background:var(--ink);color:rgba(247,245,242,.85);padding:20px 60px;display:flex;align-items:center;justify-content:space-between;gap:24px;border-top:1px solid rgba(247,245,242,.1);transform:translateY(0);transition:transform .4s cubic-bezier(.16,1,.3,1)}
+.cookie-banner.hidden{transform:translateY(110%)}
+.cookie-banner-text{font-size:.95rem;line-height:1.65;flex:1}
+.cookie-banner-text a{color:var(--accent-light);text-decoration:underline;text-decoration-color:rgba(201,169,110,.4)}
+.cookie-banner-text a:hover{color:var(--accent-pale)}
+.cookie-banner-actions{display:flex;gap:12px;flex-shrink:0}
+.cookie-btn-accept{background:var(--accent);color:#F7F5F2;border:none;padding:10px 22px;font-family:'Outfit',sans-serif;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;font-weight:500;cursor:pointer;transition:background .2s;border-radius:100px}
+.cookie-btn-accept:hover{background:var(--accent-light)}
+.cookie-btn-decline{background:transparent;color:rgba(247,245,242,.5);border:1px solid rgba(247,245,242,.2);padding:10px 22px;font-family:'Outfit',sans-serif;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;font-weight:400;cursor:pointer;transition:color .2s,border-color .2s;border-radius:100px}
+.cookie-btn-decline:hover{color:rgba(247,245,242,.8);border-color:rgba(247,245,242,.4)}
+@media(max-width:768px){
+  .cookie-banner{flex-direction:column;align-items:flex-start;padding:20px 20px 28px;gap:16px}
+  .cookie-banner-actions{width:100%}
+  .cookie-btn-accept,.cookie-btn-decline{flex:1;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<!-- GDPR Cookie Consent Banner -->
+<div class="cookie-banner hidden" id="cookieBanner">
+  <p class="cookie-banner-text">Wij gebruiken cookies en vergelijkbare technologieën voor het verwerken van contactformuliergegevens en het laden van externe inhoud (Google Maps, Google Fonts). Uw gegevens worden verwerkt conform de <a href="#" data-page="disclaimer">AVG / privacybeleid</a>. Door op "Accepteren" te klikken gaat u akkoord met het gebruik van cookies. U kunt uw keuze op elk moment wijzigen.</p>
+  <div class="cookie-banner-actions">
+    <button class="cookie-btn-decline" id="cookieDecline">Alleen noodzakelijk</button>
+    <button class="cookie-btn-accept" id="cookieAccept">Accepteren</button>
+  </div>
+</div>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<div class="mobile-overlay" id="mobileOverlay"></div>
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-inner">
+    <button class="mobile-close" id="mobileClose">&#x2715;</button>
+    <div class="mobile-nav-links">
+      <a href="#" data-page="team" data-i18n="nav.team">Team</a>
+      <a href="#" data-page="rechtsgebieden" data-i18n="nav.areas">Rechtsgebieden</a>
+      <a href="#" data-page="werkwijze" data-i18n="nav.werkwijze">Werkwijze</a>
+      <a href="#" data-page="prodeo">Pro Deo</a>
+      <a href="#" data-page="contact" data-i18n="nav.contact">Contact</a>
+    </div>
+    <div class="mobile-lang-row">
+      <button class="mobile-lang-btn active" data-lang="nl">NL</button>
+      <button class="mobile-lang-btn" data-lang="en">EN</button>
+      <button class="mobile-lang-btn" data-lang="tr">TR</button>
+      <button class="mobile-lang-btn" data-lang="ar">AR</button>
+      <button class="mobile-lang-btn" data-lang="zh">中文</button>
+    </div>
+  </div>
+</div>
+
+<nav id="navbar">
+  <a href="#" class="nav-logo" data-page="home"><img class="nav-brand-img" id="navBrandImg" src="https://raw.githubusercontent.com/krshn86/tsanglawfirm/main/images/brandinginvisible.png" alt="Tsang Law Firm"><span class="nav-brand-fallback">Tsang Law Firm</span></a>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="#" data-page="team" data-i18n="nav.team">Team</a></li>
+      <li><a href="#" data-page="rechtsgebieden" data-i18n="nav.areas">Rechtsgebieden</a></li>
+      <li><a href="#" data-page="werkwijze" data-i18n="nav.werkwijze">Werkwijze</a></li>
+      <li><a href="#" data-page="prodeo">Pro Deo</a></li>
+      <li><a href="#" class="nav-cta" data-page="contact" data-i18n="nav.contact">Contact</a></li>
+    </ul>
+    <div class="lang-switcher" id="langSwitcher">
+      <button class="lang-btn active" data-lang="nl">NL</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="tr">TR</button>
+      <button class="lang-btn" data-lang="ar">AR</button>
+      <button class="lang-btn" data-lang="zh">中文</button>
+    </div>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- =================== PAGE: HOME =================== -->
+<div class="page active" id="page-home">
+  <section class="hero">
+    <div class="hero-bg" id="heroBg"></div>
+    <div class="hero-gradient"></div>
+    <div class="hero-content">
+      <div class="hero-left">
+        <div class="hero-eyebrow"><div class="hero-eyebrow-line"></div><span data-i18n="hero.eyebrow">Den Haag &middot; Advocatenkantoor</span></div>
+        <h1 class="hero-title" data-i18n="hero.title">Juridische<br><em>Expertise.</em><br>Persoonlijke<br>Benadering.</h1>
+        <p class="hero-sub" data-i18n="hero.sub">Uw betrouwbare partner in Den Haag voor deskundige juridische bijstand. Gespecialiseerd in vreemdelingenrecht, familierecht, arbeidsrecht en meer.</p>
+        <div class="hero-actions">
+          <a href="#" class="btn-primary" data-page="contact" data-i18n="hero.cta1">Gratis Adviesgesprek</a>
+          <a href="#" class="btn-ghost" data-page="rechtsgebieden" data-i18n="hero.cta2">Rechtsgebieden <span class="btn-ghost-arrow"></span></a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <img class="hero-brand-logo" id="heroBrandLogo" src="https://raw.githubusercontent.com/krshn86/tsanglawfirm/main/images/brandinginvisible.png" alt="Tsang Law Firm">
+      </div>
+    </div>
+    <div class="scroll-indicator"><span data-i18n="scroll">Scroll</span><div class="scroll-line"></div></div>
+  </section>
+
+  <div class="stats-bar">
+    <div class="stat-item"><div class="stat-number">6+</div><div class="stat-label" data-i18n="stat1.lbl">Rechtsgebieden</div></div>
+    <div class="stat-item"><div class="stat-number">6</div><div class="stat-label" data-i18n="stat2.lbl">Talen</div></div>
+    <div class="stat-item"><div class="stat-number">10+</div><div class="stat-label" data-i18n="stat3.lbl">Jaar Ervaring</div></div>
+    <div class="stat-item"><div class="stat-number burgundy">NL+INT</div><div class="stat-label" data-i18n="stat4.lbl">Nationaal &amp; Internationaal</div></div>
+  </div>
+
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <div class="marquee-item" data-i18n-marquee>Vreemdelingenrecht <span class="marquee-dot"></span> Familierecht <span class="marquee-dot"></span> Arbeidsrecht <span class="marquee-dot"></span> Ondernemingsrecht <span class="marquee-dot"></span> Letselschade <span class="marquee-dot"></span> Strafrecht <span class="marquee-dot"></span></div>
+      <div class="marquee-item" data-i18n-marquee>Vreemdelingenrecht <span class="marquee-dot"></span> Familierecht <span class="marquee-dot"></span> Arbeidsrecht <span class="marquee-dot"></span> Ondernemingsrecht <span class="marquee-dot"></span> Letselschade <span class="marquee-dot"></span> Strafrecht <span class="marquee-dot"></span></div>
+    </div>
+  </div>
+
+  <div class="about">
+    <div class="about-left">
+      <div class="section-tag reveal"><div class="section-tag-line"></div><span data-i18n="about.tag">Over Ons</span></div>
+      <h2 class="section-title reveal" style="transition-delay:.1s" data-i18n="about.title">Waarom kiezen voor<br><em>Tsang Law Firm?</em></h2>
+      <p class="about-body reveal" style="transition-delay:.2s" data-i18n="about.body">Wij geloven in een persoonlijke benadering waarbij uw belangen altijd centraal staan.</p>
+      <div class="about-values">
+        <div class="about-value"><div class="about-value-num">01</div><div class="about-value-text"><strong data-i18n="about.v1.title">Persoonlijk &amp; Oplossingsgericht</strong><p data-i18n="about.v1.body">Wij luisteren naar uw situatie en zoeken samen de beste juridische oplossing.</p></div></div>
+        <div class="about-value"><div class="about-value-num">02</div><div class="about-value-text"><strong data-i18n="about.v2.title">Internationale Expertise</strong><p data-i18n="about.v2.body">Ruime ervaring met internationale cliënten die te maken hebben met Nederlandse en internationale wet- en regelgeving.</p></div></div>
+        <div class="about-value"><div class="about-value-num">03</div><div class="about-value-text"><strong data-i18n="about.v3.title">Toegankelijk &amp; Betaalbaar</strong><p data-i18n="about.v3.body">Mogelijkheden voor rechtsbijstandsverzekering en gefinancierde rechtsbijstand.</p></div></div>
+        <div class="about-value"><div class="about-value-num">04</div><div class="about-value-text"><strong data-i18n="about.v4.title">Meertalige Dienstverlening</strong><p data-i18n="about.v4.body">Wij adviseren in Nederlands, Engels, Chinees, Turks en Arabisch.</p></div></div>
+      </div>
+    </div>
+    <div class="about-right">
+      <img src="https://raw.githubusercontent.com/krshn86/tsanglawfirm/main/images/together.webp" alt="Tsang Law Firm team">
+      <div class="about-overlay">
+        <p class="about-overlay-quote" data-i18n="about.quote">"Integriteit, transparantie en toewijding vormen de kernwaarden van ons kantoor."</p>
+        <div class="about-overlay-langs"><span class="lang-tag">NL</span><span class="lang-tag">EN</span><span class="lang-tag">&#20013;&#25991;</span><span class="lang-tag">TR</span></div>
+      </div>
+    </div>
+  </div>
+
+  <section class="practice">
+    <div class="practice-header">
+      <div>
+        <div class="section-tag reveal"><div class="section-tag-line"></div><span data-i18n="practice.tag">Specialisaties</span></div>
+        <h2 class="section-title reveal" style="transition-delay:.1s" data-i18n="practice.title">Onze<br><em>Rechtsgebieden</em></h2>
+      </div>
+      <a href="#" class="btn-primary dark" data-page="rechtsgebieden" data-i18n="practice.all">Alle gebieden</a>
+    </div>
+    <div class="practice-grid">
+      <div class="practice-card"><span class="practice-num">01</span><div class="practice-name" data-i18n="pa1.name">Vreemdelingenrecht</div><ul class="practice-items"><li data-i18n="pa1.li1">Verblijfsvergunningen</li><li data-i18n="pa1.li2">Naturalisatie</li><li data-i18n="pa1.li3">Gezinshereniging</li><li data-i18n="pa1.li4">Kennismigranten</li></ul><div class="practice-card-arrow"><svg viewBox="0 0 10 10"><polyline points="0,5 10,5"/><polyline points="6,1 10,5 6,9"/></svg></div></div>
+      <div class="practice-card"><span class="practice-num">02</span><div class="practice-name" data-i18n="pa2.name">Familierecht</div><ul class="practice-items"><li data-i18n="pa2.li1">Echtscheiding</li><li data-i18n="pa2.li2">Alimentatie</li><li data-i18n="pa2.li3">Ouderlijk gezag</li><li data-i18n="pa2.li4">Omgangsregeling</li></ul><div class="practice-card-arrow"><svg viewBox="0 0 10 10"><polyline points="0,5 10,5"/><polyline points="6,1 10,5 6,9"/></svg></div></div>
+      <div class="practice-card"><span class="practice-num">03</span><div class="practice-name" data-i18n="pa3.name">Arbeidsrecht</div><ul class="practice-items"><li data-i18n="pa3.li1">Ontslagprocedures</li><li data-i18n="pa3.li2">Arbeidsovereenkomsten</li><li data-i18n="pa3.li3">Loonvorderingen</li><li data-i18n="pa3.li4">Arbeidsconflicten</li></ul><div class="practice-card-arrow"><svg viewBox="0 0 10 10"><polyline points="0,5 10,5"/><polyline points="6,1 10,5 6,9"/></svg></div></div>
+      <div class="practice-card"><span class="practice-num">04</span><div class="practice-name" data-i18n="pa4.name">Ondernemingsrecht</div><ul class="practice-items"><li data-i18n="pa4.li1">Contracten</li><li data-i18n="pa4.li2">Oprichting onderneming</li><li data-i18n="pa4.li3">Aandeelhoudersgeschillen</li><li data-i18n="pa4.li4">Fusies &amp; Overnames</li></ul><div class="practice-card-arrow"><svg viewBox="0 0 10 10"><polyline points="0,5 10,5"/><polyline points="6,1 10,5 6,9"/></svg></div></div>
+      <div class="practice-card"><span class="practice-num">05</span><div class="practice-name" data-i18n="pa5.name">Letselschade</div><ul class="practice-items"><li data-i18n="pa5.li1">Aansprakelijkheid</li><li data-i18n="pa5.li2">Schadevergoeding</li><li data-i18n="pa5.li3">Smartengeld</li><li data-i18n="pa5.li4">Verzekeraarsonderhandelingen</li></ul><div class="practice-card-arrow"><svg viewBox="0 0 10 10"><polyline points="0,5 10,5"/><polyline points="6,1 10,5 6,9"/></svg></div></div>
+      <div class="practice-card"><span class="practice-num">06</span><div class="practice-name" data-i18n="pa6.name">Strafrecht</div><ul class="practice-items"><li data-i18n="pa6.li1">Verdediging</li><li data-i18n="pa6.li2">Bijstand bij verhoor</li><li data-i18n="pa6.li3">Strafbeschikkingen</li><li data-i18n="pa6.li4">Ontneming voordeel</li></ul><div class="practice-card-arrow"><svg viewBox="0 0 10 10"><polyline points="0,5 10,5"/><polyline points="6,1 10,5 6,9"/></svg></div></div>
+    </div>
+  </section>
+
+  <section class="team-section">
+    <div class="section-tag reveal" style="justify-content:center"><div class="section-tag-line"></div><span data-i18n="team.tag">Ons Team</span><div class="section-tag-line"></div></div>
+    <h2 class="section-title reveal" style="transition-delay:.1s;text-align:center" data-i18n="team.title">Advocaten met<br><em>Passie &amp; Expertise</em></h2>
+    <div class="team-grid">
+      <div class="team-card">
+        <img id="teamCardPhoto1" src="https://raw.githubusercontent.com/krshn86/tsanglawfirm/main/images/photo1.webp" alt="T.Y. Tsang">
+        <div class="team-card-content">
+          <div class="team-card-role" data-i18n="tsang.role">Advocaat - Kantoorhouder</div>
+          <div class="team-card-name">Mr. T.Y. Tsang</div>
+          <div class="team-card-tags"><span class="lang-tag" data-i18n="pa1.name">Vreemdelingenrecht</span><span class="lang-tag" data-i18n="pa2.name">Personen- en Familierecht</span><span class="lang-tag" data-i18n="pa4.name">Ondernemingsrecht</span></div>
+        </div>
+      </div>
+      <div class="team-card">
+        <img id="teamCardPhoto2" src="https://raw.githubusercontent.com/krshn86/tsanglawfirm/main/images/Tansu.png" alt="R. Sarican">
+        <div class="team-card-content">
+          <div class="team-card-role" data-i18n="sarican.role">Advocaat</div>
+          <div class="team-card-name">Mr. R. Sarican</div>
+          <div class="team-card-tags"><span class="lang-tag" data-i18n="pa6.name">Strafrecht</span><span class="lang-tag" data-i18n="pa2.name">Personen- en Familierecht</span><span class="lang-tag" data-i18n="pa3.name">Arbeidsrecht</span></div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:40px"><a href="#" class="btn-primary dark" data-page="team" data-i18n="team.more">Meer over ons team</a></div>
+  </section>
+
+  <div class="contact-cta reveal">
+    <h2 class="contact-cta-title" data-i18n="cta.title">Klaar om uw zaak<br>te <em>bespreken?</em></h2>
+    <p class="contact-cta-sub" data-i18n="cta.sub">Neem vrijblijvend contact op voor een eerste adviesgesprek.</p>
+    <div class="contact-cta-actions">
+      <a href="#" class="btn-primary" data-page="contact" data-i18n="cta.btn">Neem Contact Op</a>
+      <a href="tel:+31703311480" class="btn-ghost" style="color:rgba(247,245,242,.6)">+31 70 331 1480 <span class="btn-ghost-arrow"></span></a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div><span class="footer-brand">Tsang Law Firm</span><p class="footer-desc" data-i18n="footer.desc">Uw betrouwbare juridische partner in Den Haag.</p></div>
+      <div class="footer-col"><h4 data-i18n="footer.col.areas">Rechtsgebieden</h4><ul><li><a href="#" data-page="rechtsgebieden" data-i18n="pa1.name">Vreemdelingenrecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa2.name">Personen- en Familierecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa4.name">Ondernemingsrecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa6.name">Strafrecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa3.name">Arbeidsrecht</a></li></ul></div>
+      <div class="footer-col"><h4 data-i18n="footer.col.office">Kantoor</h4><ul><li><a href="#" data-page="team" data-i18n="footer.link.team">Ons Team</a></li><li><a href="#" data-page="werkwijze" data-i18n="nav.werkwijze">Werkwijze</a></li><li><a href="#" data-page="prodeo">Pro Deo</a></li><li><a href="#" data-page="contact" data-i18n="nav.contact">Contact</a></li></ul></div>
+      <div class="footer-col"><h4 data-i18n="footer.col.hours">Openingstijden</h4><p class="footer-hours" data-i18n="footer.hours">Maandag &ndash; Vrijdag<br>9:00 &ndash; 17:00 uur<br><br>Prinsegracht 38<br>2512 GA Den Haag</p></div>
+    </div>
+    <div class="footer-bottom"><span class="footer-copy">&copy; 2025 Tsang Law Firm &nbsp;&middot;&nbsp; <a href="#" data-page="disclaimer">Disclaimer</a> &nbsp;&middot;&nbsp; <a href="#" data-page="voorwaarden" data-i18n="footer.link.terms">Algemene Voorwaarden</a></span></div>
+  </footer>
+</div>
+
+<!-- =================== PAGE: TEAM =================== -->
+<div class="page" id="page-team">
+  <div class="page-hero">
+    <div class="page-hero-bg" style="background-image:url('https://images.squarespace-cdn.com/content/v1/67caff9a90b609682b5b8b1f/902ef867-7ba5-4f4d-9a61-ecb0f7fdc2bc/La_haye_palais_paix_jardin_face.jpg')"></div>
+    <div class="page-hero-content">
+      <div class="page-hero-eyebrow"><div class="page-hero-eyebrow-line"></div><span data-i18n="team.tag">Ons Team</span></div>
+      <h1 class="page-hero-title" data-i18n="team.title">Advocaten met<br><em>Passie &amp; Expertise</em></h1>
+      <p class="page-hero-sub" data-i18n="team.sub">Gepassioneerde advocaten die uw belangen behartigen met toewijding en expertise.</p>
+    </div>
+  </div>
+  <section class="team-page-section">
+    <div class="team-profile reveal">
+      <div class="team-profile-img">
+        <img id="teamProfilePhoto1" src="https://raw.githubusercontent.com/krshn86/tsanglawfirm/main/images/photo1.webp" alt="T.Y. Tsang">
+        <div class="team-profile-img-overlay"><div class="team-profile-langs"><span class="lang-tag">NL</span><span class="lang-tag">EN</span><span class="lang-tag">&#20013;&#25991;</span></div></div>
+      </div>
+      <div class="team-profile-info">
+        <div class="team-profile-role" data-i18n="tsang.role">Advocaat - Kantoorhouder</div>
+        <h2 class="team-profile-name">Mr. T.Y. (Angel) Tsang</h2>
+        <div class="team-profile-uni" data-i18n="tsang.uni">tsang@tsanglawfirm.nl</div>
+        <p class="team-profile-bio" data-i18n="tsang.bio1">Angel Tsang is de oprichtster van Tsang Law Firm. Zij staat haar cliënten onder meer op het gebied van vreemdelingenrecht, personen- en familierecht en ondernemingsrecht bij. Met oog voor detail en een warme benadering begeleidt zij mensen door soms ingrijpende juridische trajecten.</p>
+        <p class="team-profile-bio" data-i18n="tsang.bio2">Haar internationale achtergrond en meertalige vaardigheid stellen haar in staat om cliënten uit diverse culturen op een toegankelijke en empathische manier te begeleiden.</p>
+        <div class="team-expertise">
+          <div class="team-expertise-label" data-i18n="expertise.label">Expertise</div>
+          <div class="team-expertise-tags"><span class="tag" data-i18n="pa1.name">Vreemdelingenrecht</span><span class="tag" data-i18n="pa2.name">Personen- en Familierecht</span><span class="tag" data-i18n="pa4.name">Ondernemingsrecht</span><span class="tag" data-i18n="tag.erfrecht">Erfrecht</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="team-profile reveal" style="transition-delay:.15s">
+      <div class="team-profile-img">
+        <img id="teamProfilePhoto2" src="https://raw.githubusercontent.com/krshn86/tsanglawfirm/main/images/Tansu.png" alt="R. Sarican">
+        <div class="team-profile-img-overlay"><div class="team-profile-langs"><span class="lang-tag">NL</span><span class="lang-tag">EN</span><span class="lang-tag">TR</span></div></div>
+      </div>
+      <div class="team-profile-info">
+        <div class="team-profile-role" data-i18n="sarican.role">Advocaat</div>
+        <h2 class="team-profile-name">Mr. R. (Tansu) Sarican</h2>
+        <div class="team-profile-uni" data-i18n="sarican.uni">sarican@tsanglawfirm.nl</div>
+        <p class="team-profile-bio" data-i18n="sarican.bio1">Tansu heeft na haar rechtenstudie aan de Universiteit van Amsterdam en Erasmus Universiteit waardevolle werkervaring opgedaan binnen de overheid en de advocatuur, waarna zij in 2025 beëdigd is als advocaat. Zij staat ingeschreven bij de Nederlandse Orde van Advocaten.</p>
+        <p class="team-profile-bio" data-i18n="sarican.bio2">Door haar internationale oriëntatie en haar beheersing van meerdere talen weet zij cliënten met verschillende culturele achtergronden goed te begrijpen en op een heldere, betrokken manier te begeleiden. Zij verleent juridische bijstand in het Nederlands, Turks en Engels.</p>
+        <div class="team-expertise">
+          <div class="team-expertise-label" data-i18n="expertise.label">Expertise</div>
+          <div class="team-expertise-tags"><span class="tag" data-i18n="pa6.name">Strafrecht</span><span class="tag" data-i18n="pa2.name">Personen- en Familierecht</span><span class="tag" data-i18n="pa3.name">Arbeidsrecht</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="waarneming-box reveal">
+      <div class="section-tag" style="margin-bottom:16px"><div class="section-tag-line"></div><span data-i18n="waarneming.tag">Waarneming &amp; Vervanging</span></div>
+      <p style="font-size:1.1rem;line-height:1.85;color:var(--ink-soft);max-width:700px" data-i18n="waarneming.body">Voor continu&iuml;teit in onze dienstverlening hebben wij een waarnemings- en vervangingsregeling met mr. J.M. Szczerbak van <strong style="color:var(--ink-mid)">Szczerbak Advocatuur</strong>, Parkstraat 83, 2514 JG Den Haag.</p>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-grid">
+      <div><span class="footer-brand">Tsang Law Firm</span><p class="footer-desc" data-i18n="footer.desc">Uw betrouwbare juridische partner in Den Haag.</p></div>
+      <div class="footer-col"><h4 data-i18n="footer.col.areas">Rechtsgebieden</h4><ul><li><a href="#" data-page="rechtsgebieden" data-i18n="pa1.name">Vreemdelingenrecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa2.name">Personen- en Familierecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa4.name">Ondernemingsrecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa6.name">Strafrecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa3.name">Arbeidsrecht</a></li></ul></div>
+      <div class="footer-col"><h4 data-i18n="footer.col.office">Kantoor</h4><ul><li><a href="#" data-page="home">Home</a></li><li><a href="#" data-page="werkwijze" data-i18n="nav.werkwijze">Werkwijze</a></li><li><a href="#" data-page="contact" data-i18n="nav.contact">Contact</a></li></ul></div>
+      <div class="footer-col"><h4 data-i18n="footer.col.contact">Contact</h4><p class="footer-hours">+31 70 331 1480<br><a href="mailto:info@tsanglawfirm.nl" style="color:inherit;text-decoration:none">info@tsanglawfirm.nl</a><br>Prinsegracht 38<br>2512 GA Den Haag</p></div>
+    </div>
+    <div class="footer-bottom"><span class="footer-copy">&copy; 2025 Tsang Law Firm &nbsp;&middot;&nbsp; <a href="#" data-page="disclaimer">Disclaimer</a></span></div>
+  </footer>
+</div>
+
+<!-- =================== PAGE: RECHTSGEBIEDEN =================== -->
+<div class="page" id="page-rechtsgebieden">
+  <div class="page-hero">
+    <div class="page-hero-bg" style="background-image:url('https://images.squarespace-cdn.com/content/v1/67caff9a90b609682b5b8b1f/902ef867-7ba5-4f4d-9a61-ecb0f7fdc2bc/La_haye_palais_paix_jardin_face.jpg')"></div>
+    <div class="page-hero-content">
+      <div class="page-hero-eyebrow"><div class="page-hero-eyebrow-line"></div><span data-i18n="rg.eyebrow">Specialisaties</span></div>
+      <h1 class="page-hero-title" data-i18n="rg.hero.title">Onze<br><em>Rechtsgebieden</em></h1>
+      <p class="page-hero-sub" data-i18n="rg.hero.sub">Bij Tsang Law Firm kunt u terecht met juridische kwesties op een breed scala aan rechtsgebieden.</p>
+    </div>
+  </div>
+  <div class="rg-intro reveal">
+    <div class="rg-intro-left">
+      <div class="section-tag" style="margin-bottom:24px"><div class="section-tag-line"></div><span data-i18n="rg.intro.tag">Expertise</span></div>
+      <h2 class="section-title" style="margin:0" data-i18n="rg.intro.title">Meerdere gebieden,<br><em>&eacute;&eacute;n aanspreekpunt</em></h2>
+    </div>
+    <div class="rg-intro-right"><p data-i18n="rg.intro.body">Tsang Law Firm biedt gerichte juridische ondersteuning op meerdere kerngebieden. Of het nu gaat om een verblijfsrechtelijk vraagstuk, een arbeidsconflict of een familiezaak: u staat er niet alleen voor. Wij spreken uw taal, letterlijk en figuurlijk.</p></div>
+  </div>
+  <div class="rechtsgebieden-grid">
+    <div class="rechtsgebied-card">
+      <div class="rg-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+      <span class="rechtsgebied-num">01</span><h3 class="rechtsgebied-title" data-i18n="pa1.name">Vreemdelingenrecht</h3>
+      <p class="rechtsgebied-desc" data-i18n="rg1.desc">Wij begeleiden u bij alle aspecten van het vreemdelingenrecht.</p>
+      <ul class="rechtsgebied-items"><li data-i18n="rg1.li1">Aanvraag en verlenging verblijfsvergunning</li><li data-i18n="rg1.li2">Bezwaar en beroep bij afwijzingen</li><li data-i18n="rg1.li3">Naturalisatie en Optie tot Nederlanderschap</li><li data-i18n="rg1.li4">Inburgering en inburgeringsexamen</li><li data-i18n="rg1.li5">Gezinshereniging</li><li data-i18n="rg1.li6">Kennismigranten</li></ul>
+    </div>
+    <div class="rechtsgebied-card">
+      <div class="rg-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+      <span class="rechtsgebied-num">02</span><h3 class="rechtsgebied-title" data-i18n="pa2.name">Familierecht</h3>
+      <p class="rechtsgebied-desc" data-i18n="rg2.desc">Familiezaken vragen om een delicate en persoonlijke aanpak.</p>
+      <ul class="rechtsgebied-items"><li data-i18n="rg2.li1">Echtscheiding en scheiding van tafel en bed</li><li data-i18n="rg2.li2">Kinder- en partneralimentatie</li><li data-i18n="rg2.li3">Ouderlijk gezag en omgangsregeling</li><li data-i18n="rg2.li4">Erkenning en ontkenning vaderschap</li><li data-i18n="rg2.li5">Naamswijzigingen</li><li data-i18n="rg2.li6">Verdeling van huwelijksgemeenschap</li></ul>
+    </div>
+    <div class="rechtsgebied-card">
+      <div class="rg-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+      <span class="rechtsgebied-num">03</span><h3 class="rechtsgebied-title" data-i18n="pa3.name">Arbeidsrecht</h3>
+      <p class="rechtsgebied-desc" data-i18n="rg3.desc">Arbeidsrechtelijke kwesties raken zowel werknemers als werkgevers.</p>
+      <ul class="rechtsgebied-items"><li data-i18n="rg3.li1">Opstellen en beoordelen arbeidsovereenkomsten</li><li data-i18n="rg3.li2">Ontslagprocedures en ontbinding</li><li data-i18n="rg3.li3">Loonvorderingen en achterstallige betalingen</li><li data-i18n="rg3.li4">Arbeidsconflicten en mediation</li><li data-i18n="rg3.li5">Non-concurrentiebeding</li><li data-i18n="rg3.li6">Ziekte en re-integratie</li></ul>
+    </div>
+    <div class="rechtsgebied-card">
+      <div class="rg-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+      <span class="rechtsgebied-num">04</span><h3 class="rechtsgebied-title" data-i18n="pa4.name">Ondernemingsrecht</h3>
+      <p class="rechtsgebied-desc" data-i18n="rg4.desc">Voor ondernemers bieden wij juridische ondersteuning bij de oprichting en bescherming van uw onderneming.</p>
+      <ul class="rechtsgebied-items"><li data-i18n="rg4.li1">Opstellen en beoordelen contracten</li><li data-i18n="rg4.li2">Oprichting van ondernemingen (BV, VOF etc.)</li><li data-i18n="rg4.li3">Algemene voorwaarden</li><li data-i18n="rg4.li4">Aandeelhoudersgeschillen</li><li data-i18n="rg4.li5">Bestuurdersaansprakelijkheid</li><li data-i18n="rg4.li6">Fusies en overnames</li></ul>
+    </div>
+    <div class="rechtsgebied-card">
+      <div class="rg-icon"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+      <span class="rechtsgebied-num">05</span><h3 class="rechtsgebied-title" data-i18n="pa5.name">Letselschade</h3>
+      <p class="rechtsgebied-desc" data-i18n="rg5.desc">Na een ongeval heeft u recht op een eerlijke schadevergoeding.</p>
+      <ul class="rechtsgebied-items"><li data-i18n="rg5.li1">Vaststellen van aansprakelijkheid</li><li data-i18n="rg5.li2">Berekenen en claimen schadevergoeding</li><li data-i18n="rg5.li3">Onderhandelingen met verzekeraars</li><li data-i18n="rg5.li4">Smartengeld en immateriële schade</li><li data-i18n="rg5.li5">Verlies van arbeidsvermogen</li><li data-i18n="rg5.li6">Medische kosten en revalidatie</li></ul>
+    </div>
+    <div class="rechtsgebied-card">
+      <div class="rg-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+      <span class="rechtsgebied-num">06</span><h3 class="rechtsgebied-title" data-i18n="pa6.name">Strafrecht</h3>
+      <p class="rechtsgebied-desc" data-i18n="rg6.desc">Bij een strafzaak staat veel op het spel. Onze advocaten bieden u een sterke verdediging.</p>
+      <ul class="rechtsgebied-items"><li data-i18n="rg6.li1">Verdediging bij overtredingen en misdrijven</li><li data-i18n="rg6.li2">Bijstand tijdens verhoor en aanhouding</li><li data-i18n="rg6.li3">Voorarrest en inverzekeringstelling</li><li data-i18n="rg6.li4">Hoger beroep en cassatie</li><li data-i18n="rg6.li5">Schadevergoeding na vrijspraak</li><li data-i18n="rg6.li6">Ontneming van wederrechtelijk verkregen voordeel</li></ul>
+    </div>
+  </div>
+  <div class="rg-bar-notice reveal">
+    <div>
+      <h3 data-i18n="rg.bar.title">Mr. T.Y. Tsang is geregistreerd bij de<br>Nederlandse Orde van Advocaten</h3>
+      <p data-i18n="rg.bar.body">Geregistreerde rechtsgebieden: vreemdelingenrecht &middot; personen- en familierecht &middot; erfrecht &middot; algemene praktijk.</p>
+    </div>
+    <a href="#" class="btn-primary dark" data-page="contact" style="white-space:nowrap;flex-shrink:0" data-i18n="cta.btn">Neem Contact Op</a>
+  </div>
+  <footer>
+    <div class="footer-grid">
+      <div><span class="footer-brand">Tsang Law Firm</span><p class="footer-desc" data-i18n="footer.desc">Uw betrouwbare juridische partner in Den Haag.</p></div>
+      <div class="footer-col"><h4 data-i18n="footer.col.areas">Rechtsgebieden</h4><ul><li><a href="#" data-page="rechtsgebieden" data-i18n="pa1.name">Vreemdelingenrecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa2.name">Personen- en Familierecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa4.name">Ondernemingsrecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa6.name">Strafrecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa3.name">Arbeidsrecht</a></li></ul></div>
+      <div class="footer-col"><h4 data-i18n="footer.col.office">Kantoor</h4><ul><li><a href="#" data-page="home">Home</a></li><li><a href="#" data-page="team" data-i18n="footer.link.team">Ons Team</a></li><li><a href="#" data-page="contact" data-i18n="nav.contact">Contact</a></li></ul></div>
+      <div class="footer-col"><h4 data-i18n="footer.col.contact">Contact</h4><p class="footer-hours">+31 70 331 1480<br><a href="mailto:info@tsanglawfirm.nl" style="color:inherit;text-decoration:none">info@tsanglawfirm.nl</a><br>Prinsegracht 38<br>2512 GA Den Haag</p></div>
+    </div>
+    <div class="footer-bottom"><span class="footer-copy">&copy; 2025 Tsang Law Firm &nbsp;&middot;&nbsp; <a href="#" data-page="disclaimer">Disclaimer</a> &nbsp;&middot;&nbsp; <a href="#" data-page="voorwaarden" data-i18n="footer.link.terms">Algemene Voorwaarden</a></span></div>
+  </footer>
+</div>
+
+<!-- =================== PAGE: WERKWIJZE =================== -->
+<div class="page" id="page-werkwijze">
+  <div class="page-hero">
+    <div class="page-hero-content">
+      <div class="page-hero-eyebrow"><div class="page-hero-eyebrow-line"></div><span data-i18n="ww.eyebrow">Werkwijze</span></div>
+      <h1 class="page-hero-title" data-i18n="ww.hero.title">Hoe wij<br><em>voor u werken</em></h1>
+      <p class="page-hero-sub" data-i18n="ww.hero.sub">Bij Tsang Law Firm hanteren wij een heldere en transparante werkwijze.</p>
+    </div>
+  </div>
+  <section style="padding:100px 60px">
+    <div class="section-tag reveal"><div class="section-tag-line"></div><span data-i18n="ww.section.tag">Onze Aanpak</span></div>
+    <h2 class="section-title reveal" style="transition-delay:.1s" data-i18n="ww.section.title">Stap voor stap<br><em>naar uw resultaat</em></h2>
+    <div class="process-steps">
+      <div class="process-step reveal"><div class="process-step-num">01</div><h3 class="process-step-title" data-i18n="ww.step1.title">Intake &amp; Kennismaking</h3><p data-i18n="ww.step1.body">Een vrijblijvend gesprek om uw situatie te bespreken en de juridische mogelijkheden te verkennen.</p></div>
+      <div class="process-step reveal" style="transition-delay:.1s"><div class="process-step-num">02</div><h3 class="process-step-title" data-i18n="ww.step2.title">Analyse &amp; Strategie</h3><p data-i18n="ww.step2.body">Wij analyseren uw zaak grondig en stellen een op maat gemaakte juridische strategie op.</p></div>
+      <div class="process-step reveal" style="transition-delay:.15s"><div class="process-step-num">03</div><h3 class="process-step-title" data-i18n="ww.step3.title">Uitvoering &amp; Begeleiding</h3><p data-i18n="ww.step3.body">Wij nemen de juridische acties namens u en houden u volledig op de hoogte van de voortgang.</p></div>
+      <div class="process-step reveal" style="transition-delay:.2s"><div class="process-step-num">04</div><h3 class="process-step-title" data-i18n="ww.step4.title">Resultaat &amp; Nazorg</h3><p data-i18n="ww.step4.body">Wij streven naar de best mogelijke uitkomst en begeleiden u ook na afloop van de procedure.</p></div>
+    </div>
+    <div class="process-extra">
+      <div class="process-extra-card reveal"><h3 data-i18n="ww.extra1.title">Rechtsbijstandsverzekering</h3><p data-i18n="ww.extra1.body">Heeft u een rechtsbijstandsverzekering? In veel gevallen kunnen wij uw zaak via uw verzekeraar behandelen.</p></div>
+      <div class="process-extra-card reveal" style="transition-delay:.1s"><h3 data-i18n="ww.extra2.title">Gefinancierde Rechtsbijstand</h3><p data-i18n="ww.extra2.body">Heeft u een laag inkomen? Dan kunt u mogelijk in aanmerking komen voor gefinancierde rechtsbijstand.</p><a href="#" data-page="prodeo" class="btn-ghost" style="margin-top:20px;color:var(--ink-soft)" data-i18n="ww.extra2.link">Meer over Pro Deo <span class="btn-ghost-arrow"></span></a></div>
+    </div>
+  </section>
+  <div class="tarieven-section">
+    <div class="tarieven-inner">
+      <div class="section-tag reveal" style="justify-content:center"><div class="section-tag-line"></div><span data-i18n="tarieven.tag">Tarieven</span><div class="section-tag-line"></div></div>
+      <h2 class="section-title reveal" style="color:#F7F5F2;text-align:center;margin-top:20px;transition-delay:.1s" data-i18n="tarieven.title">Transparante <em>Kosten</em></h2>
+      <p class="reveal" style="font-size:1.1rem;color:rgba(247,245,242,.45);line-height:1.85;margin-top:20px;transition-delay:.15s" data-i18n="tarieven.body">Tenzij schriftelijk anders overeengekomen, wordt het honorarium berekend aan de hand van het aantal bestede uren maal het overeengekomen uurtarief.</p>
+      <div class="tarieven-grid reveal" style="transition-delay:.2s">
+        <div class="tarief-item"><div class="tarief-item-title" data-i18n="tarief1.title">Uurloon</div><p data-i18n="tarief1.body">Berekend per besteed uur, in overleg vastgelegd bij aanvang van de zaak</p></div>
+        <div class="tarief-item"><div class="tarief-item-title" data-i18n="tarief2.title">Voorschot</div><p data-i18n="tarief2.body">Een voorschot kan worden verlangd; verrekend met de eindfactuur</p></div>
+        <div class="tarief-item"><div class="tarief-item-title">Pro Deo</div><p data-i18n="tarief3.body">Gefinancierde rechtsbijstand mogelijk voor lagere inkomens</p></div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-grid">
+      <div><span class="footer-brand">Tsang Law Firm</span><p class="footer-desc" data-i18n="footer.desc">Uw betrouwbare juridische partner in Den Haag.</p></div>
+      <div class="footer-col"><h4 data-i18n="footer.col.areas">Rechtsgebieden</h4><ul><li><a href="#" data-page="rechtsgebieden" data-i18n="pa1.name">Vreemdelingenrecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa2.name">Personen- en Familierecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa4.name">Ondernemingsrecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa6.name">Strafrecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa3.name">Arbeidsrecht</a></li></ul></div>
+      <div class="footer-col"><h4 data-i18n="footer.col.office">Kantoor</h4><ul><li><a href="#" data-page="home">Home</a></li><li><a href="#" data-page="prodeo">Pro Deo</a></li><li><a href="#" data-page="contact" data-i18n="nav.contact">Contact</a></li></ul></div>
+      <div class="footer-col"><h4 data-i18n="footer.col.contact">Contact</h4><p class="footer-hours">+31 70 331 1480<br><a href="mailto:info@tsanglawfirm.nl" style="color:inherit;text-decoration:none">info@tsanglawfirm.nl</a><br>Prinsegracht 38<br>2512 GA Den Haag</p></div>
+    </div>
+    <div class="footer-bottom"><span class="footer-copy">&copy; 2025 Tsang Law Firm &nbsp;&middot;&nbsp; <a href="#" data-page="disclaimer">Disclaimer</a></span></div>
+  </footer>
+</div>
+
+<!-- =================== PAGE: PRO DEO =================== -->
+<div class="page" id="page-prodeo">
+  <div class="page-hero">
+    <div class="page-hero-content">
+      <div class="page-hero-eyebrow"><div class="page-hero-eyebrow-line"></div><span data-i18n="pd.eyebrow">Toegankelijke Rechtsbijstand</span></div>
+      <h1 class="page-hero-title" data-i18n="pd.hero.title">Gefinancierde<br><em>Rechtsbijstand</em></h1>
+      <p class="page-hero-sub" data-i18n="pd.hero.sub">Juridische hulp moet voor iedereen toegankelijk zijn. Wij helpen u bij het aanvragen van gefinancierde rechtsbijstand.</p>
+    </div>
+  </div>
+  <div class="prodeo-section">
+    <div class="prodeo-content">
+      <p class="prodeo-intro reveal" data-i18n="pd.intro">Heeft u een laag inkomen en kunt u de kosten van een advocaat niet zelf dragen? Dan kunt u mogelijk in aanmerking komen voor <strong>gefinancierde rechtsbijstand</strong>.</p>
+      <div class="prodeo-steps">
+        <div class="prodeo-step reveal"><div class="prodeo-step-num">01</div><div><h3 data-i18n="pd.step1.title">Intake &amp; Beoordeling</h3><p data-i18n="pd.step1.body">Tijdens een vrijblijvend gesprek bespreken wij uw juridische situatie en beoordelen wij samen of gefinancierde rechtsbijstand van toepassing is.</p></div></div>
+        <div class="prodeo-step reveal" style="transition-delay:.08s"><div class="prodeo-step-num">02</div><div><h3 data-i18n="pd.step2.title">Aanvraag bij Raad voor Rechtsbijstand</h3><p data-i18n="pd.step2.body">Wij dienen namens u een toevoegingsaanvraag in bij de Raad voor Rechtsbijstand.</p></div></div>
+        <div class="prodeo-step reveal" style="transition-delay:.15s"><div class="prodeo-step-num">03</div><div><h3 data-i18n="pd.step3.title">Eigen Bijdrage</h3><p data-i18n="pd.step3.body">Bij toekenning stelt de Raad een eigen bijdrage vast op basis van uw inkomen.</p></div></div>
+        <div class="prodeo-step reveal" style="transition-delay:.22s"><div class="prodeo-step-num">04</div><div><h3 data-i18n="pd.step4.title">Behandeling van uw Zaak</h3><p data-i18n="pd.step4.body">Na toekenning behandelen wij uw zaak volledig.</p></div></div>
+      </div>
+      <div class="prodeo-cta-box reveal">
+        <h3 data-i18n="pd.cta.title">Weet u niet of u in aanmerking komt?</h3>
+        <p data-i18n="pd.cta.body">Neem vrijblijvend contact op. Wij beoordelen samen uw situatie.</p>
+        <a href="#" class="btn-primary" data-page="contact" data-i18n="pd.cta.btn">Vrijblijvend Adviesgesprek</a>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-grid">
+      <div><span class="footer-brand">Tsang Law Firm</span><p class="footer-desc" data-i18n="footer.desc">Uw betrouwbare juridische partner in Den Haag.</p></div>
+      <div class="footer-col"><h4 data-i18n="footer.col.areas">Rechtsgebieden</h4><ul><li><a href="#" data-page="rechtsgebieden" data-i18n="pa1.name">Vreemdelingenrecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa2.name">Personen- en Familierecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa4.name">Ondernemingsrecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa6.name">Strafrecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa3.name">Arbeidsrecht</a></li></ul></div>
+      <div class="footer-col"><h4 data-i18n="footer.col.office">Kantoor</h4><ul><li><a href="#" data-page="home">Home</a></li><li><a href="#" data-page="werkwijze" data-i18n="nav.werkwijze">Werkwijze</a></li><li><a href="#" data-page="contact" data-i18n="nav.contact">Contact</a></li></ul></div>
+      <div class="footer-col"><h4 data-i18n="footer.col.contact">Contact</h4><p class="footer-hours">+31 70 331 1480<br><a href="mailto:info@tsanglawfirm.nl" style="color:inherit;text-decoration:none">info@tsanglawfirm.nl</a><br>Prinsegracht 38<br>2512 GA Den Haag</p></div>
+    </div>
+    <div class="footer-bottom"><span class="footer-copy">&copy; 2025 Tsang Law Firm &nbsp;&middot;&nbsp; <a href="#" data-page="disclaimer">Disclaimer</a></span></div>
+  </footer>
+</div>
+
+<!-- =================== PAGE: CONTACT =================== -->
+<div class="page" id="page-contact">
+  <div class="page-hero">
+    <div class="page-hero-content">
+      <div class="page-hero-eyebrow"><div class="page-hero-eyebrow-line"></div><span data-i18n="nav.contact">Contact</span></div>
+      <h1 class="page-hero-title" data-i18n="contact.hero.title">Neem<br><em>Contact Op</em></h1>
+      <p class="page-hero-sub" data-i18n="contact.hero.sub">Heeft u juridische vragen? Neem vrijblijvend contact op.</p>
+    </div>
+  </div>
+  <div class="contact-section">
+    <div class="contact-left">
+      <div class="section-tag reveal"><div class="section-tag-line"></div><span data-i18n="contact.reach.tag">Bereikbaarheid</span></div>
+      <h2 class="section-title reveal" style="transition-delay:.1s" data-i18n="contact.reach.title">Uw belangen zijn<br><em>onze prioriteit</em></h2>
+      <p class="reveal" style="margin-top:16px;font-size:1.1rem;line-height:1.85;color:var(--ink-soft);transition-delay:.2s" data-i18n="contact.reach.body">Wij staan klaar om uw situatie te bespreken en de beste juridische oplossing voor u te vinden.</p>
+      <div class="contact-details">
+        <div class="contact-item reveal" style="transition-delay:.3s">
+          <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.05 2.2 2 2 0 012 .04h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+          <div><div class="contact-label" data-i18n="contact.lbl.phone">Telefoon</div><a href="tel:+31703311480" class="contact-value">+31 70 331 1480</a></div>
+        </div>
+        <div class="contact-item reveal" style="transition-delay:.35s">
+          <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></div>
+          <div><div class="contact-label">WhatsApp</div><a href="https://wa.me/31629332677" class="contact-value" target="_blank" rel="noopener noreferrer">+31 6 2933 2677</a></div>
+        </div>
+        <div class="contact-item reveal" style="transition-delay:.4s">
+          <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div><div class="contact-label" data-i18n="contact.lbl.email">E-mail</div><a href="mailto:info@tsanglawfirm.nl" class="contact-value">info@tsanglawfirm.nl</a></div>
+        </div>
+        <div class="contact-item reveal" style="transition-delay:.45s">
+          <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><div class="contact-label" data-i18n="contact.lbl.address">Adres</div><span class="contact-value">Prinsegracht 38, 2512 GA Den Haag</span></div>
+        </div>
+        <div class="contact-item reveal" style="transition-delay:.5s">
+          <div class="contact-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg></div>
+          <div><div class="contact-label" data-i18n="contact.lbl.hours">Openingstijden</div><span class="contact-value" data-i18n="contact.hours.val">Maandag &ndash; Vrijdag: 9:00 &ndash; 17:00</span></div>
+        </div>
+      </div>
+      <div class="map-embed reveal" style="transition-delay:.55s">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2451.8!2d4.3040!3d52.0793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5b72cd7b3c60b%3A0x1!2sPrinsegracht+38%2C+2512+GA+Den+Haag!5e0!3m2!1snl!2snl!4v1700000000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Tsang Law Firm locatie" sandbox="allow-scripts allow-same-origin allow-popups allow-forms"></iframe>
+      </div>
+    </div>
+    <div class="contact-right">
+      <h3 class="contact-form-title" data-i18n="form.title">Stuur ons<br><em style="font-family:'Playfair Display',serif;font-style:italic;color:var(--accent)">een bericht</em></h3>
+      <form id="contactForm" action="https://formspree.io/f/mpqyklwr" method="POST">
+        <div class="form-grid">
+          <div class="form-group"><label data-i18n="form.fname">Voornaam</label><input type="text" name="voornaam" data-i18n-ph="form.ph.fname" placeholder="Jan" required maxlength="100" autocomplete="given-name"></div>
+          <div class="form-group"><label data-i18n="form.lname">Achternaam</label><input type="text" name="achternaam" data-i18n-ph="form.ph.lname" placeholder="de Vries" required maxlength="100" autocomplete="family-name"></div>
+          <div class="form-group full"><label data-i18n="form.email">E-mailadres</label><input type="email" name="email" data-i18n-ph="form.ph.email" placeholder="jan@email.nl" required maxlength="254" autocomplete="email"></div>
+          <div class="form-group full"><label data-i18n="form.phone">Telefoonnummer</label><input type="tel" name="telefoon" placeholder="+31 6 ..." maxlength="20" pattern="[+]?[\d\s\-()\./]{6,20}" autocomplete="tel"></div>
+          <div class="form-group full">
+            <label data-i18n="form.area">Rechtsgebied</label>
+            <select name="rechtsgebied">
+              <option value="" data-i18n="form.area.placeholder">Selecteer een rechtsgebied</option>
+              <option data-i18n="pa1.name">Vreemdelingenrecht</option>
+              <option data-i18n="pa2.name">Personen- en familierecht</option>
+              <option data-i18n="pa3.name">Arbeidsrecht</option>
+              <option data-i18n="pa4.name">Ondernemingsrecht</option>
+              <option data-i18n="pa5.name">Letselschade</option>
+              <option data-i18n="pa6.name">Strafrecht</option>
+              <option data-i18n="form.area.other">Anders</option>
+            </select>
+          </div>
+          <div class="form-group full"><label data-i18n="form.message">Bericht</label><textarea name="bericht" data-i18n-ph="form.ph.message" placeholder="Beschrijf kort uw situatie..." required maxlength="2000"></textarea></div>
+        </div>
+        <button type="submit" class="btn-submit" data-i18n="form.submit">Verstuur Bericht</button>
+        <p id="formStatus" style="margin-top:16px;font-size:.9rem;display:none"></p>
+        <p class="privacy-note" data-i18n="form.privacy">Uw gegevens worden vertrouwelijk behandeld en niet gedeeld met derden.</p>
+      </form>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-grid">
+      <div><span class="footer-brand">Tsang Law Firm</span><p class="footer-desc" data-i18n="footer.desc">Uw betrouwbare juridische partner in Den Haag.</p></div>
+      <div class="footer-col"><h4 data-i18n="footer.col.areas">Rechtsgebieden</h4><ul><li><a href="#" data-page="rechtsgebieden" data-i18n="pa1.name">Vreemdelingenrecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa2.name">Personen- en Familierecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa4.name">Ondernemingsrecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa6.name">Strafrecht</a></li><li><a href="#" data-page="rechtsgebieden" data-i18n="pa3.name">Arbeidsrecht</a></li></ul></div>
+      <div class="footer-col"><h4 data-i18n="footer.col.office">Kantoor</h4><ul><li><a href="#" data-page="home">Home</a></li><li><a href="#" data-page="team" data-i18n="footer.link.team">Ons Team</a></li><li><a href="#" data-page="werkwijze" data-i18n="nav.werkwijze">Werkwijze</a></li></ul></div>
+      <div class="footer-col"><h4 data-i18n="footer.col.contact">Contact</h4><p class="footer-hours">+31 70 331 1480<br><a href="mailto:info@tsanglawfirm.nl" style="color:inherit;text-decoration:none">info@tsanglawfirm.nl</a><br>Prinsegracht 38<br>2512 GA Den Haag<br><br><span data-i18n="footer.hours.short">Ma &ndash; Vr: 9:00 &ndash; 17:00</span></p></div>
+    </div>
+    <div class="footer-bottom"><span class="footer-copy">&copy; 2025 Tsang Law Firm &nbsp;&middot;&nbsp; <a href="#" data-page="disclaimer">Disclaimer</a> &nbsp;&middot;&nbsp; <a href="#" data-page="voorwaarden" data-i18n="footer.link.terms">Algemene Voorwaarden</a></span></div>
+  </footer>
+</div>
+
+<!-- =================== PAGE: DISCLAIMER =================== -->
+<div class="page" id="page-disclaimer">
+  <div class="page-hero">
+    <div class="page-hero-content">
+      <div class="page-hero-eyebrow"><div class="page-hero-eyebrow-line"></div><span data-i18n="legal.eyebrow">Juridische Informatie</span></div>
+      <h1 class="page-hero-title" data-i18n="disclaimer.title">Disclaimer</h1>
+    </div>
+  </div>
+  <section style="padding:80px 60px 120px">
+    <div class="legal-section">
+      <h2 data-i18n="disc.h1">Aansprakelijkheid</h2><p data-i18n="disc.p1">Tsang Law Firm streeft ernaar de informatie op deze website zo volledig en nauwkeurig mogelijk te houden. Wij aanvaarden echter geen aansprakelijkheid voor schade die ontstaat uit het gebruik van de website.</p>
+      <h2 data-i18n="disc.h2">Intellectueel Eigendom</h2><p data-i18n="disc.p2">Alle rechten op de inhoud van deze website berusten bij Tsang Law Firm. Niets van deze website mag worden verveelvoudigd zonder voorafgaande schriftelijke toestemming.</p>
+      <h2 data-i18n="disc.h3">Privacybeleid</h2><p data-i18n="disc.p3">Tsang Law Firm respecteert uw privacy en verwerkt persoonsgegevens conform de AVG. Gegevens die u via het contactformulier invult worden uitsluitend gebruikt voor de behandeling van uw aanvraag.</p>
+      <h2 data-i18n="disc.h4">Contact</h2><p data-i18n="disc.p4">Voor vragen over deze disclaimer kunt u contact opnemen via <a href="mailto:info@tsanglawfirm.nl" style="color:var(--accent)">info@tsanglawfirm.nl</a> of +31 70 331 1480.</p>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-grid">
+      <div><span class="footer-brand">Tsang Law Firm</span><p class="footer-desc" data-i18n="footer.desc">Uw betrouwbare juridische partner in Den Haag.</p></div>
+      <div class="footer-col"><h4 data-i18n="footer.col.office">Kantoor</h4><ul><li><a href="#" data-page="home">Home</a></li><li><a href="#" data-page="contact" data-i18n="nav.contact">Contact</a></li><li><a href="#" data-page="voorwaarden" data-i18n="footer.link.terms">Voorwaarden</a></li></ul></div>
+      <div class="footer-col"><h4 data-i18n="footer.col.contact">Contact</h4><p class="footer-hours">+31 70 331 1480<br><a href="mailto:info@tsanglawfirm.nl" style="color:inherit;text-decoration:none">info@tsanglawfirm.nl</a><br>Prinsegracht 38<br>2512 GA Den Haag</p></div>
+      <div></div>
+    </div>
+    <div class="footer-bottom"><span class="footer-copy">&copy; 2025 Tsang Law Firm &nbsp;&middot;&nbsp; <a href="#" data-page="voorwaarden" data-i18n="footer.link.terms">Algemene Voorwaarden</a></span></div>
+  </footer>
+</div>
+
+<!-- =================== PAGE: VOORWAARDEN =================== -->
+<div class="page" id="page-voorwaarden">
+  <div class="page-hero">
+    <div class="page-hero-content">
+      <div class="page-hero-eyebrow"><div class="page-hero-eyebrow-line"></div><span data-i18n="legal.eyebrow">Juridische Informatie</span></div>
+      <h1 class="page-hero-title" data-i18n="vw.title">Algemene<br><em>Voorwaarden</em></h1>
+    </div>
+  </div>
+  <section style="padding:80px 60px 120px">
+    <div class="legal-section">
+      <h2 data-i18n="vw.h1">Artikel 1 - Toepasselijkheid</h2><p data-i18n="vw.p1">Deze algemene voorwaarden zijn van toepassing op alle opdrachten die aan Tsang Law Firm worden verstrekt, tenzij schriftelijk anders is overeengekomen.</p>
+      <h2 data-i18n="vw.h2">Artikel 2 - Opdracht</h2><p data-i18n="vw.p2">Een opdracht komt tot stand op het moment dat Tsang Law Firm de opdracht schriftelijk heeft bevestigd. De cli&euml;nt staat in voor de juistheid en volledigheid van de verstrekte informatie.</p>
+      <h2 data-i18n="vw.h3">Artikel 3 - Honorarium &amp; Kosten</h2><p data-i18n="vw.p3">Tenzij schriftelijk anders overeengekomen, wordt het honorarium berekend aan de hand van het aantal bestede uren maal het overeengekomen uurtarief. Bijzondere onkosten worden separaat in rekening gebracht. Alle bedragen worden vermeerderd met BTW.</p>
+      <h2 data-i18n="vw.h4">Artikel 4 - Betalingstermijn</h2><p data-i18n="vw.p4">Declaraties dienen binnen veertien dagen na factuurdatum te worden voldaan. Bij overschrijding is de wettelijke rente verschuldigd.</p>
+      <h2 data-i18n="vw.h5">Artikel 5 - Aansprakelijkheid</h2><p data-i18n="vw.p5">De aansprakelijkheid van Tsang Law Firm is beperkt tot het bedrag dat in het desbetreffende geval door de beroepsaansprakelijkheidsverzekering wordt uitgekeerd.</p>
+      <h2 data-i18n="vw.h6">Artikel 6 - Klachtenregeling</h2><p data-i18n="vw.p6">Klachten over de dienstverlening dienen zo spoedig mogelijk schriftelijk te worden ingediend. Wij zullen de klacht uiterlijk binnen vier weken behandelen.</p>
+      <h2 data-i18n="vw.h7">Artikel 7 - Toepasselijk Recht</h2><p data-i18n="vw.p7">Op alle overeenkomsten met Tsang Law Firm is Nederlands recht van toepassing. Geschillen worden voorgelegd aan de bevoegde rechter in het arrondissement Den Haag.</p>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-grid">
+      <div><span class="footer-brand">Tsang Law Firm</span><p class="footer-desc" data-i18n="footer.desc">Uw betrouwbare juridische partner in Den Haag.</p></div>
+      <div class="footer-col"><h4 data-i18n="footer.col.office">Kantoor</h4><ul><li><a href="#" data-page="home">Home</a></li><li><a href="#" data-page="contact" data-i18n="nav.contact">Contact</a></li><li><a href="#" data-page="disclaimer">Disclaimer</a></li></ul></div>
+      <div class="footer-col"><h4 data-i18n="footer.col.contact">Contact</h4><p class="footer-hours">+31 70 331 1480<br><a href="mailto:info@tsanglawfirm.nl" style="color:inherit;text-decoration:none">info@tsanglawfirm.nl</a><br>Prinsegracht 38<br>2512 GA Den Haag</p></div>
+      <div></div>
+    </div>
+    <div class="footer-bottom"><span class="footer-copy">&copy; 2025 Tsang Law Firm &nbsp;&middot;&nbsp; <a href="#" data-page="disclaimer">Disclaimer</a></span></div>
+  </footer>
+</div>
+
+<script>
+// ============================================================
+// TRANSLATIONS
+// ============================================================
+const TRANSLATIONS = {
+  nl: {
+    "nav.team":"Team","nav.areas":"Rechtsgebieden","nav.werkwijze":"Werkwijze","nav.contact":"Contact",
+    "hero.eyebrow":"Den Haag · Advocatenkantoor",
+    "hero.title":"Juridische<br><em>Expertise.</em><br>Persoonlijke<br>Benadering.",
+    "hero.sub":"Gespecialiseerde juridische bijstand in Den Haag. Persoonlijk, betrokken en altijd gericht op het beste resultaat voor u.",
+    "hero.cta1":"Plan een Gesprek","hero.cta2":"Rechtsgebieden","scroll":"Scroll",
+    "stat1.lbl":"Rechtsgebieden","stat2.lbl":"Talen","stat3.lbl":"Jaar Ervaring","stat4.lbl":"Nationaal &amp; Internationaal",
+    "marquee":"Vreemdelingenrecht <span class='marquee-dot'></span> Familierecht <span class='marquee-dot'></span> Arbeidsrecht <span class='marquee-dot'></span> Ondernemingsrecht <span class='marquee-dot'></span> Letselschade <span class='marquee-dot'></span> Strafrecht <span class='marquee-dot'></span>",
+    "about.tag":"Over Ons",
+    "about.title":"Uw belangen,<br><em>onze prioriteit</em>",
+    "about.body":"Bij Tsang Law Firm staat uw situatie centraal. Wij bieden heldere juridische begeleiding, eerlijk advies en een aanpak die past bij uw persoonlijke omstandigheden. Geen jargon, geen verrassingen. Gewoon resultaatgericht werken.",
+    "about.v1.title":"Persoonlijk &amp; Resultaatgericht","about.v1.body":"Wij nemen de tijd om uw situatie goed te begrijpen en werken doelgericht naar de best mogelijke uitkomst.",
+    "about.v2.title":"Internationale Expertise","about.v2.body":"Ruime ervaring met internationale cliënten die te maken hebben met Nederlandse en internationale wet- en regelgeving.",
+    "about.v3.title":"Toegankelijk &amp; Betaalbaar","about.v3.body":"Wij bekijken samen welke financieringsmogelijkheden voor u beschikbaar zijn, waaronder rechtsbijstandsverzekering en gefinancierde rechtsbijstand.",
+    "about.v4.title":"Meertalige Dienstverlening","about.v4.body":"Wij adviseren in het Nederlands, Engels, Chinees, Turks en Arabisch, zodat u zich altijd volledig begrepen voelt.",
+    "about.quote":"&ldquo;Wij zijn er voor u, met de expertise die uw zaak verdient en de aandacht die u nodig heeft.&rdquo;",
+    "practice.tag":"Onze Expertise","practice.title":"Onze<br><em>Rechtsgebieden</em>","practice.all":"Alle gebieden",
+    "pa1.name":"Vreemdelingenrecht","pa2.name":"Personen- en Familierecht","pa3.name":"Arbeidsrecht",
+    "pa4.name":"Ondernemingsrecht","pa5.name":"Letselschade","pa6.name":"Strafrecht",
+    "pa1.li1":"Verblijfsvergunningen","pa1.li2":"Naturalisatie","pa1.li3":"Gezinshereniging","pa1.li4":"Kennismigranten",
+    "pa2.li1":"Echtscheiding","pa2.li2":"Alimentatie","pa2.li3":"Ouderlijk gezag","pa2.li4":"Omgangsregeling",
+    "pa3.li1":"Ontslagprocedures","pa3.li2":"Arbeidsovereenkomsten","pa3.li3":"Loonvorderingen","pa3.li4":"Arbeidsconflicten",
+    "pa4.li1":"Contracten","pa4.li2":"Oprichting onderneming","pa4.li3":"Aandeelhoudersgeschillen","pa4.li4":"Fusies &amp; Overnames",
+    "pa5.li1":"Aansprakelijkheid","pa5.li2":"Schadevergoeding","pa5.li3":"Smartengeld","pa5.li4":"Verzekeraarsonderhandelingen",
+    "pa6.li1":"Verdediging","pa6.li2":"Bijstand bij verhoor","pa6.li3":"Strafbeschikkingen","pa6.li4":"Ontneming voordeel",
+    "team.tag":"Ons Team","team.title":"Advocaten met<br><em>Passie &amp; Expertise</em>",
+    "team.sub":"Een hecht team van betrokken advocaten, klaar om u professioneel en persoonlijk te ondersteunen.",
+    "team.more":"Maak kennis met ons team",
+    "tsang.role":"Advocaat - Kantoorhouder","sarican.role":"Advocaat",
+    "tag.privaatrecht":"Privaatrecht","tag.contractenrecht":"Contractenrecht",
+    "tag.aansprakelijkheid":"Aansprakelijkheidsrecht","tag.erfrecht":"Erfrecht",
+    "cta.title":"Heeft u een juridische<br><em>vraag?</em>",
+    "cta.sub":"Neem vrijblijvend contact op. Wij denken graag met u mee.","cta.btn":"Neem Contact Op",
+    "footer.desc":"Tsang Law Firm — persoonlijke juridische begeleiding in Den Haag, voor iedereen die recht verdient.",
+    "footer.col.areas":"Rechtsgebieden","footer.col.office":"Kantoor","footer.col.contact":"Contact","footer.col.hours":"Openingstijden",
+    "footer.link.team":"Ons Team","footer.link.terms":"Algemene Voorwaarden",
+    "footer.hours":"Maandag &ndash; Vrijdag<br>9:00 &ndash; 17:00 uur<br><br>Prinsegracht 38<br>2512 GA Den Haag",
+    "footer.hours.short":"Ma &ndash; Vr: 9:00 &ndash; 17:00",
+    "tsang.uni":"tsang@tsanglawfirm.nl",
+    "tsang.bio1":"Angel Tsang is de oprichtster van Tsang Law Firm. Zij staat haar cliënten onder meer op het gebied van vreemdelingenrecht, personen- en familierecht en ondernemingsrecht bij. Met oog voor detail en een warme benadering begeleidt zij mensen door soms ingrijpende juridische trajecten.",
+    "tsang.bio2":"Haar internationale achtergrond en meertalige vaardigheid stellen haar in staat om cliënten uit uiteenlopende culturen op een toegankelijke en empathische manier te begeleiden. Zij is ingeschreven bij de Nederlandse Orde van Advocaten.",
+    "sarican.uni":"sarican@tsanglawfirm.nl",
+    "sarican.bio1":"Tansu heeft na haar rechtenstudie aan de Universiteit van Amsterdam en Erasmus Universiteit waardevolle werkervaring opgedaan binnen de overheid en de advocatuur, waarna zij in 2025 beëdigd is als advocaat. Zij staat ingeschreven bij de Nederlandse Orde van Advocaten.",
+    "sarican.bio2":"Door haar internationale oriëntatie en haar beheersing van meerdere talen weet zij cliënten met verschillende culturele achtergronden goed te begrijpen en op een heldere, betrokken manier te begeleiden. Zij verleent juridische bijstand in het Nederlands, Turks en Engels.",
+    "expertise.label":"Expertise",
+    "waarneming.tag":"Continuïteit &amp; Waarneming",
+    "waarneming.body":"Voor continuïteit in onze dienstverlening hebben wij een waarnemings- en vervangingsregeling met mr. J.M. Szczerbak van <strong style='color:var(--ink-mid)'>Szczerbak Advocatuur</strong>, Parkstraat 83, 2514 JG Den Haag.",
+    "rg.eyebrow":"Specialisaties","rg.hero.title":"Onze<br><em>Rechtsgebieden</em>",
+    "rg.hero.sub":"Bij Tsang Law Firm kunt u terecht met juridische kwesties op een breed scala aan rechtsgebieden. Wij bieden deskundig advies en bijstand op maat.",
+    "rg.intro.tag":"Expertise","rg.intro.title":"Meerdere gebieden,<br><em>één aanspreekpunt</em>",
+    "rg.intro.body":"Tsang Law Firm biedt gerichte juridische ondersteuning op meerdere kerngebieden. Of het nu gaat om een verblijfsrechtelijk vraagstuk, een arbeidsconflict of een familiezaak: u staat er niet alleen voor. Wij spreken uw taal, letterlijk en figuurlijk.",
+    "rg1.desc":"Wij begeleiden u bij alle aspecten van het vreemdelingenrecht: van verblijfsvergunning tot naturalisatie. Onze meertalige expertise maakt het verschil voor internationale cliënten.",
+    "rg1.li1":"Aanvraag en verlenging verblijfsvergunning","rg1.li2":"Bezwaar en beroep bij afwijzingen","rg1.li3":"Naturalisatie en Optie tot Nederlanderschap","rg1.li4":"Inburgering en inburgeringsexamen","rg1.li5":"Gezinshereniging","rg1.li6":"Kennismigranten",
+    "rg2.desc":"Familiezaken vragen om een delicate en persoonlijke aanpak. Wij ondersteunen u bij echtscheidingen en alle overige familierechtzaken met empathie en deskundigheid.",
+    "rg2.li1":"Echtscheiding en scheiding van tafel en bed","rg2.li2":"Kinder- en partneralimentatie","rg2.li3":"Ouderlijk gezag en omgangsregeling","rg2.li4":"Erkenning en ontkenning vaderschap","rg2.li5":"Naamswijzigingen","rg2.li6":"Verdeling van huwelijksgemeenschap",
+    "rg3.desc":"Arbeidsrechtelijke kwesties raken zowel werknemers als werkgevers. Wij adviseren en procederen over arbeidsovereenkomsten, ontslag en conflicten op de werkvloer.",
+    "rg3.li1":"Opstellen en beoordelen arbeidsovereenkomsten","rg3.li2":"Ontslagprocedures en ontbinding","rg3.li3":"Loonvorderingen en achterstallige betalingen","rg3.li4":"Arbeidsconflicten en mediation","rg3.li5":"Non-concurrentiebeding","rg3.li6":"Ziekte en re-integratie",
+    "rg4.desc":"Voor ondernemers bieden wij juridische ondersteuning bij de oprichting, het runnen en de bescherming van uw onderneming: van startups tot gevestigde bedrijven.",
+    "rg4.li1":"Opstellen en beoordelen contracten","rg4.li2":"Oprichting van ondernemingen (BV, VOF etc.)","rg4.li3":"Algemene voorwaarden","rg4.li4":"Aandeelhoudersgeschillen","rg4.li5":"Bestuurdersaansprakelijkheid","rg4.li6":"Fusies en overnames",
+    "rg5.desc":"Na een ongeval of letsel heeft u recht op een eerlijke schadevergoeding. Wij staan u bij in de strijd tegen verzekeraars.",
+    "rg5.li1":"Vaststellen van aansprakelijkheid","rg5.li2":"Berekenen en claimen schadevergoeding","rg5.li3":"Onderhandelingen met verzekeraars","rg5.li4":"Smartengeld en immateriële schade","rg5.li5":"Verlies van arbeidsvermogen","rg5.li6":"Medische kosten en revalidatie",
+    "rg6.desc":"Bij een strafzaak staat veel op het spel. Onze advocaten bieden u een sterke verdediging en zorgen ervoor dat uw rechten beschermd blijven.",
+    "rg6.li1":"Verdediging bij overtredingen en misdrijven","rg6.li2":"Bijstand tijdens verhoor en aanhouding","rg6.li3":"Voorarrest en inverzekeringstelling","rg6.li4":"Hoger beroep en cassatie","rg6.li5":"Schadevergoeding na vrijspraak","rg6.li6":"Ontneming van wederrechtelijk verkregen voordeel",
+    "rg.bar.title":"Mr. T.Y. Tsang is geregistreerd bij de Nederlandse Orde van Advocaten",
+    "rg.bar.body":"Geregistreerde rechtsgebieden: vreemdelingenrecht · personen- en familierecht · erfrecht · algemene praktijk. Op grond van deze registratie behaalt zij jaarlijks 10 opleidingspunten per hoofdrechtsgebied.",
+    "ww.eyebrow":"Werkwijze","ww.hero.title":"Hoe wij<br><em>voor u werken</em>",
+    "ww.hero.sub":"Wij werken gestructureerd, transparant en altijd met oog voor uw situatie. U weet te allen tijde waar u aan toe bent.",
+    "ww.section.tag":"Onze Aanpak","ww.section.title":"Stap voor stap<br><em>naar uw resultaat</em>",
+    "ww.step1.title":"Intake &amp; Kennismaking","ww.step1.body":"In een eerste gesprek luisteren wij naar uw situatie, beantwoorden uw vragen en verkennen samen de juridische mogelijkheden. Geheel vrijblijvend.",
+    "ww.step2.title":"Analyse &amp; Strategie","ww.step2.body":"Wij analyseren uw zaak zorgvuldig, bestuderen de relevante wet- en regelgeving en stellen een heldere strategie op, afgestemd op uw persoonlijke situatie.",
+    "ww.step3.title":"Uitvoering &amp; Begeleiding","ww.step3.body":"Wij handelen namens u, informeren u proactief over de voortgang en verdedigen uw belangen met overtuiging en professionaliteit.",
+    "ww.step4.title":"Resultaat &amp; Nazorg","ww.step4.body":"Ons doel is het beste resultaat voor u. Ook na afloop van de procedure zijn wij beschikbaar voor vragen of vervolgstappen.",
+    "ww.extra1.title":"Rechtsbijstandsverzekering","ww.extra1.body":"Heeft u een rechtsbijstandsverzekering? In veel gevallen kunnen wij uw zaak via uw verzekeraar behandelen.",
+    "ww.extra2.title":"Gefinancierde Rechtsbijstand","ww.extra2.body":"Heeft u een laag inkomen? Dan kunt u mogelijk in aanmerking komen voor gefinancierde rechtsbijstand (pro deo).",
+    "ww.extra2.link":"Meer over Pro Deo",
+    "tarieven.tag":"Tarieven","tarieven.title":"Transparante <em>Kosten</em>",
+    "tarieven.body":"Tenzij schriftelijk anders overeengekomen, wordt het honorarium berekend aan de hand van het aantal bestede uren maal het overeengekomen uurtarief. Alle bedragen worden vermeerderd met BTW.",
+    "tarief1.title":"Uurloon","tarief1.body":"Berekend per besteed uur, in overleg vastgelegd bij aanvang van de zaak",
+    "tarief2.title":"Voorschot","tarief2.body":"Een voorschot kan worden verlangd; verrekend met de eindfactuur",
+    "tarief3.body":"Gefinancierde rechtsbijstand mogelijk voor lagere inkomens",
+    "pd.eyebrow":"Toegankelijke Rechtsbijstand","pd.hero.title":"Gefinancierde<br><em>Rechtsbijstand</em>",
+    "pd.hero.sub":"Juridische hulp moet voor iedereen bereikbaar zijn, ongeacht uw inkomen. Wij helpen u bij het aanvragen van gefinancierde rechtsbijstand.",
+    "pd.intro":"Heeft u een laag inkomen en kunt u de kosten van rechtsbijstand niet zelf dragen? Dan kunt u mogelijk in aanmerking komen voor <strong>gefinancierde rechtsbijstand</strong>. Dit heet ook wel een toevoeging of pro deo. Wij vertellen u graag wat uw mogelijkheden zijn.",
+    "pd.step1.title":"Intake &amp; Beoordeling","pd.step1.body":"Tijdens een vrijblijvend gesprek bespreken wij uw juridische situatie en beoordelen wij samen of gefinancierde rechtsbijstand van toepassing is.",
+    "pd.step2.title":"Aanvraag bij Raad voor Rechtsbijstand","pd.step2.body":"Wij dienen namens u een toevoegingsaanvraag in bij de Raad voor Rechtsbijstand.",
+    "pd.step3.title":"Eigen Bijdrage","pd.step3.body":"Bij toekenning stelt de Raad een eigen bijdrage vast op basis van uw inkomen. Deze bijdrage betaalt u aan ons kantoor.",
+    "pd.step4.title":"Behandeling van uw Zaak","pd.step4.body":"Na toekenning behandelen wij uw zaak volledig. Houd er rekening mee dat de Raad de toevoeging achteraf kan intrekken.",
+    "pd.step5.title":"Rechtsbijstandsverzekering","pd.step5.body":"Heeft u een rechtsbijstandsverzekering? Dan is het mogelijk dat uw verzekeraar de kosten dekt.",
+    "pd.cta.title":"Niet zeker of u in aanmerking komt?",
+    "pd.cta.body":"Neem contact op voor een vrijblijvend gesprek. Wij kijken samen wat er mogelijk is en welke financieringsopties bij uw situatie passen.",
+    "pd.cta.btn":"Vrijblijvend Adviesgesprek",
+    "contact.hero.title":"Neem<br><em>Contact Op</em>","contact.hero.sub":"Heeft u een juridische vraag of wilt u advies? Wij zijn er voor u. Neem vrijblijvend contact op. Wij reageren spoedig.",
+    "contact.reach.tag":"Bereikbaarheid","contact.reach.title":"Persoonlijk contact,<br><em>snel geholpen</em>",
+    "contact.reach.body":"Wij denken graag met u mee. Of u nu een korte vraag heeft of uw volledige zaak wilt bespreken. Wij nemen de tijd voor u.",
+    "contact.lbl.phone":"Telefoon","contact.lbl.email":"E-mail","contact.lbl.address":"Adres","contact.lbl.hours":"Openingstijden",
+    "contact.hours.val":"Maandag – Vrijdag: 9:00 – 17:00",
+    "form.title":"Stuur ons<br><em style='font-family:&quot;Playfair Display&quot;,serif;font-style:italic;color:var(--accent)'>een bericht</em>",
+    "form.fname":"Voornaam","form.lname":"Achternaam","form.email":"E-mailadres","form.phone":"Telefoonnummer","form.area":"Rechtsgebied","form.message":"Bericht",
+    "form.ph.fname":"Jan","form.ph.lname":"de Vries","form.ph.email":"jan@email.nl","form.ph.message":"Beschrijf kort uw vraag of situatie...",
+    "form.area.placeholder":"Selecteer een rechtsgebied","form.area.other":"Anders",
+    "form.submit":"Verstuur Bericht",
+    "form.privacy":"Uw gegevens worden strikt vertrouwelijk behandeld en nooit gedeeld met derden. Door dit formulier te verzenden gaat u akkoord met ons privacybeleid.",
+    "legal.eyebrow":"Juridische Informatie","disclaimer.title":"Disclaimer",
+    "disc.h1":"Aansprakelijkheid","disc.p1":"Tsang Law Firm streeft ernaar de informatie op deze website zo volledig en nauwkeurig mogelijk te houden. Wij aanvaarden echter geen aansprakelijkheid voor schade die ontstaat uit het gebruik van de website.",
+    "disc.h2":"Intellectueel Eigendom","disc.p2":"Alle rechten op de inhoud van deze website, waaronder teksten, afbeeldingen en logo’s, berusten bij Tsang Law Firm. Niets van deze website mag worden verveelvoudigd zonder voorafgaande schriftelijke toestemming.",
+    "disc.h3":"Privacybeleid","disc.p3":"Tsang Law Firm respecteert uw privacy en verwerkt persoonsgegevens conform de AVG. Gegevens via het contactformulier worden uitsluitend gebruikt voor de behandeling van uw aanvraag.",
+    "disc.h4":"Contact","disc.p4":"Voor vragen over deze disclaimer kunt u contact opnemen via <a href='mailto:info@tsanglawfirm.nl' style='color:var(--accent)'>info@tsanglawfirm.nl</a> of +31 70 331 1480.",
+    "vw.title":"Algemene<br><em>Voorwaarden</em>",
+    "vw.h1":"Artikel 1 - Toepasselijkheid","vw.p1":"Deze algemene voorwaarden zijn van toepassing op alle opdrachten die aan Tsang Law Firm worden verstrekt, tenzij schriftelijk anders is overeengekomen.",
+    "vw.h2":"Artikel 2 - Opdracht","vw.p2":"Een opdracht komt tot stand op het moment dat Tsang Law Firm de opdracht schriftelijk heeft bevestigd. De cliënt staat in voor de juistheid en volledigheid van de verstrekte informatie.",
+    "vw.h3":"Artikel 3 - Honorarium &amp; Kosten","vw.p3":"Tenzij schriftelijk anders overeengekomen, wordt het honorarium berekend aan de hand van het aantal bestede uren maal het overeengekomen uurtarief. Bijzondere onkosten worden separaat in rekening gebracht. Alle bedragen worden vermeerderd met BTW.",
+    "vw.h4":"Artikel 4 - Betalingstermijn","vw.p4":"Declaraties dienen binnen veertien dagen na factuurdatum te worden voldaan. Bij overschrijding van de betalingstermijn is de wettelijke rente verschuldigd.",
+    "vw.h5":"Artikel 5 - Aansprakelijkheid","vw.p5":"De aansprakelijkheid van Tsang Law Firm is beperkt tot het bedrag dat door de beroepsaansprakelijkheidsverzekering wordt uitgekeerd, vermeerderd met het eigen risico.",
+    "vw.h6":"Artikel 6 - Klachtenregeling","vw.p6":"Klachten over de dienstverlening dienen zo spoedig mogelijk schriftelijk te worden ingediend. Wij zullen de klacht uiterlijk binnen vier weken behandelen.",
+    "vw.h7":"Artikel 7 - Toepasselijk Recht","vw.p7":"Op alle overeenkomsten met Tsang Law Firm is Nederlands recht van toepassing. Geschillen worden voorgelegd aan de bevoegde rechter in het arrondissement Den Haag."
+  },
+
+  en: {
+    "nav.team":"Team","nav.areas":"Practice Areas","nav.werkwijze":"Our Approach","nav.contact":"Contact",
+    "hero.eyebrow":"The Hague · Law Firm",
+    "hero.title":"Legal<br><em>Expertise.</em><br>Personal<br>Approach.",
+    "hero.sub":"Specialist legal assistance in The Hague. Personal, dedicated and always focused on the best outcome for you.",
+    "hero.cta1":"Book a Consultation","hero.cta2":"Practice Areas","scroll":"Scroll",
+    "stat1.lbl":"Practice Areas","stat2.lbl":"Languages","stat3.lbl":"Years Experience","stat4.lbl":"National &amp; International",
+    "marquee":"Immigration Law <span class='marquee-dot'></span> Family Law <span class='marquee-dot'></span> Employment Law <span class='marquee-dot'></span> Corporate Law <span class='marquee-dot'></span> Personal Injury <span class='marquee-dot'></span> Criminal Law <span class='marquee-dot'></span>",
+    "about.tag":"About Us",
+    "about.title":"Your interests,<br><em>our priority</em>",
+    "about.body":"At Tsang Law Firm, your situation comes first. We provide clear legal guidance, honest advice and a tailored approach to your personal circumstances. No jargon, no surprises. Just results-focused work.",
+    "about.v1.title":"Personal &amp; Results-Focused","about.v1.body":"We take the time to understand your situation thoroughly and work purposefully towards the best possible outcome.",
+    "about.v2.title":"International Expertise","about.v2.body":"Extensive experience supporting international clients navigating Dutch law and legal procedures.",
+    "about.v3.title":"Accessible &amp; Affordable","about.v3.body":"We explore all available funding options with you, including legal expenses insurance and government-funded legal aid.",
+    "about.v4.title":"Multilingual Services","about.v4.body":"We advise in Dutch, English, Chinese, Turkish and Arabic, so you always feel fully understood.",
+    "about.quote":"&ldquo;We zijn er voor u, met de expertise die uw zaak verdient en de aandacht die u nodig heeft.&rdquo;",
+    "practice.tag":"Specialisations","practice.title":"Our<br><em>Practice Areas</em>","practice.all":"All areas",
+    "pa1.name":"Immigration Law","pa2.name":"Family Law","pa3.name":"Employment Law",
+    "pa4.name":"Corporate Law","pa5.name":"Personal Injury","pa6.name":"Criminal Law",
+    "pa1.li1":"Residence permits","pa1.li2":"Naturalisation","pa1.li3":"Family reunification","pa1.li4":"Asylum &amp; Protection",
+    "pa2.li1":"Divorce","pa2.li2":"Alimony","pa2.li3":"Parental authority","pa2.li4":"Visitation arrangements",
+    "pa3.li1":"Dismissal procedures","pa3.li2":"Employment contracts","pa3.li3":"Wage claims","pa3.li4":"Workplace disputes",
+    "pa4.li1":"Contracts","pa4.li2":"Company formation","pa4.li3":"Shareholder disputes","pa4.li4":"Mergers &amp; Acquisitions",
+    "pa5.li1":"Liability","pa5.li2":"Compensation claims","pa5.li3":"Non-economic damages","pa5.li4":"Insurer negotiations",
+    "pa6.li1":"Defence","pa6.li2":"Assistance during interrogation","pa6.li3":"Appeal","pa6.li4":"Asset confiscation",
+    "team.tag":"Our Team","team.title":"Lawyers with<br><em>Passion &amp; Expertise</em>",
+    "team.sub":"A committed team of lawyers, ready to support you professionally and personally.",
+    "team.more":"Get to know our team",
+    "tsang.role":"Attorney - Managing Partner","sarican.role":"Attorney",
+    "tag.privaatrecht":"Private Law","tag.contractenrecht":"Contract Law","tag.aansprakelijkheid":"Liability Law","tag.erfrecht":"Inheritance Law",
+    "cta.title":"Do you have a<br><em>legal question?</em>",
+    "cta.sub":"Get in touch without obligation. We are happy to think along with you.","cta.btn":"Get in Touch",
+    "footer.desc":"Tsang Law Firm — personal legal guidance in The Hague, for everyone who deserves justice.",
+    "footer.col.areas":"Practice Areas","footer.col.office":"Office","footer.col.contact":"Contact","footer.col.hours":"Office Hours",
+    "footer.link.team":"Our Team","footer.link.terms":"Terms &amp; Conditions",
+    "footer.hours":"Monday – Friday<br>9:00 – 17:00<br><br>Prinsegracht 38<br>2512 GA The Hague",
+    "footer.hours.short":"Mon – Fri: 9:00 – 17:00",
+    "tsang.uni":"Leiden University - Law",
+    "tsang.bio1":"Angel Tsang is the founder of Tsang Law Firm. She advises clients in immigration law, family law and employment law. With attention to detail and a warm approach, she guides people through sometimes complex and life-changing legal processes.",
+    "tsang.bio2":"Her international background and multilingual abilities allow her to support clients from diverse cultures in an accessible and empathetic way. She is registered with the Dutch Bar Association.",
+    "sarican.uni":"University of Amsterdam - Law",
+    "sarican.bio1":"Tansu Sarican is a driven attorney specialising in criminal law and private law. She is known for her clear communication, sharp analysis and the tenacity with which she defends her clients.",
+    "sarican.bio2":"After graduating from the University of Amsterdam, she gained practical experience at a law firm and was sworn in as an attorney in 2025. Thanks to her Turkish background, Tansu assists clients in Dutch, English and Turkish.",
+    "expertise.label":"Expertise",
+    "waarneming.tag":"Continuity &amp; Covering",
+    "waarneming.body":"To ensure continuity of our services, we have a covering and substitution arrangement with mr. J.M. Szczerbak of <strong style='color:var(--ink-mid)'>Szczerbak Advocatuur</strong>, Parkstraat 83, 2514 JG The Hague.",
+    "rg.eyebrow":"Specialisations","rg.hero.title":"Our<br><em>Practice Areas</em>",
+    "rg.hero.sub":"At Tsang Law Firm you can turn to us for legal matters across a wide range of practice areas. We offer expert advice and tailored assistance.",
+    "rg.intro.tag":"Expertise","rg.intro.title":"Multiple areas,<br><em>one point of contact</em>",
+    "rg.intro.body":"Tsang Law Firm provides focused legal support across multiple core practice areas. Whether it concerns an immigration issue, a workplace dispute or a family matter. You are not alone. We speak your language, literally and figuratively.",
+    "rg1.desc":"We guide you through all aspects of immigration law: from residence permits to naturalisation. Our multilingual expertise makes the difference for international clients.",
+    "rg1.li1":"Application and renewal of residence permit","rg1.li2":"Objection and appeal against refusals","rg1.li3":"Naturalisation and Option to Dutch citizenship","rg1.li4":"Civic integration and integration exam","rg1.li5":"Family reunification","rg1.li6":"Asylum and protection",
+    "rg2.desc":"Family cases require a delicate and personal approach. We support you in divorces, maintenance matters and all other family law cases with empathy and expertise.",
+    "rg2.li1":"Divorce and legal separation","rg2.li2":"Child and partner maintenance","rg2.li3":"Parental authority and visitation","rg2.li4":"Acknowledgement and denial of paternity","rg2.li5":"Name changes","rg2.li6":"Division of marital property",
+    "rg3.desc":"Employment law issues affect both employees and employers. We advise and litigate on employment contracts, dismissal and workplace conflicts.",
+    "rg3.li1":"Drafting and reviewing employment contracts","rg3.li2":"Dismissal procedures and dissolution","rg3.li3":"Wage claims and outstanding payments","rg3.li4":"Employment disputes and mediation","rg3.li5":"Non-compete clause","rg3.li6":"Illness and reintegration",
+    "rg4.desc":"For entrepreneurs we provide legal support for the establishment, operation and protection of your business: from start-ups to established companies.",
+    "rg4.li1":"Drafting and reviewing contracts","rg4.li2":"Company formation (BV, VOF etc.)","rg4.li3":"General terms and conditions","rg4.li4":"Shareholder disputes","rg4.li5":"Director liability","rg4.li6":"Mergers and acquisitions",
+    "rg5.desc":"After an accident or injury you are entitled to fair compensation. We assist you in the fight against insurers to achieve the best possible outcome.",
+    "rg5.li1":"Establishing liability","rg5.li2":"Calculating and claiming compensation","rg5.li3":"Negotiations with insurers","rg5.li4":"Pain and suffering / Non-economic damages","rg5.li5":"Loss of earning capacity","rg5.li6":"Medical costs and rehabilitation",
+    "rg6.desc":"Much is at stake in a criminal case. Our lawyers offer you a strong defence and ensure your rights are protected throughout the entire criminal process.",
+    "rg6.li1":"Defence in offences and crimes","rg6.li2":"Assistance during interrogation and arrest","rg6.li3":"Pre-trial detention and police custody","rg6.li4":"Appeal and cassation","rg6.li5":"Compensation after acquittal","rg6.li6":"Confiscation of illegally obtained assets",
+    "rg.bar.title":"Mr. T.Y. Tsang is registered with the Dutch Bar Association",
+    "rg.bar.body":"Registered practice areas: immigration law · family and personal law · inheritance law · general practice. Under this registration she obtains 10 training points per main practice area annually.",
+    "ww.eyebrow":"Our Approach","ww.hero.title":"How we<br><em>work for you</em>",
+    "ww.hero.sub":"We work in a structured, transparent way, always with your situation in mind. You know exactly where you stand at every step.",
+    "ww.section.tag":"Our Method","ww.section.title":"Step by step<br><em>to your result</em>",
+    "ww.step1.title":"Intake &amp; Introduction","ww.step1.body":"We start with a no-obligation conversation: we listen to your situation, answer your questions and explore the legal options together.",
+    "ww.step2.title":"Analysis &amp; Strategy","ww.step2.body":"We carefully analyse your case, review the relevant legislation and develop a clear strategy, tailored to your specific circumstances.",
+    "ww.step3.title":"Execution &amp; Guidance","ww.step3.body":"We act on your behalf, keep you proactively informed of progress and defend your interests with conviction and professionalism.",
+    "ww.step4.title":"Result &amp; Follow-up","ww.step4.body":"Our goal is the best possible result for you. After the proceedings, we remain available for any follow-up questions or next steps.",
+    "ww.extra1.title":"Legal Expenses Insurance","ww.extra1.body":"Do you have legal expenses insurance? In many cases we can handle your case through your insurer.",
+    "ww.extra2.title":"Government-Funded Legal Aid","ww.extra2.body":"Do you have a low income? You may be eligible for government-funded legal aid. We assist you with the application.",
+    "ww.extra2.link":"More about Legal Aid",
+    "tarieven.tag":"Fees","tarieven.title":"Transparent <em>Costs</em>",
+    "tarieven.body":"Unless otherwise agreed in writing, fees are calculated based on hours spent multiplied by the agreed hourly rate. Special costs are billed separately. All amounts are subject to VAT.",
+    "tarief1.title":"Hourly Rate","tarief1.body":"Calculated per hour spent, agreed upon at the start of the case",
+    "tarief2.title":"Advance Payment","tarief2.body":"An advance payment may be required; settled against the final invoice",
+    "tarief3.body":"Government-funded legal aid available for lower incomes",
+    "pd.eyebrow":"Accessible Legal Aid","pd.hero.title":"Government-Funded<br><em>Legal Aid</em>",
+    "pd.hero.sub":"Legal assistance should be within reach for everyone, regardless of income. We guide you through the process of applying for government-funded legal aid.",
+    "pd.intro":"Do you have a low income and cannot cover the costs of a lawyer yourself? You may be eligible for <strong>government-funded legal aid</strong>, also known as &ldquo;pro deo&rdquo; or &ldquo;toevoeging&rdquo;.",
+    "pd.step1.title":"Intake &amp; Assessment","pd.step1.body":"During a no-obligation conversation we discuss your legal situation and together assess whether government-funded legal aid applies to you.",
+    "pd.step2.title":"Application to the Legal Aid Board","pd.step2.body":"We submit an application for legal aid on your behalf. The Board may request information from government agencies about your income and assets.",
+    "pd.step3.title":"Own Contribution","pd.step3.body":"If the application is approved, the Board sets an own contribution based on your income. This is paid to our firm.",
+    "pd.step4.title":"Handling your Case","pd.step4.body":"After approval we handle your case in full. Please note that the Board may withdraw the legal aid after the proceedings.",
+    "pd.step5.title":"Legal Expenses Insurance","pd.step5.body":"Do you have legal expenses insurance? It is possible your insurer covers the costs. We are happy to check this for you.",
+    "pd.cta.title":"Not sure whether you qualify?",
+    "pd.cta.body":"Get in touch for a no-obligation conversation. We will look at your situation together and explore which funding options suit you.",
+    "pd.cta.btn":"No-Obligation Consultation",
+    "contact.hero.title":"Get<br><em>in Touch</em>","contact.hero.sub":"Have a legal question or need advice? We are here for you. Get in touch. We respond promptly.",
+    "contact.reach.tag":"Availability","contact.reach.title":"Personal contact,<br><em>prompt assistance</em>",
+    "contact.reach.body":"We are happy to think along with you. Whether you have a quick question or want to discuss your full situation. We make time for you.",
+    "contact.lbl.phone":"Phone","contact.lbl.email":"Email","contact.lbl.address":"Address","contact.lbl.hours":"Office Hours",
+    "contact.hours.val":"Monday – Friday: 9:00 – 17:00",
+    "form.title":"Send us<br><em style='font-family:&quot;Playfair Display&quot;,serif;font-style:italic;color:var(--accent)'>a message</em>",
+    "form.fname":"First Name","form.lname":"Last Name","form.email":"Email Address","form.phone":"Phone Number","form.area":"Practice Area","form.message":"Message",
+    "form.ph.fname":"John","form.ph.lname":"Smith","form.ph.email":"john@email.com","form.ph.message":"Briefly describe your question or situation...",
+    "form.area.placeholder":"Select a practice area","form.area.other":"Other",
+    "form.submit":"Send Message",
+    "form.privacy":"Your details are treated with strict confidentiality and never shared with third parties. By submitting this form you agree to our privacy policy.",
+    "legal.eyebrow":"Legal Information","disclaimer.title":"Disclaimer",
+    "disc.h1":"Liability","disc.p1":"Tsang Law Firm strives to keep the information on this website as complete and accurate as possible. However, we accept no liability for damage arising from the use of the website.",
+    "disc.h2":"Intellectual Property","disc.p2":"All rights to the content of this website, including texts, images and logos, are vested in Tsang Law Firm. Nothing may be reproduced without prior written permission.",
+    "disc.h3":"Privacy Policy","disc.p3":"Tsang Law Firm respects your privacy and processes personal data in accordance with the GDPR. Data submitted via the contact form is used solely for handling your request.",
+    "disc.h4":"Contact","disc.p4":"For questions about this disclaimer please contact us at <a href='mailto:info@tsanglawfirm.nl' style='color:var(--accent)'>info@tsanglawfirm.nl</a> or +31 70 331 1480.",
+    "vw.title":"Terms &amp;<br><em>Conditions</em>",
+    "vw.h1":"Article 1 - Applicability","vw.p1":"These general terms and conditions apply to all assignments given to Tsang Law Firm, unless otherwise agreed in writing.",
+    "vw.h2":"Article 2 - Assignment","vw.p2":"An assignment is established at the moment Tsang Law Firm has confirmed the assignment in writing. The client warrants the accuracy and completeness of the information provided.",
+    "vw.h3":"Article 3 - Fees &amp; Costs","vw.p3":"Unless otherwise agreed in writing, the fee is calculated based on the number of hours spent multiplied by the agreed hourly rate. Special costs are billed separately. All amounts are subject to VAT.",
+    "vw.h4":"Article 4 - Payment Term","vw.p4":"Invoices must be paid within fourteen days of the invoice date. If the payment term is exceeded, statutory interest is due.",
+    "vw.h5":"Article 5 - Liability","vw.p5":"The liability of Tsang Law Firm is limited to the amount paid out by the professional liability insurance in the relevant case, plus the applicable deductible.",
+    "vw.h6":"Article 6 - Complaints Procedure","vw.p6":"Complaints about the services must be submitted in writing to Tsang Law Firm as soon as possible. We will handle the complaint no later than within four weeks.",
+    "vw.h7":"Article 7 - Governing Law","vw.p7":"Dutch law applies to all agreements with Tsang Law Firm. Disputes are submitted exclusively to the competent court in the district of The Hague."
+  },
+  tr: {
+    "nav.team":"Ekip","nav.areas":"Hukuk Alanları","nav.werkwijze":"Çalışma Şeklimiz","nav.contact":"İletişim",
+    "hero.eyebrow":"Lahey · Avukatlık Bürosu",
+    "hero.title":"Hukuki<br><em>Uzmanlık.</em><br>Kişisel<br>Yaklaşım.",
+    "hero.sub":"Lahey'de uzman hukuki destek. Kişisel, kararlı ve her zaman sizin için en iyi sonuca odaklı.",
+    "hero.cta1":"Ücretsiz Danışma","hero.cta2":"Hukuk Alanları","scroll":"Kaydır",
+    "stat1.lbl":"Hukuk Alanı","stat2.lbl":"Dil","stat3.lbl":"Yıllık Deneyim","stat4.lbl":"Ulusal &amp; Uluslararası",
+    "marquee":"Yabancılar Hukuku <span class='marquee-dot'></span> Aile Hukuku <span class='marquee-dot'></span> İş Hukuku <span class='marquee-dot'></span> Şirketler Hukuku <span class='marquee-dot'></span> Tazminat Hukuku <span class='marquee-dot'></span> Ceza Hukuku <span class='marquee-dot'></span>",
+    "about.tag":"Hakkımızda",
+    "about.title":"Önceliğimiz<br><em>sizin çıkarlarınız</em>",
+    "about.body":"Tsang Law Firm'de sizin durumunuz önce gelir. Anlaşılır hukuki rehberlik, dürüst tavsiye ve kişisel koşullarınıza uygun bir yaklaşım sunuyoruz. Jargon yok, sürpriz yok. Sadece sonuç odaklı çalışma.",
+    "about.v1.title":"Kişisel &amp; Sonuç Odaklı","about.v1.body":"Durumunuzu iyice anlamak için zaman ayırıyor ve en iyi sonuca doğru kararlılıkla ilerliyoruz.",
+    "about.v2.title":"Uluslararası Uzmanlık","about.v2.body":"Hollanda hukuku ve hukuki prosedürlerinde uluslararası müvekkillere kapsamlı destek deneyimi.",
+    "about.v3.title":"Erişilebilir &amp; Uygun Fiyatlı","about.v3.body":"Hukuki yardım sigortası ve devlet destekli hukuki yardım dahil tüm finansman seçeneklerini birlikte değerlendiriyoruz.",
+    "about.v4.title":"Çok Dilli Hizmet","about.v4.body":"Hollandaca, İngilizce, Çince, Türkçe ve Arapça danışmanlık sunuyoruz; böylece kendinizi her zaman tam anlamıyla ifade edebildiğinizi hissediyorsunuz.",
+    "about.quote":"&ldquo;Yanınızdayız; davanızın hak ettiği uzmanlıkla ve ihtiyaç duyduğunuz ilgiyle.&rdquo;",
+    "practice.tag":"Uzmanlık Alanları","practice.title":"Hukuk<br><em>Alanlarımız</em>","practice.all":"Tüm alanlar",
+    "pa1.name":"Yabancılar Hukuku","pa2.name":"Aile Hukuku","pa3.name":"İş Hukuku",
+    "pa4.name":"Şirketler Hukuku","pa5.name":"Tazminat Hukuku","pa6.name":"Ceza Hukuku",
+    "pa1.li1":"Oturma izinleri","pa1.li2":"Vatandaşlık","pa1.li3":"Aile birleşimi","pa1.li4":"İltica &amp; Koruma",
+    "pa2.li1":"Boşanma","pa2.li2":"Nafaka","pa2.li3":"Velayet","pa2.li4":"Kişisel görüşme düzenlemesi",
+    "pa3.li1":"İşten çıkarma prosedürleri","pa3.li2":"İş sözleşmeleri","pa3.li3":"Ücret alacakları","pa3.li4":"İş yeri anlaşmazlıkları",
+    "pa4.li1":"Sözleşmeler","pa4.li2":"Şirket kuruluşu","pa4.li3":"Ortak anlaşmazlıkları","pa4.li4":"Birleşme &amp; Satın almalar",
+    "pa5.li1":"Sorumluluk","pa5.li2":"Tazminat talepleri","pa5.li3":"Manevi tazminat","pa5.li4":"Sigorta müzakereleri",
+    "pa6.li1":"Savunma","pa6.li2":"Sorgu sırasında yardım","pa6.li3":"İstinaf","pa6.li4":"Mal müsaderesi",
+    "team.tag":"Ekibimiz","team.title":"Tutkulu &amp; Uzman<br><em>Avukatlar</em>",
+    "team.sub":"Sizi hem profesyonel hem de kişisel olarak desteklemeye hazır, bağlı bir avukatlar ekibi.",
+    "team.more":"Ekibimizi tanıyın",
+    "tsang.role":"Avukat - Büro Sahibi","sarican.role":"Avukat",
+    "tag.privaatrecht":"Özel Hukuk","tag.contractenrecht":"Sözleşme Hukuku","tag.aansprakelijkheid":"Sorumluluk Hukuku","tag.erfrecht":"Miras Hukuku",
+    "cta.title":"Hukuki bir<br><em>sorunuz mu var?</em>",
+    "cta.sub":"Ücretsiz iletişime geçin. Sizinle birlikte düşünmekten memnuniyet duyarız.","cta.btn":"İletişime Geçin",
+    "footer.desc":"Tsang Law Firm — Lahey'de kişisel hukuki rehberlik, adaleti hak eden herkes için.",
+    "footer.col.areas":"Hukuk Alanları","footer.col.office":"Büro","footer.col.contact":"İletişim","footer.col.hours":"Çalışma Saatleri",
+    "footer.link.team":"Ekibimiz","footer.link.terms":"Genel Şartlar",
+    "footer.hours":"Pazartesi – Cuma<br>9:00 – 17:00<br><br>Prinsegracht 38<br>2512 GA Den Haag",
+    "footer.hours.short":"Pzt – Cum: 9:00 – 17:00",
+    "tsang.uni":"Leiden Üniversitesi - Hukuk",
+    "tsang.bio1":"Angel Tsang, Tsang Law Firm'in kurucusudur. Yabancılar hukuku, kişiler ve aile hukuku ile iş hukuku alanlarında müvekkillere danışmanlık yapmaktadır. Ayrıntılara verdiği önem ve sıcak yaklaşımıyla insanları zaman zaman zorlu hukuki süreçlerde yönlendirmektedir.",
+    "tsang.bio2":"Uluslararası geçmişi ve çok dilli yetkinliği sayesinde farklı kültürlerden müvekkillere erişilebilir ve empatik bir biçimde destek olabilmektedir. Hollanda Barosu'na kayıtlıdır.",
+    "sarican.uni":"Amsterdam Üniversitesi - Hukuk",
+    "sarican.bio1":"Tansu Sarican, ceza hukuku ve özel hukuk alanında uzmanlaşmış tutkulu bir avukattır. Net iletişimi, keskin analizleri ve müvekkillerini savunmadaki kararlılığıyla tanınmaktadır.",
+    "sarican.bio2":"Amsterdam Üniversitesi'ndeki eğitiminin ardından bir avukatlık bürosunda pratik deneyim kazanmış ve 2025 yılında avukat olarak yemin etmiştir. Türk kökenli olması sayesinde Tansu müvekkillere Hollandaca, İngilizce ve Türkçe hizmet vermektedir.",
+    "expertise.label":"Uzmanlık",
+    "waarneming.tag":"Süreklilik &amp; Vekâlet",
+    "waarneming.body":"Hizmetlerimizin sürekliliğini sağlamak amacıyla mr. J.M. Szczerbak, <strong style='color:var(--ink-mid)'>Szczerbak Advocatuur</strong>, Parkstraat 83, 2514 JG Den Haag, ile vekâlet ve ikame düzenlemesi bulunmaktadır.",
+    "rg.eyebrow":"Uzmanlık Alanları","rg.hero.title":"Hukuk<br><em>Alanlarımız</em>",
+    "rg.hero.sub":"Tsang Law Firm olarak geniş bir yelpazede hukuki konularda yanınızdayız. Uzman danışmanlık ve kişiye özel destek sunuyoruz.",
+    "rg.intro.tag":"Uzmanlık","rg.intro.title":"Birden fazla alan,<br><em>tek muhatap</em>",
+    "rg.intro.body":"Tsang Law Firm, birden fazla temel hukuk alanında odaklı hukuki destek sunmaktadır. Bir oturma izni sorunu, bir iş anlaşmazlığı veya bir aile davası olsun: yalnız değilsiniz. Dilinizi konuşuyoruz, hem gerçek anlamda hem de mecazi olarak.",
+    "rg1.desc":"Oturma izninden vatandaşlığa kadar yabancılar hukukunun tüm yönlerinde size rehberlik ediyoruz. Çok dilli uzmanlığımız uluslararası müvekkiller için fark yaratıyor.",
+    "rg1.li1":"Oturma izninin başvuru ve yenilenmesi","rg1.li2":"Ret kararlarına itiraz ve dava","rg1.li3":"Vatandaşlık ve Hollanda uyruğu opsiyonu","rg1.li4":"Entegrasyon ve entegrasyon sınavı","rg1.li5":"Aile birleşimi","rg1.li6":"İltica ve koruma",
+    "rg2.desc":"Aile davaları hassas ve kişisel bir yaklaşım gerektirir. Boşanma ve diğer tüm aile hukuku davalarında empati ve uzmanlıkla yanınızdayız.",
+    "rg2.li1":"Boşanma ve yasal ayrılık","rg2.li2":"Çocuk ve eş nafakası","rg2.li3":"Velayet ve kişisel görüşme","rg2.li4":"Babalığın kabulü ve reddi","rg2.li5":"İsim değişikliği","rg2.li6":"Evlilik mallarının bölüşümü",
+    "rg3.desc":"İş hukuku sorunları hem çalışanları hem işverenleri etkiler. Sözleşmeler, işten çıkarma ve iş yeri anlaşmazlıkları konularında danışmanlık ve dava hizmetleri sunuyoruz.",
+    "rg3.li1":"İş sözleşmelerinin hazırlanması ve incelenmesi","rg3.li2":"İşten çıkarma prosedürleri ve fesih","rg3.li3":"Ücret alacakları ve birikmiş ödemeler","rg3.li4":"İş anlaşmazlıkları ve arabuluculuk","rg3.li5":"Rekabet yasağı maddesi","rg3.li6":"Hastalık ve işe yeniden uyum",
+    "rg4.desc":"Girişimcilere; şirket kuruluşu, işletme ve korunması konularında hukuki destek sunuyoruz: start-up'lardan köklü şirketlere kadar.",
+    "rg4.li1":"Sözleşmelerin hazırlanması ve incelenmesi","rg4.li2":"Şirket kuruluşu (BV, VOF vb.)","rg4.li3":"Genel şartlar ve koşullar","rg4.li4":"Ortak anlaşmazlıkları","rg4.li5":"Yönetici sorumluluğu","rg4.li6":"Birleşmeler ve satın almalar",
+    "rg5.desc":"Bir kaza veya yaralanma sonrasında adil tazminat hakkınız vardır. Sigortacılara karşı mücadelede en iyi sonucu elde etmeniz için yanınızdayız.",
+    "rg5.li1":"Sorumluluğun belirlenmesi","rg5.li2":"Tazminatın hesaplanması ve talep edilmesi","rg5.li3":"Sigortacılarla müzakere","rg5.li4":"Manevi tazminat","rg5.li5":"Çalışma gücü kaybı","rg5.li6":"Tıbbi giderler ve rehabilitasyon",
+    "rg6.desc":"Bir ceza davasında çok şey söz konusudur. Avukatlarımız size güçlü bir savunma sunar ve tüm ceza süreci boyunca haklarınızın korunmasını sağlar.",
+    "rg6.li1":"Kabahat ve suçlarda savunma","rg6.li2":"Sorgu ve gözaltı sırasında yardım","rg6.li3":"Tutukluluk ve nezarethane","rg6.li4":"İstinaf ve temyiz","rg6.li5":"Beraat sonrası tazminat","rg6.li6":"Yasadışı kazanılan varlıkların müsaderesi",
+    "rg.bar.title":"Mr. T.Y. Tsang, Hollanda<br>Barosu'na kayıtlıdır",
+    "rg.bar.body":"Kayıtlı hukuk alanları: yabancılar hukuku · kişiler ve aile hukuku · miras hukuku · genel uygulama. Bu kayıt kapsamında yıllık olarak her ana hukuk alanı için 10 eğitim puanı kazanmaktadır.",
+    "ww.eyebrow":"Çalışma Şeklimiz","ww.hero.title":"Sizin için<br><em>nasıl çalışıyoruz</em>",
+    "ww.hero.sub":"Yapılandırılmış ve şeffaf bir şekilde çalışıyoruz; her adımda durumunuzu göz önünde bulundurarak. Her aşamada nerede olduğunuzu tam olarak biliyorsunuz.",
+    "ww.section.tag":"Yaklaşımımız","ww.section.title":"Adım adım<br><em>sonucunuza doğru</em>",
+    "ww.step1.title":"Başvuru &amp; Tanışma","ww.step1.body":"Durumunuzu dinlemek, sorularınızı yanıtlamak ve hukuki seçenekleri birlikte keşfetmek için ücretsiz bir görüşmeyle başlıyoruz.",
+    "ww.step2.title":"Analiz &amp; Strateji","ww.step2.body":"Davanızı dikkatle analiz ediyor, ilgili mevzuatı inceliyor ve özel koşullarınıza göre şekillendirilmiş net bir strateji geliştiriyoruz.",
+    "ww.step3.title":"Uygulama &amp; Rehberlik","ww.step3.body":"Sizin adınıza hareket ediyor, ilerleme konusunda sizi proaktif biçimde bilgilendiriyor ve çıkarlarınızı kararlılık ve profesyonellikle savunuyoruz.",
+    "ww.step4.title":"Sonuç &amp; Takip","ww.step4.body":"Sizin için en iyi sonucu hedefliyoruz. Süreç tamamlandıktan sonra da olası sorular veya sonraki adımlar için yanınızdayız.",
+    "ww.extra1.title":"Hukuki Yardım Sigortası","ww.extra1.body":"Hukuki yardım sigortanız var mı? Pek çok durumda davanızı sigortanız aracılığıyla takip edebiliriz.",
+    "ww.extra2.title":"Devlet Destekli Hukuki Yardım","ww.extra2.body":"Düşük geliriniz mi var? Devlet destekli hukuki yardımdan yararlanmaya hak kazanabilirsiniz.",
+    "ww.extra2.link":"Hukuki Yardım Hakkında",
+    "tarieven.tag":"Ücretler","tarieven.title":"Şeffaf <em>Maliyetler</em>",
+    "tarieven.body":"Yazılı olarak aksi kararlaştırılmadıkça, ücret; harcanan saat sayısı ile üzerinde mutabık kalınan saatlik ücretin çarpımına göre hesaplanır. Tüm tutarlara KDV eklenir.",
+    "tarief1.title":"Saatlik Ücret","tarief1.body":"Harcanan saat başına hesaplanır, dava başlangıcında mutabık kalınır",
+    "tarief2.title":"Avans","tarief2.body":"Avans talep edilebilir; nihai faturadan mahsup edilir",
+    "tarief3.body":"Düşük gelirli bireyler için devlet destekli hukuki yardım mevcuttur",
+    "pd.eyebrow":"Erişilebilir Hukuki Yardım","pd.hero.title":"Devlet Destekli<br><em>Hukuki Yardım</em>",
+    "pd.hero.sub":"Hukuki yardım, gelirinizden bağımsız olarak herkesin erişebileceği bir hizmet olmalıdır. Devlet destekli hukuki yardım başvuru sürecinde size rehberlik ediyoruz.",
+    "pd.intro":"Düşük geliriniz var ve bir avukatın masraflarını kendiniz karşılayamıyor musunuz? <strong>Devlet destekli hukuki yardımdan</strong> yararlanmaya hak kazanabilirsiniz.",
+    "pd.step1.title":"Başvuru &amp; Değerlendirme","pd.step1.body":"Ücretsiz bir görüşmede hukuki durumunuzu ele alıyor ve birlikte devlet destekli hukuki yardımın geçerli olup olmadığını değerlendiriyoruz.",
+    "pd.step2.title":"Hukuki Yardım Kurulu'na Başvuru","pd.step2.body":"Hukuki yardım başvurusunu sizin adınıza yapıyoruz. Kurul, geliriniz ve varlıklarınız hakkında devlet kurumlarından bilgi talep edebilir.",
+    "pd.step3.title":"Katkı Payı","pd.step3.body":"Başvuru onaylanırsa, Kurul gelirinize göre bir katkı payı belirler. Bu tutar büromuza ödenir.",
+    "pd.step4.title":"Davanızın Takibi","pd.step4.body":"Onayın ardından davanızı eksiksiz takip ediyoruz. Kurulun yargılama sonrasında yardımı geri alabileceğini lütfen unutmayın.",
+    "pd.step5.title":"Hukuki Yardım Sigortası","pd.step5.body":"Hukuki yardım sigortanız var mı? Sigortanızın masrafları karşılaması mümkün olabilir. Bunu sizin için kontrol etmekten memnuniyet duyarız.",
+    "pd.cta.title":"Hak kazanıp kazanmadığınızdan emin değil misiniz?",
+    "pd.cta.body":"Ücretsiz bir görüşme için iletişime geçin. Durumunuzu birlikte değerlendiriyor ve size uygun finansman seçeneklerini araştırıyoruz.",
+    "pd.cta.btn":"Ücretsiz Danışma Görüşmesi",
+    "contact.hero.title":"Bize<br><em>Ulaşın</em>","contact.hero.sub":"Hukuki bir sorunuz mu var veya tavsiyeye mi ihtiyacınız var? Yanınızdayız. İletişime geçin; hızlıca geri dönüyoruz.",
+    "contact.reach.tag":"Erişilebilirlik","contact.reach.title":"Kişisel iletişim,<br><em>hızlı çözüm</em>",
+    "contact.reach.body":"Sizinle birlikte düşünmekten memnuniyet duyarız. Kısa bir sorunuz olsun ya da tüm durumunuzu görüşmek isteyin; sizin için zaman ayırıyoruz.",
+    "contact.lbl.phone":"Telefon","contact.lbl.email":"E-posta","contact.lbl.address":"Adres","contact.lbl.hours":"Çalışma Saatleri",
+    "contact.hours.val":"Pazartesi – Cuma: 9:00 – 17:00",
+    "form.title":"Bize<br><em style='font-family:&quot;Playfair Display&quot;,serif;font-style:italic;color:var(--accent)'>mesaj gönderin</em>",
+    "form.fname":"Ad","form.lname":"Soyad","form.email":"E-posta Adresi","form.phone":"Telefon Numarası","form.area":"Hukuk Alanı","form.message":"Mesaj",
+    "form.ph.fname":"Ahmet","form.ph.lname":"Yılmaz","form.ph.email":"ahmet@email.com","form.ph.message":"Durumunuzu kısaca açıklayın...",
+    "form.area.placeholder":"Bir hukuk alanı seçin","form.area.other":"Diğer",
+    "form.submit":"Mesaj Gönder",
+    "form.privacy":"Bilgileriniz sıkı bir gizlilikle korunur ve asla üçüncü taraflarla paylaşılmaz. Bu formu göndererek gizlilik politikamızı kabul etmiş olursunuz.",
+    "legal.eyebrow":"Hukuki Bilgi","disclaimer.title":"Sorumluluk Reddi",
+    "disc.h1":"Sorumluluk","disc.p1":"Tsang Law Firm, bu web sitesindeki bilgileri mümkün olduğunca eksiksiz ve doğru tutmaya çalışmaktadır. Ancak web sitesinin kullanımından doğabilecek zararlar için hiçbir sorumluluk kabul etmiyoruz.",
+    "disc.h2":"Fikri Mülkiyet","disc.p2":"Metin, görsel ve logolar dahil bu web sitesinin tüm içerik hakları Tsang Law Firm'e aittir. Önceden yazılı izin alınmaksızın hiçbir içerik çoğaltılamaz.",
+    "disc.h3":"Gizlilik Politikası","disc.p3":"Tsang Law Firm gizliliğinize saygı duyar ve kişisel verileri GDPR'a uygun olarak işler. İletişim formu aracılığıyla iletilen veriler yalnızca talebinizin işlenmesinde kullanılır.",
+    "disc.h4":"İletişim","disc.p4":"Bu sorumluluk reddi beyanı hakkındaki sorularınız için <a href='mailto:info@tsanglawfirm.nl' style='color:var(--accent)'>info@tsanglawfirm.nl</a> veya +31 70 331 1480 aracılığıyla bize ulaşabilirsiniz.",
+    "vw.title":"Genel<br><em>Şartlar</em>",
+    "vw.h1":"Madde 1 - Uygulanabilirlik","vw.p1":"Bu genel şartlar ve koşullar, yazılı olarak aksi kararlaştırılmadıkça Tsang Law Firm'e verilen tüm görevlendirmeler için geçerlidir.",
+    "vw.h2":"Madde 2 - Görevlendirme","vw.p2":"Görevlendirme, Tsang Law Firm'in görevi yazılı olarak onayladığı anda geçerli hale gelir. Müvekkil, sağlanan bilgilerin doğruluğunu ve eksiksizliğini garanti eder.",
+    "vw.h3":"Madde 3 - Ücret &amp; Masraflar","vw.p3":"Yazılı olarak aksi kararlaştırılmadıkça ücret, harcanan saat sayısının mutabık kalınan saatlik ücretle çarpımına göre hesaplanır. Özel masraflar ayrıca faturalandırılır. Tüm tutarlara KDV eklenir.",
+    "vw.h4":"Madde 4 - Ödeme Süresi","vw.p4":"Faturalar, düzenleme tarihinden itibaren on dört gün içinde ödenmelidir. Ödeme süresinin aşılması halinde yasal faiz işlemeye başlar.",
+    "vw.h5":"Madde 5 - Sorumluluk","vw.p5":"Tsang Law Firm'in sorumluluğu, ilgili mesleki sorumluluk sigortası kapsamında ödenen tutar ile muafiyet miktarıyla sınırlıdır.",
+    "vw.h6":"Madde 6 - Şikayet Prosedürü","vw.p6":"Hizmetlere ilişkin şikayetler mümkün olan en kısa sürede Tsang Law Firm'e yazılı olarak iletilmelidir. En geç dört hafta içinde şikayeti değerlendireceğiz.",
+    "vw.h7":"Madde 7 - Uygulanacak Hukuk","vw.p7":"Tsang Law Firm ile tüm sözleşmelere Hollanda hukuku uygulanır. Anlaşmazlıklar münhasıran Lahey bölgesindeki yetkili mahkemeye sunulur."
+  },
+
+  ar: {
+    "nav.team":"الفريق","nav.areas":"مجالات القانون","nav.werkwijze":"طريقة عملنا","nav.contact":"تواصل معنا",
+    "hero.eyebrow":"لاهاي · مكتب محاماة",
+    "hero.title":"خبرة<br><em>قانونية.</em><br>نهج<br>شخصي.",
+    "hero.sub":"مساعدة قانونية متخصصة في لاهاي. شخصية، ملتزمة، وتسعى دائماً لتحقيق أفضل نتيجة لكم.",
+    "hero.cta1":"استشارة مجانية","hero.cta2":"مجالات القانون","scroll":"مرر",
+    "stat1.lbl":"مجال قانوني","stat2.lbl":"لغة","stat3.lbl":"سنوات خبرة","stat4.lbl":"محلي &amp; دولي",
+    "marquee":"قانون الأجانب <span class='marquee-dot'></span> قانون الأسرة <span class='marquee-dot'></span> قانون العمل <span class='marquee-dot'></span> قانون الشركات <span class='marquee-dot'></span> قانون التعويض <span class='marquee-dot'></span> القانون الجنائي <span class='marquee-dot'></span>",
+    "about.tag":"من نحن",
+    "about.title":"مصالحكم<br><em>أولويتنا</em>",
+    "about.body":"في Tsang Law Firm، وضعكم هو محور اهتمامنا. نقدم إرشاداً قانونياً واضحاً ومشورة صادقة ونهجاً مصمماً خصيصاً لظروفكم الشخصية. لا مصطلحات معقدة، لا مفاجآت. نعمل بأسلوب يُركّز على النتائج.",
+    "about.v1.title":"شخصي &amp; موجّه نحو النتائج","about.v1.body":"نأخذ الوقت الكافي لفهم وضعكم جيداً ونعمل بهدفية نحو تحقيق أفضل نتيجة ممكنة.",
+    "about.v2.title":"خبرة دولية","about.v2.body":"خبرة واسعة في دعم العملاء الدوليين في التعامل مع القانون الهولندي والإجراءات القانونية.",
+    "about.v3.title":"سهل الوصول &amp; بأسعار معقولة","about.v3.body":"نستعرض معكم جميع خيارات التمويل المتاحة، بما فيها التأمين على المصاريف القانونية والمساعدة القانونية الممولة من الدولة.",
+    "about.v4.title":"خدمة متعددة اللغات","about.v4.body":"نقدم الاستشارات بالهولندية والإنجليزية والصينية والعربية والتركية؛ لتشعروا دائماً بأنكم مفهومون تماماً.",
+    "about.quote":"&ldquo;نحن هنا من أجلكم، بالخبرة التي تستحقها قضيتكم والاهتمام الذي تحتاجونه.&rdquo;",
+    "practice.tag":"مجالات التخصص","practice.title":"مجالاتنا<br><em>القانونية</em>","practice.all":"جميع المجالات",
+    "pa1.name":"قانون الأجانب","pa2.name":"قانون الأسرة","pa3.name":"قانون العمل",
+    "pa4.name":"قانون الشركات","pa5.name":"قانون التعويض","pa6.name":"القانون الجنائي",
+    "pa1.li1":"تصاريح الإقامة","pa1.li2":"الجنسية","pa1.li3":"لم شمل الأسرة","pa1.li4":"اللجوء &amp; الحماية",
+    "pa2.li1":"الطلاق","pa2.li2":"النفقة","pa2.li3":"حضانة الأطفال","pa2.li4":"ترتيبات الزيارة",
+    "pa3.li1":"إجراءات الفصل","pa3.li2":"عقود العمل","pa3.li3":"مطالبات الأجور","pa3.li4":"النزاعات العمالية",
+    "pa4.li1":"العقود","pa4.li2":"تأسيس الشركات","pa4.li3":"نزاعات المساهمين","pa4.li4":"الاندماج &amp; الاستحواذ",
+    "pa5.li1":"المسؤولية","pa5.li2":"مطالبات التعويض","pa5.li3":"التعويض المعنوي","pa5.li4":"مفاوضات شركات التأمين",
+    "pa6.li1":"الدفاع","pa6.li2":"المساعدة أثناء الاستجواب","pa6.li3":"الاستئناف","pa6.li4":"مصادرة الأصول",
+    "team.tag":"فريقنا","team.title":"محامون متحمسون<br><em>وذوو خبرة</em>",
+    "team.sub":"فريق محامين ملتزمين، جاهزون لدعمكم باحترافية وعلى الصعيد الشخصي.",
+    "team.more":"تعرفوا على فريقنا",
+    "tsang.role":"محامية - صاحبة المكتب","sarican.role":"محامية",
+    "tag.privaatrecht":"القانون الخاص","tag.contractenrecht":"قانون العقود","tag.aansprakelijkheid":"قانون المسؤولية","tag.erfrecht":"قانون الميراث",
+    "cta.title":"هل لديكم<br><em>سؤال قانوني؟</em>",
+    "cta.sub":"تواصلوا معنا دون أي التزام. يسعدنا التفكير معكم في الحل المناسب.","cta.btn":"تواصل معنا",
+    "footer.desc":"Tsang Law Firm — إرشاد قانوني شخصي في لاهاي، لكل من يستحق العدالة.",
+    "footer.col.areas":"مجالات القانون","footer.col.office":"المكتب","footer.col.contact":"تواصل معنا","footer.col.hours":"ساعات العمل",
+    "footer.link.team":"فريقنا","footer.link.terms":"الشروط العامة",
+    "footer.hours":"الاثنين – الجمعة<br>9:00 – 17:00<br><br>Prinsegracht 38<br>2512 GA Den Haag",
+    "footer.hours.short":"الاثنين – الجمعة: 9:00 – 17:00",
+    "tsang.uni":"جامعة ليدن - القانون",
+    "tsang.bio1":"أنجيل تسانج هي مؤسسة Tsang Law Firm. تقدم المشورة القانونية في مجالات قانون الأجانب وقانون الأسرة وقانون العمل. باهتمامها بالتفاصيل ونهجها الدافئ، ترشد الموكلين عبر المسارات القانونية التي قد تكون بالغة الأثر في حياتهم.",
+    "tsang.bio2":"تُمكّنها خلفيتها الدولية وكفاءتها متعددة اللغات من دعم موكلين من ثقافات متنوعة بأسلوب ميسّر ومتعاطف. وهي مسجلة في نقابة المحامين الهولندية.",
+    "sarican.uni":"جامعة أمستردام - القانون",
+    "sarican.bio1":"تانسو ساريجان محامية متحمسة تتخصص في القانون الجنائي والقانون الخاص. تُعرف بتواصلها الواضح وتحليلاتها الحادة وإصرارها في الدفاع عن موكليها.",
+    "sarican.bio2":"بعد تخرجها من جامعة أمستردام، اكتسبت خبرة عملية في مكتب محاماة وأدّت اليمين محامية عام 2025. بفضل أصولها التركية، تخدم تانسو الموكلين بالهولندية والإنجليزية والتركية.",
+    "expertise.label":"الخبرة",
+    "waarneming.tag":"الاستمرارية &amp; النيابة",
+    "waarneming.body":"لضمان استمرارية خدماتنا، لدينا ترتيب نيابة واستبدال مع mr. J.M. Szczerbak من <strong style='color:var(--ink-mid)'>Szczerbak Advocatuur</strong>، Parkstraat 83، 2514 JG Den Haag.",
+    "rg.eyebrow":"مجالات التخصص","rg.hero.title":"مجالاتنا<br><em>القانونية</em>",
+    "rg.hero.sub":"في Tsang Law Firm نساندكم في طيف واسع من المسائل القانونية. نقدم مشورة متخصصة ومساعدة مصممة خصيصاً لوضعكم.",
+    "rg.intro.tag":"الخبرة","rg.intro.title":"عدة مجالات،<br><em>جهة تواصل واحدة</em>",
+    "rg.intro.body":"تقدم Tsang Law Firm دعماً قانونياً متخصصاً في عدة مجالات قانونية أساسية. سواء تعلّق الأمر بمسألة إقامة أو نزاع عمالي أو قضية أسرية: لستم وحدكم. نتحدث لغتكم، بالمعنى الحرفي والمجازي.",
+    "rg1.desc":"نرشدكم عبر جميع جوانب قانون الأجانب: من تصريح الإقامة إلى الجنسية. خبرتنا متعددة اللغات تصنع الفارق للموكلين الدوليين.",
+    "rg1.li1":"تقديم وتجديد تصريح الإقامة","rg1.li2":"الاعتراض والطعن في حالات الرفض","rg1.li3":"الجنسية وخيار الجنسية الهولندية","rg1.li4":"الاندماج وامتحان الاندماج","rg1.li5":"لم شمل الأسرة","rg1.li6":"اللجوء والحماية",
+    "rg2.desc":"تستدعي قضايا الأسرة نهجاً حساساً وشخصياً. ندعمكم في الطلاق وسائر قضايا قانون الأسرة بتعاطف واحترافية.",
+    "rg2.li1":"الطلاق والانفصال القانوني","rg2.li2":"نفقة الطفل والزوج","rg2.li3":"الحضانة وحق الزيارة","rg2.li4":"إثبات الأبوة ونفيها","rg2.li5":"تغيير الاسم","rg2.li6":"تقسيم الممتلكات الزوجية",
+    "rg3.desc":"تؤثر مسائل قانون العمل على الموظفين وأصحاب العمل على حدٍّ سواء. نقدم الاستشارة والتقاضي في العقود والفصل والنزاعات في مكان العمل.",
+    "rg3.li1":"صياغة عقود العمل ومراجعتها","rg3.li2":"إجراءات الفصل والإنهاء","rg3.li3":"مطالبات الأجور والمستحقات المتأخرة","rg3.li4":"النزاعات العمالية والوساطة","rg3.li5":"شرط عدم المنافسة","rg3.li6":"المرض وإعادة الاندماج المهني",
+    "rg4.desc":"نقدم لأصحاب الأعمال دعماً قانونياً لتأسيس المشاريع وإدارتها وحمايتها: من الشركات الناشئة إلى الشركات الراسخة.",
+    "rg4.li1":"صياغة العقود ومراجعتها","rg4.li2":"تأسيس الشركات (BV وVOF وغيرها)","rg4.li3":"الشروط والأحكام العامة","rg4.li4":"نزاعات المساهمين","rg4.li5":"مسؤولية المدير","rg4.li6":"الاندماج والاستحواذ",
+    "rg5.desc":"بعد حادث أو إصابة، يحق لكم الحصول على تعويض عادل. نساندكم في النضال ضد شركات التأمين لتحقيق أفضل نتيجة ممكنة.",
+    "rg5.li1":"تحديد المسؤولية","rg5.li2":"حساب التعويض والمطالبة به","rg5.li3":"التفاوض مع شركات التأمين","rg5.li4":"التعويض المعنوي","rg5.li5":"فقدان القدرة على الكسب","rg5.li6":"التكاليف الطبية وإعادة التأهيل",
+    "rg6.desc":"تتضمن القضايا الجنائية مخاطر جسيمة. يوفر لكم محامونا دفاعاً قوياً ويضمنون حماية حقوقكم طوال الإجراءات الجنائية.",
+    "rg6.li1":"الدفاع في المخالفات والجرائم","rg6.li2":"المساعدة أثناء الاستجواب والاحتجاز","rg6.li3":"الاحتجاز السابق للمحاكمة","rg6.li4":"الاستئناف والتمييز","rg6.li5":"التعويض بعد البراءة","rg6.li6":"مصادرة الأصول المكتسبة بطرق غير مشروعة",
+    "rg.bar.title":"Mr. T.Y. Tsang مسجلة في<br>نقابة المحامين الهولندية",
+    "rg.bar.body":"مجالات القانون المسجلة: قانون الأجانب · قانون الأشخاص والأسرة · قانون الميراث · الممارسة العامة. بموجب هذا التسجيل، تحصل سنوياً على 10 نقاط تدريب لكل مجال رئيسي.",
+    "ww.eyebrow":"طريقة عملنا","ww.hero.title":"كيف نعمل<br><em>من أجلكم</em>",
+    "ww.hero.sub":"نعمل بأسلوب منظم وشفاف، مع مراعاة وضعكم في كل خطوة. تعرفون تماماً أين أنتم في كل مرحلة.",
+    "ww.section.tag":"نهجنا","ww.section.title":"خطوة بخطوة<br><em>نحو نتيجتكم</em>",
+    "ww.step1.title":"الاستقبال &amp; التعارف","ww.step1.body":"نبدأ بمحادثة غير ملزمة نستمع فيها لوضعكم ونجيب على أسئلتكم ونستكشف الخيارات القانونية معاً.",
+    "ww.step2.title":"التحليل &amp; الاستراتيجية","ww.step2.body":"نحلل قضيتكم بعناية ونراجع التشريعات ذات الصلة ونضع استراتيجية واضحة مصممة وفق ظروفكم الخاصة.",
+    "ww.step3.title":"التنفيذ &amp; التوجيه","ww.step3.body":"نتصرف باسمكم ونُطلعكم بشكل استباقي على مستجدات القضية ونُدافع عن مصالحكم بقناعة واحترافية.",
+    "ww.step4.title":"النتيجة &amp; المتابعة","ww.step4.body":"هدفنا تحقيق أفضل نتيجة ممكنة لكم. بعد انتهاء الإجراءات، نبقى متاحين لأي استفسارات أو خطوات لاحقة.",
+    "ww.extra1.title":"التأمين على المصاريف القانونية","ww.extra1.body":"هل لديكم تأمين على المصاريف القانونية؟ في كثير من الحالات يمكننا تناول قضيتكم عبر شركة التأمين.",
+    "ww.extra2.title":"المساعدة القانونية الممولة من الدولة","ww.extra2.body":"هل دخلكم منخفض؟ قد تكونوا مؤهلين للحصول على مساعدة قانونية ممولة من الدولة.",
+    "ww.extra2.link":"مزيد عن المساعدة القانونية",
+    "tarieven.tag":"الأتعاب","tarieven.title":"تكاليف <em>شفافة</em>",
+    "tarieven.body":"ما لم يُتفق على خلاف ذلك كتابياً، تُحسب الأتعاب بضرب عدد الساعات المنجزة في الأجر الساعي المتفق عليه. تُضاف ضريبة القيمة المضافة على جميع المبالغ.",
+    "tarief1.title":"الأجر الساعي","tarief1.body":"يُحسب لكل ساعة عمل ويُحدد بالاتفاق في بداية القضية",
+    "tarief2.title":"الدفعة المقدمة","tarief2.body":"قد تُطلب دفعة مقدمة وتُخصم من الفاتورة النهائية",
+    "tarief3.body":"المساعدة القانونية الممولة من الدولة متاحة لأصحاب الدخل المنخفض",
+    "pd.eyebrow":"مساعدة قانونية ميسورة","pd.hero.title":"المساعدة القانونية<br><em>الممولة من الدولة</em>",
+    "pd.hero.sub":"يجب أن تكون المساعدة القانونية في متناول الجميع بصرف النظر عن الدخل. نرشدكم خلال عملية التقدم للحصول على المساعدة القانونية الممولة من الدولة.",
+    "pd.intro":"هل دخلكم منخفض ولا تستطيعون تحمّل تكاليف محامٍ بأنفسكم؟ قد تكونوا مؤهلين للحصول على <strong>مساعدة قانونية ممولة من الدولة</strong>.",
+    "pd.step1.title":"الاستقبال &amp; التقييم","pd.step1.body":"في محادثة غير ملزمة نناقش وضعكم القانوني ونقيّم معاً ما إذا كانت المساعدة الممولة تنطبق عليكم.",
+    "pd.step2.title":"التقديم لمجلس المساعدة القانونية","pd.step2.body":"نتقدم بطلب المساعدة القانونية باسمكم. قد يطلب المجلس معلومات من الجهات الحكومية بشأن دخلكم وأصولكم.",
+    "pd.step3.title":"المساهمة الذاتية","pd.step3.body":"عند الموافقة يحدد المجلس مساهمة ذاتية بناءً على دخلكم، وتُدفع لمكتبنا.",
+    "pd.step4.title":"متابعة قضيتكم","pd.step4.body":"بعد الموافقة نتابع قضيتكم بالكامل. يُرجى العلم بأن المجلس قد يسحب المساعدة بعد صدور الحكم.",
+    "pd.step5.title":"التأمين على المصاريف القانونية","pd.step5.body":"هل لديكم تأمين على المصاريف القانونية؟ من المحتمل أن تغطي شركة التأمين التكاليف، ويسعدنا التحقق من ذلك نيابة عنكم.",
+    "pd.cta.title":"لستم متأكدين من أهليتكم؟",
+    "pd.cta.body":"تواصلوا معنا لمحادثة غير ملزمة. سنقيّم وضعكم معاً ونستكشف خيارات التمويل التي تناسبكم.",
+    "pd.cta.btn":"استشارة مجانية",
+    "contact.hero.title":"تواصلوا<br><em>معنا</em>","contact.hero.sub":"هل لديكم سؤال قانوني أو تحتاجون إلى مشورة؟ نحن هنا من أجلكم. تواصلوا معنا وسنرد بسرعة.",
+    "contact.reach.tag":"إمكانية الوصول","contact.reach.title":"تواصل شخصي،<br><em>مساعدة سريعة</em>",
+    "contact.reach.body":"يسعدنا التفكير معكم في الحل المناسب. سواء كان لديكم سؤال سريع أو تودّون مناقشة وضعكم كاملاً، نحن نخصص لكم الوقت الكافي.",
+    "contact.lbl.phone":"الهاتف","contact.lbl.email":"البريد الإلكتروني","contact.lbl.address":"العنوان","contact.lbl.hours":"ساعات العمل",
+    "contact.hours.val":"الاثنين – الجمعة: 9:00 – 17:00",
+    "form.title":"أرسلوا لنا<br><em style='font-family:&quot;Playfair Display&quot;,serif;font-style:italic;color:var(--accent)'>رسالة</em>",
+    "form.fname":"الاسم الأول","form.lname":"الاسم الأخير","form.email":"البريد الإلكتروني","form.phone":"رقم الهاتف","form.area":"مجال القانون","form.message":"الرسالة",
+    "form.ph.fname":"محمد","form.ph.lname":"العمري","form.ph.email":"mohammed@email.com","form.ph.message":"صفوا وضعكم باختصار...",
+    "form.area.placeholder":"اختاروا مجال القانون","form.area.other":"أخرى",
+    "form.submit":"إرسال الرسالة",
+    "form.privacy":"تُعامَل بياناتكم بسرية صارمة ولا تُشارك أبداً مع أطراف ثالثة. بإرسال هذا النموذج توافقون على سياسة الخصوصية لدينا.",
+    "legal.eyebrow":"معلومات قانونية","disclaimer.title":"إخلاء المسؤولية",
+    "disc.h1":"المسؤولية","disc.p1":"تسعى Tsang Law Firm إلى الحفاظ على المعلومات الواردة في هذا الموقع بشكل كامل ودقيق قدر الإمكان. غير أننا لا نتحمل أي مسؤولية عن الأضرار الناجمة عن استخدام الموقع.",
+    "disc.h2":"الملكية الفكرية","disc.p2":"جميع حقوق محتوى هذا الموقع، بما يشمل النصوص والصور والشعارات، مملوكة لـ Tsang Law Firm. لا يجوز إعادة إنتاج أي محتوى دون إذن كتابي مسبق.",
+    "disc.h3":"سياسة الخصوصية","disc.p3":"تحترم Tsang Law Firm خصوصيتكم وتعالج البيانات الشخصية وفق اللائحة الأوروبية لحماية البيانات GDPR. البيانات المقدمة عبر نموذج التواصل تُستخدم فقط لمعالجة طلبكم.",
+    "disc.h4":"التواصل","disc.p4":"لأي استفسارات حول إخلاء المسؤولية هذا، يرجى التواصل عبر <a href='mailto:info@tsanglawfirm.nl' style='color:var(--accent)'>info@tsanglawfirm.nl</a> أو +31 70 331 1480.",
+    "vw.title":"الشروط<br><em>العامة</em>",
+    "vw.h1":"المادة 1 - نطاق التطبيق","vw.p1":"تسري هذه الشروط والأحكام العامة على جميع التكليفات الممنوحة لـ Tsang Law Firm، ما لم يُتفق كتابياً على خلاف ذلك.",
+    "vw.h2":"المادة 2 - التكليف","vw.p2":"ينشأ التكليف لحظة تأكيد Tsang Law Firm له كتابياً. يضمن الموكل صحة المعلومات المقدمة واكتمالها.",
+    "vw.h3":"المادة 3 - الأتعاب &amp; المصاريف","vw.p3":"ما لم يُتفق كتابياً على خلاف ذلك، تُحسب الأتعاب بضرب عدد الساعات المنجزة في الأجر الساعي المتفق عليه. تُفوتر المصاريف الخاصة بشكل منفصل وتُضاف ضريبة القيمة المضافة على جميع المبالغ.",
+    "vw.h4":"المادة 4 - مدة السداد","vw.p4":"يجب سداد الفواتير خلال أربعة عشر يوماً من تاريخ إصدارها. يترتب على تجاوز مدة السداد فائدة قانونية.",
+    "vw.h5":"المادة 5 - المسؤولية","vw.p5":"تقتصر مسؤولية Tsang Law Firm على المبلغ المدفوع بموجب تأمين المسؤولية المهنية في القضية ذات الصلة، مضافاً إليه مبلغ التحمّل.",
+    "vw.h6":"المادة 6 - إجراء الشكاوى","vw.p6":"يجب تقديم الشكاوى المتعلقة بالخدمات إلى Tsang Law Firm كتابياً في أقرب وقت ممكن. سنعالج الشكوى في غضون أربعة أسابيع على الأكثر.",
+    "vw.h7":"المادة 7 - القانون الواجب التطبيق","vw.p7":"يسري القانون الهولندي على جميع الاتفاقيات مع Tsang Law Firm. تُرفع النزاعات حصراً إلى المحكمة المختصة في مقاطعة لاهاي."
+  },
+
+  zh: {
+    "nav.team":"团队","nav.areas":"业务领域","nav.werkwijze":"服务方式","nav.contact":"联系我们",
+    "hero.eyebrow":"海牙 · 律师事务所",
+    "hero.title":"法律<br><em>专业。</em><br>个人化<br>服务。",
+    "hero.sub":"海牙专业法律服务。个人化、尽责，始终致力于为您争取最佳结果。",
+    "hero.cta1":"免费咨询","hero.cta2":"业务领域","scroll":"滚动",
+    "stat1.lbl":"业务领域","stat2.lbl":"语言","stat3.lbl":"年执业经验","stat4.lbl":"本地 &amp; 国际",
+    "marquee":"移民法 <span class='marquee-dot'></span> 家庭法 <span class='marquee-dot'></span> 劳动法 <span class='marquee-dot'></span> 公司法 <span class='marquee-dot'></span> 人身伤害 <span class='marquee-dot'></span> 刑法 <span class='marquee-dot'></span>",
+    "about.tag":"关于我们",
+    "about.title":"您的权益，<br><em>我们的首要任务</em>",
+    "about.body":"在Tsang Law Firm，您的情况是我们关注的核心。我们提供清晰的法律指导、诚实的建议，以及量身定制的服务方案。没有繁文缛节，没有意外惊喜，只有以结果为导向的专业工作。",
+    "about.v1.title":"个人化 &amp; 以结果为导向","about.v1.body":"我们花时间深入了解您的情况，并有目的地朝着最佳结果努力。",
+    "about.v2.title":"国际化专业经验","about.v2.body":"在支持国际客户应对荷兰法律及法律程序方面拥有丰富经验。",
+    "about.v3.title":"便捷 &amp; 合理收费","about.v3.body":"我们与您共同探讨所有可用的资金选项，包括法律费用保险及政府资助的法律援助。",
+    "about.v4.title":"多语言服务","about.v4.body":"我们提供荷语、英语、中文、土耳其语及阿拉伯语咨询服务，让您始终感到被充分理解。",
+    "about.quote":"&ldquo;我们为您而来，以您的案件所应得的专业能力和您所需要的关怀全力相助。&rdquo;",
+    "practice.tag":"专业领域","practice.title":"我们的<br><em>业务领域</em>","practice.all":"所有领域",
+    "pa1.name":"移民法","pa2.name":"家庭法","pa3.name":"劳动法",
+    "pa4.name":"公司法","pa5.name":"人身伤害","pa6.name":"刑法",
+    "pa1.li1":"居留许可","pa1.li2":"入籍","pa1.li3":"家庭团聚","pa1.li4":"庇护 &amp; 保护",
+    "pa2.li1":"离婚","pa2.li2":"赡养费","pa2.li3":"子女监护权","pa2.li4":"探视安排",
+    "pa3.li1":"解雇程序","pa3.li2":"劳动合同","pa3.li3":"工资索赔","pa3.li4":"劳动争议",
+    "pa4.li1":"合同","pa4.li2":"公司注册","pa4.li3":"股东纠纷","pa4.li4":"并购",
+    "pa5.li1":"责任认定","pa5.li2":"损害赔偿","pa5.li3":"精神损害赔偿","pa5.li4":"保险公司谈判",
+    "pa6.li1":"辩护","pa6.li2":"审讯期间协助","pa6.li3":"上诉","pa6.li4":"资产没收",
+    "team.tag":"我们的团队","team.title":"充满热情<br><em>的专业律师</em>",
+    "team.sub":"一支尽心尽力的律师团队，随时准备在专业层面和个人层面为您提供支持。",
+    "team.more":"认识我们的团队",
+    "tsang.role":"律师 - 主任合伙人","sarican.role":"律师",
+    "tag.privaatrecht":"私法","tag.contractenrecht":"合同法","tag.aansprakelijkheid":"责任法","tag.erfrecht":"继承法",
+    "cta.title":"您有法律<br><em>方面的疑问吗？</em>",
+    "cta.sub":"欢迎免费联系我们。我们乐于与您共同探讨解决方案。","cta.btn":"联系我们",
+    "footer.desc":"Tsang Law Firm — 海牙的个人化法律指导，为每一位值得获得公正的人。",
+    "footer.col.areas":"业务领域","footer.col.office":"事务所","footer.col.contact":"联系我们","footer.col.hours":"办公时间",
+    "footer.link.team":"我们的团队","footer.link.terms":"一般条款",
+    "footer.hours":"周一至周五<br>9:00 – 17:00<br><br>Prinsegracht 38<br>2512 GA Den Haag",
+    "footer.hours.short":"周一至周五：9:00 – 17:00",
+    "tsang.uni":"莱顿大学 - 法学",
+    "tsang.bio1":"Angel Tsang女士是Tsang Law Firm的创始人。她在移民法、家庭法及劳动法领域为当事人提供专业咨询。凭借对细节的关注和温暖的服务态度，她引导当事人走过有时影响深远的法律程序。",
+    "tsang.bio2":"其国际化背景与多语言能力使她能够以平易近人、感同身受的方式支持来自不同文化背景的当事人。她已在荷兰律师协会登记注册。",
+    "sarican.uni":"阿姆斯特丹大学 - 法学",
+    "sarican.bio1":"Tansu Sarican是一位充满热忱的律师，专注于刑法和私法领域。她以清晰的沟通、敏锐的分析以及为当事人据理力争的坚定态度著称。",
+    "sarican.bio2":"从阿姆斯特丹大学毕业后，她在律师事务所积累了实践经验，并于2025年正式宣誓就职。凭借土耳其裔背景，Tansu能够以荷语、英语及土耳其语为当事人提供服务。",
+    "expertise.label":"专业领域",
+    "waarneming.tag":"服务连续性 &amp; 代理安排",
+    "waarneming.body":"为确保服务的连续性，我们与mr. J.M. Szczerbak（<strong style='color:var(--ink-mid)'>Szczerbak Advocatuur</strong>，Parkstraat 83，2514 JG Den Haag）建立了代理与替代安排。",
+    "rg.eyebrow":"专业领域","rg.hero.title":"我们的<br><em>业务领域</em>",
+    "rg.hero.sub":"Tsang Law Firm可在广泛的法律事务领域为您提供支持，提供专业咨询与个性化协助。",
+    "rg.intro.tag":"专业能力","rg.intro.title":"多个领域，<br><em>一个联系窗口</em>",
+    "rg.intro.body":"Tsang Law Firm在多个核心法律领域提供专注的法律支持。无论是居留权问题、劳动争议还是家庭事务：您并不孤单。我们与您语言相通，无论字面意义还是引申意义皆然。",
+    "rg1.desc":"我们在移民法各方面为您提供全面指导：从居留许可到入籍申请。我们的多语言专业能力为国际当事人带来显著优势。",
+    "rg1.li1":"居留许可申请与续签","rg1.li2":"对拒绝决定提出异议与上诉","rg1.li3":"入籍及荷兰国籍选择权","rg1.li4":"融入社会与融入测试","rg1.li5":"家庭团聚","rg1.li6":"庇护与保护",
+    "rg2.desc":"家庭案件需要细致入微的个人化处理方式。我们以同理心与专业能力，在离婚及所有家庭法事务中支持您。",
+    "rg2.li1":"离婚与法律分居","rg2.li2":"子女及配偶赡养费","rg2.li3":"监护权与探视安排","rg2.li4":"亲子关系确认与否认","rg2.li5":"更名","rg2.li6":"婚姻财产分割",
+    "rg3.desc":"劳动法问题同时影响雇员和雇主。我们在劳动合同、解雇及工作场所纠纷方面提供咨询与诉讼服务。",
+    "rg3.li1":"劳动合同起草与审核","rg3.li2":"解雇程序与劳动关系解除","rg3.li3":"工资索赔与欠薪追讨","rg3.li4":"劳动争议与调解","rg3.li5":"竞业禁止条款","rg3.li6":"病假与复工再融合",
+    "rg4.desc":"我们为企业家提供法律支持，涵盖企业设立、运营与保护：从初创企业到成熟公司。",
+    "rg4.li1":"合同起草与审核","rg4.li2":"公司注册（BV、VOF等）","rg4.li3":"一般条款与条件","rg4.li4":"股东纠纷","rg4.li5":"董事责任","rg4.li6":"企业并购",
+    "rg5.desc":"发生事故或受伤后，您有权获得合理赔偿。我们协助您与保险公司周旋，争取最佳结果。",
+    "rg5.li1":"责任认定","rg5.li2":"损害赔偿计算与追索","rg5.li3":"与保险公司谈判","rg5.li4":"精神损害赔偿","rg5.li5":"劳动能力丧失","rg5.li6":"医疗费用与康复",
+    "rg6.desc":"刑事案件事关重大。我们的律师为您提供有力辩护，确保您的权利在整个刑事程序中得到保障。",
+    "rg6.li1":"违法与犯罪行为辩护","rg6.li2":"审讯及拘留期间协助","rg6.li3":"羁押前审判与警方拘留","rg6.li4":"上诉与再审","rg6.li5":"无罪释放后的赔偿","rg6.li6":"非法所得资产没收",
+    "rg.bar.title":"Mr. T.Y. Tsang已在<br>荷兰律师协会登记注册",
+    "rg.bar.body":"已登记业务领域：移民法 · 家庭法 · 继承法 · 一般执业。依据此注册，每年每个主要业务领域获得10个培训学分。",
+    "ww.eyebrow":"服务方式","ww.hero.title":"我们如何<br><em>为您服务</em>",
+    "ww.hero.sub":"我们以有条不紊、透明的方式开展工作，始终将您的情况放在首位。每个阶段您都清楚地知道自己的处境。",
+    "ww.section.tag":"我们的方法","ww.section.title":"循序渐进<br><em>实现您的目标</em>",
+    "ww.step1.title":"接案 &amp; 初步了解","ww.step1.body":"我们从一次无约束力的会谈开始：倾听您的情况，回答您的问题，共同探讨法律选项。",
+    "ww.step2.title":"分析 &amp; 策略","ww.step2.body":"我们仔细分析您的案件，审查相关法律法规，制定清晰的策略，完全根据您的具体情况量身定制。",
+    "ww.step3.title":"执行 &amp; 指导","ww.step3.body":"我们代您采取行动，主动告知您案件进展，并以坚定和专业的态度全力维护您的权益。",
+    "ww.step4.title":"结果 &amp; 跟进","ww.step4.body":"我们致力于为您争取最佳结果。程序结束后，如有任何后续问题或需要进一步跟进，我们依然随时可及。",
+    "ww.extra1.title":"法律费用保险","ww.extra1.body":"您是否持有法律费用保险？在许多情况下，我们可通过您的保险公司处理案件。",
+    "ww.extra2.title":"政府资助法律援助","ww.extra2.body":"您的收入是否偏低？您可能有资格申请政府资助的法律援助。",
+    "ww.extra2.link":"了解更多法律援助",
+    "tarieven.tag":"收费标准","tarieven.title":"透明的<em>费用</em>",
+    "tarieven.body":"除非书面另行约定，律师费按实际工作小时数乘以约定时薪计算。所有金额须另加增值税。",
+    "tarief1.title":"时薪","tarief1.body":"按实际工作小时收费，于案件开始时协商确定",
+    "tarief2.title":"预付款","tarief2.body":"可能需要预付款，将从最终账单中扣除",
+    "tarief3.body":"低收入人士可申请政府资助法律援助",
+    "pd.eyebrow":"普惠法律援助","pd.hero.title":"政府资助<br><em>法律援助</em>",
+    "pd.hero.sub":"无论收入水平如何，法律援助应向所有人开放。我们全程引导您完成政府资助法律援助的申请流程。",
+    "pd.intro":"您的收入偏低，无法自行承担律师费用吗？您可能有资格获得<strong>政府资助的法律援助</strong>。",
+    "pd.step1.title":"接案 &amp; 评估","pd.step1.body":"在无约束力的会谈中，我们讨论您的法律情况，共同评估政府资助法律援助是否适用于您。",
+    "pd.step2.title":"向法律援助委员会提出申请","pd.step2.body":"我们代您提交法律援助申请。委员会可能向政府机构查询您的收入及资产信息。",
+    "pd.step3.title":"自付部分","pd.step3.body":"获批后，委员会将根据您的收入确定自付金额，须缴纳至本事务所。",
+    "pd.step4.title":"案件处理","pd.step4.body":"获批后我们将全面处理您的案件。请注意，委员会可能在程序结束后撤销法律援助。",
+    "pd.step5.title":"法律费用保险","pd.step5.body":"您是否持有法律费用保险？保险公司可能承担相关费用，我们很乐意为您核实。",
+    "pd.cta.title":"不确定自己是否符合资格？",
+    "pd.cta.body":"欢迎预约无约束力的会谈。我们将共同评估您的情况，探讨适合您的资助选项。",
+    "pd.cta.btn":"免费咨询预约",
+    "contact.hero.title":"联系<br><em>我们</em>","contact.hero.sub":"有法律疑问或需要建议？我们随时为您服务。欢迎联系我们，我们会及时回复。",
+    "contact.reach.tag":"联系方式","contact.reach.title":"个人化联系，<br><em>迅速获得帮助</em>",
+    "contact.reach.body":"我们乐于与您共同寻找解决方案。无论您有简短的问题还是希望全面讨论您的情况，我们都会为您留出时间。",
+    "contact.lbl.phone":"电话","contact.lbl.email":"电子邮件","contact.lbl.address":"地址","contact.lbl.hours":"办公时间",
+    "contact.hours.val":"周一至周五：9:00 – 17:00",
+    "form.title":"给我们<br><em style='font-family:&quot;Playfair Display&quot;,serif;font-style:italic;color:var(--accent)'>发送消息</em>",
+    "form.fname":"名字","form.lname":"姓氏","form.email":"电子邮件地址","form.phone":"电话号码","form.area":"法律领域","form.message":"留言",
+    "form.ph.fname":"伟明","form.ph.lname":"陈","form.ph.email":"weiming@email.com","form.ph.message":"请简要描述您的情况……",
+    "form.area.placeholder":"选择法律领域","form.area.other":"其他",
+    "form.submit":"发送消息",
+    "form.privacy":"您的信息将受到严格保密，绝不会与第三方共享。提交此表格即表示您同意我们的隐私政策。",
+    "legal.eyebrow":"法律信息","disclaimer.title":"免责声明",
+    "disc.h1":"责任","disc.p1":"Tsang Law Firm致力于使本网站上的信息尽量完整准确。但我们对因使用本网站而造成的损失不承担任何责任。",
+    "disc.h2":"知识产权","disc.p2":"本网站所有内容（包括文字、图片及标志）的权利归属于Tsang Law Firm，未经事先书面许可不得转载。",
+    "disc.h3":"隐私政策","disc.p3":"Tsang Law Firm尊重您的隐私，并依据GDPR处理个人数据。通过联系表格提交的信息仅用于处理您的请求。",
+    "disc.h4":"联系方式","disc.p4":"如对本免责声明有任何疑问，请通过<a href='mailto:info@tsanglawfirm.nl' style='color:var(--accent)'>info@tsanglawfirm.nl</a>或+31 70 331 1480联系我们。",
+    "vw.title":"一般<br><em>条款</em>",
+    "vw.h1":"第1条 - 适用范围","vw.p1":"本一般条款适用于委托给Tsang Law Firm的所有委托事项，除非书面另行约定。",
+    "vw.h2":"第2条 - 委托","vw.p2":"委托自Tsang Law Firm书面确认时生效。委托人保证所提供信息的准确性与完整性。",
+    "vw.h3":"第3条 - 律师费 &amp; 费用","vw.p3":"除非书面另行约定，律师费按实际工作小时数乘以约定时薪计算，特殊费用另行计费，所有金额须另加增值税。",
+    "vw.h4":"第4条 - 付款期限","vw.p4":"账单须于开票日起十四日内支付，逾期须支付法定利息。",
+    "vw.h5":"第5条 - 责任","vw.p5":"Tsang Law Firm的责任以专业责任保险在相关案件中赔付的金额加上免赔额为限。",
+    "vw.h6":"第6条 - 投诉程序","vw.p6":"有关服务的投诉应尽快以书面形式向Tsang Law Firm提出，我们将在四周内处理投诉。",
+    "vw.h7":"第7条 - 适用法律","vw.p7":"与Tsang Law Firm签订的所有协议均适用荷兰法律，争议专属提交海牙地区有管辖权的法院解决。"
+  }
+};
+
+// ============================================================
+// LANGUAGE ENGINE
+// ============================================================
+let currentLang = 'nl';
+
+function applyLang(lang) {
+  const T = TRANSLATIONS[lang];
+  if (!T) return;
+  currentLang = lang;
+  document.documentElement.lang = lang;
+
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.dataset.i18n;
+    if (T[key] !== undefined) {
+      if (el.classList.contains('btn-ghost')) {
+        el.innerHTML = T[key] + ' <span class="btn-ghost-arrow"></span>';
+      } else {
+        el.innerHTML = T[key];
+      }
+    }
+  });
+
+  document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+    const key = el.dataset.i18nPh;
+    if (T[key] !== undefined) el.placeholder = T[key];
+  });
+
+  if (T['marquee']) {
+    document.querySelectorAll('[data-i18n-marquee]').forEach(el => {
+      el.innerHTML = T['marquee'];
+    });
+  }
+
+  const titles = { nl: 'Tsang Law Firm — Uw Partner in Rechtvaardigheid', en: 'Tsang Law Firm — Your Partner in Justice', tr: 'Tsang Law Firm — Adalet Yolunda Güvenilir Ortağınız', ar: 'Tsang Law Firm — شريككم في العدالة', zh: 'Tsang Law Firm — 您的法律合作伙伴' };
+  document.title = titles[lang] || titles.nl;
+
+  // RTL support for Arabic
+  document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
+  document.body.classList.toggle('rtl', lang === 'ar');
+
+  document.querySelectorAll('.lang-btn, .mobile-lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
+
+  bindCursorTargets();
+}
+
+// ============================================================
+// CURSOR
+// ============================================================
+const cursor = document.getElementById('cursor');
+const ring   = document.getElementById('cursorRing');
+let mx = 0, my = 0, rx = 0, ry = 0;
+
+// Only enable custom cursor on non-touch pointer devices
+const isTouch = window.matchMedia('(hover:none) and (pointer:coarse)').matches;
+
+// Dark background detection — sections with dark bg get gold cursor
+const DARK_BG_SELECTORS = [
+  '.hero', '.contact-cta', '.tarieven-section', '.prodeo-section',
+  '.team-card', '.footer', 'nav'
+];
+
+function isDarkUnderCursor(x, y) {
+  // Temporarily hide cursor to hit-test correctly
+  cursor.style.display = 'none';
+  ring.style.display = 'none';
+  const el = document.elementFromPoint(x, y);
+  cursor.style.display = '';
+  ring.style.display = '';
+  if (!el) return false;
+  // Walk up the DOM to check for dark-bg ancestors
+  let node = el;
+  while (node && node !== document.body) {
+    if (DARK_BG_SELECTORS.some(sel => node.matches && node.matches(sel))) return true;
+    // Also check computed background
+    const bg = window.getComputedStyle(node).backgroundColor;
+    if (bg) {
+      const m = bg.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)/);
+      if (m) {
+        const luminance = (0.299*+m[1] + 0.587*+m[2] + 0.114*+m[3]);
+        if (luminance < 80) return true;
+      }
+    }
+    node = node.parentElement;
+  }
+  return false;
+}
+
+if (!isTouch) {
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX; my = e.clientY;
+    cursor.style.left = mx + 'px';
+    cursor.style.top  = my + 'px';
+    // Dark bg detection
+    const dark = isDarkUnderCursor(mx, my);
+    cursor.classList.toggle('dark', dark);
+    ring.classList.toggle('dark', dark);
+  });
+  (function lerpRing() {
+    rx += (mx - rx) * .12;
+    ry += (my - ry) * .12;
+    ring.style.left = rx + 'px';
+    ring.style.top  = ry + 'px';
+    requestAnimationFrame(lerpRing);
+  })();
+} else {
+  cursor.style.display = 'none';
+  ring.style.display = 'none';
+  document.body.style.cursor = 'auto';
+}
+
+function bindCursorTargets() {
+  document.querySelectorAll('a, button, .practice-card, .team-card, .rechtsgebied-card, .process-step, select, input, textarea').forEach(el => {
+    el.addEventListener('mouseenter', () => { cursor.classList.add('hover'); ring.classList.add('hover'); });
+    el.addEventListener('mouseleave', () => { cursor.classList.remove('hover'); ring.classList.remove('hover'); });
+  });
+}
+
+// ============================================================
+// INTERSECTION OBSERVER
+// ============================================================
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+  });
+}, { threshold: 0.07 });
+
+function observePage(page) {
+  page.querySelectorAll('.reveal, .about-value, .stat-item, .practice-card, .team-card, .rechtsgebied-card, .process-step, .team-profile, .prodeo-step').forEach(el => {
+    el.classList.remove('visible');
+    io.observe(el);
+  });
+}
+
+// ============================================================
+// SHOW PAGE
+// ============================================================
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  const target = document.getElementById('page-' + id);
+  if (!target) return;
+  target.classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'instant' });
+  setTimeout(() => { observePage(target); bindCursorTargets(); }, 60);
+  if (typeof closeMenu === 'function') closeMenu();
+  else document.getElementById('mobileMenu').classList.remove('open');
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    a.classList.toggle('active', a.dataset.page === id);
+  });
+}
+
+// ============================================================
+// CLICK DELEGATION (pages + lang switcher)
+// ============================================================
+document.addEventListener('click', e => {
+  const langBtn = e.target.closest('[data-lang]');
+  if (langBtn && !langBtn.dataset.page) {
+    applyLang(langBtn.dataset.lang);
+    return;
+  }
+  const link = e.target.closest('[data-page]');
+  if (link) { e.preventDefault(); showPage(link.dataset.page); }
+});
+
+// ============================================================
+// HAMBURGER + MOBILE FULLSCREEN MENU
+// ============================================================
+const hamburger   = document.getElementById('hamburger');
+const mobileMenu  = document.getElementById('mobileMenu');
+const mobileClose = document.getElementById('mobileClose');
+const mobileOverlay = document.getElementById('mobileOverlay');
+
+function openMenu() {
+  mobileMenu.classList.add('open');
+  hamburger.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeMenu() {
+  mobileMenu.classList.remove('open');
+  hamburger.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+hamburger.addEventListener('click', () => {
+  mobileMenu.classList.contains('open') ? closeMenu() : openMenu();
+});
+mobileClose.addEventListener('click', closeMenu);
+mobileOverlay.addEventListener('click', closeMenu);
+
+// Swipe right to close drawer
+let touchStartX = 0;
+mobileMenu.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+mobileMenu.addEventListener('touchend', e => {
+  if (e.changedTouches[0].clientX - touchStartX > 60) closeMenu();
+}, { passive: true });
+
+// ============================================================
+// SCROLL
+// ============================================================
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 60);
+  const heroBg = document.getElementById('heroBg');
+  if (heroBg && document.getElementById('page-home').classList.contains('active')) {
+    heroBg.style.transform = 'translateY(' + (window.scrollY * 0.25) + 'px) scale(1.06)';
+  }
+});
+
+// ============================================================
+// INIT
+// ============================================================
+applyLang('nl');
+showPage('home');
+
+// ============================================================
+// CONTACT FORM — FORMSPREE AJAX SUBMIT
+// ============================================================
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+  contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const btn = contactForm.querySelector('.btn-submit');
+    const status = document.getElementById('formStatus');
+    const originalText = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = currentLang === 'nl' ? 'Verzenden...' : currentLang === 'en' ? 'Sending...' : currentLang === 'tr' ? 'Gönderiliyor...' : currentLang === 'ar' ? '...جاري الإرسال' : currentLang === 'zh' ? '发送中...' : 'Verzenden...';
+    fetch(contactForm.action, {
+      method: 'POST',
+      body: new FormData(contactForm),
+      headers: { 'Accept': 'application/json' }
+    }).then(function(response) {
+      if (response.ok) {
+        status.style.display = 'block';
+        status.style.color = 'var(--accent)';
+        status.textContent = currentLang === 'nl' ? 'Bedankt! Uw bericht is verzonden. Wij nemen zo snel mogelijk contact met u op.' : currentLang === 'en' ? 'Thank you! Your message has been sent. We will contact you as soon as possible.' : currentLang === 'tr' ? 'Teşekkürler! Mesajınız gönderildi. En kısa sürede size ulaşacağız.' : currentLang === 'ar' ? 'شكراً لك! تم إرسال رسالتك. سنتواصل معك في أقرب وقت.' : currentLang === 'zh' ? '谢谢！您的消息已发送。我们会尽快与您联系。' : 'Bedankt! Uw bericht is verzonden.';
+        contactForm.reset();
+      } else {
+        throw new Error('Form submission failed');
+      }
+    }).catch(function() {
+      status.style.display = 'block';
+      status.style.color = '#c0392b';
+      status.textContent = currentLang === 'nl' ? 'Er is iets misgegaan. Probeer het opnieuw of neem telefonisch contact op.' : currentLang === 'en' ? 'Something went wrong. Please try again or contact us by phone.' : currentLang === 'tr' ? 'Bir hata oluştu. Lütfen tekrar deneyin veya telefonla iletişime geçin.' : currentLang === 'ar' ? 'حدث خطأ. يرجى المحاولة مرة أخرى أو الاتصال بنا هاتفياً.' : currentLang === 'zh' ? '出现错误，请重试或致电联系我们。' : 'Er is iets misgegaan.';
+    }).finally(function() {
+      btn.disabled = false;
+      btn.textContent = originalText;
+    });
+  });
+}
+
+// Hero bg loaded animation
+const heroBgEl = document.getElementById('heroBg');
+if (heroBgEl) {
+  const img = new Image();
+  img.addEventListener('load', () => heroBgEl.classList.add('loaded'));
+  img.src = 'https://images.squarespace-cdn.com/content/v1/67caff9a90b609682b5b8b1f/902ef867-7ba5-4f4d-9a61-ecb0f7fdc2bc/La_haye_palais_paix_jardin_face.jpg';
+}
+
+// ============================================================
+// IMAGE ERROR FALLBACKS (replaces inline onerror handlers)
+// ============================================================
+(function() {
+  var navBrand = document.getElementById('navBrandImg');
+  if (navBrand) navBrand.addEventListener('error', function() { this.style.display = 'none'; });
+
+  var heroBrand = document.getElementById('heroBrandLogo');
+  if (heroBrand) heroBrand.addEventListener('error', function() { this.style.display = 'none'; });
+
+  var teamCard1 = document.getElementById('teamCardPhoto1');
+  if (teamCard1) teamCard1.addEventListener('error', function() { this.style.background = 'var(--ink-mid)'; });
+
+  var teamProfile1 = document.getElementById('teamProfilePhoto1');
+  if (teamProfile1) teamProfile1.addEventListener('error', function() { this.style.background = 'var(--bg-alt)'; });
+
+  var teamCard2 = document.getElementById('teamCardPhoto2');
+  if (teamCard2) teamCard2.addEventListener('error', function() { this.style.background = 'var(--ink-mid)'; });
+
+  var teamProfile2 = document.getElementById('teamProfilePhoto2');
+  if (teamProfile2) teamProfile2.addEventListener('error', function() { this.style.background = 'var(--bg-alt)'; });
+})();
+
+// ============================================================
+// GDPR COOKIE CONSENT
+// ============================================================
+(function() {
+  const banner = document.getElementById('cookieBanner');
+  const acceptBtn = document.getElementById('cookieAccept');
+  const declineBtn = document.getElementById('cookieDecline');
+  if (!banner) return;
+
+  function hideBanner() {
+    banner.classList.add('hidden');
+  }
+
+  // Show banner if consent not yet given
+  const consent = localStorage.getItem('cookieConsent');
+  if (!consent) {
+    setTimeout(function() { banner.classList.remove('hidden'); }, 1200);
+  }
+
+  acceptBtn.addEventListener('click', function() {
+    localStorage.setItem('cookieConsent', 'accepted');
+    hideBanner();
+  });
+
+  declineBtn.addEventListener('click', function() {
+    localStorage.setItem('cookieConsent', 'declined');
+    hideBanner();
+  });
+})();
+</script>
+<!-- WhatsApp bubble -->
+<a class="wa-bubble" href="https://wa.me/31629332677" target="_blank" rel="noopener noreferrer" aria-label="Contact via WhatsApp">
+  <span class="wa-btn">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </span>
+  <span class="wa-label">Chat met ons</span>
+</a>
+
+</body>
+</html>
